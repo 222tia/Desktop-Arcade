@@ -1,5 +1,10 @@
-# NostalgiChat
-desc.
+# Desktop Arcade
+A desktop-based entertainment hub that possesses a number of text-based games.
+<br>It's meant to mimic the spirit of plug-and-play games and the old, flash-based websites that housed multiple games.
+<p><b>Iteration 1:</b> Introduces 2 games that can be accessed and played via the terminal.
+<br><b>Iteration 2:</b> Introduces a 3rd game, alongside the option to play the games via a GUI.
+<br><b>Iteration 3:</b> Introduces local multiplayer and minor customization options.
+</p>
 <hr>
 <h2>Authors</h2>
 Emma "Jay" Jordan
