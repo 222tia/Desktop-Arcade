@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class PlayRandomizerRPS {
+public class RPSPlayRandomizer {
 
     private static final ArrayList<String> possiblePlays = new ArrayList<>(
             Arrays.asList("rock", "paper", "scissors"));
