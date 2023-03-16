@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
 
-public class TestUserPlayReceiver extends UserPlayReceiver {
+public class TestRPSUserPlayReceiver extends RPSUserPlayReceiver {
     @Test
     public void testUserPlaysScissors(){
         final String input = "scissors";

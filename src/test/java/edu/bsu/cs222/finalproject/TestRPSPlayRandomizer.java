@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class TestPlayRandomizerRPS {
+public class TestRPSPlayRandomizer {
     private static final ArrayList<String> possiblePlays = new ArrayList<>(
             Arrays.asList("rock", "paper", "scissors"));
 
     @Test
     public void testPlayRandomizerOutput(){
-        final String randomResult = PlayRandomizerRPS.getRandomPlay();
+        final String randomResult = RPSPlayRandomizer.getRandomPlay();
         Assertions.assertTrue(possiblePlays.contains(randomResult));
     }
 }

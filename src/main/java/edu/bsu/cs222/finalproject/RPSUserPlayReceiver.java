@@ -2,7 +2,7 @@ package edu.bsu.cs222.finalproject;
 
 import java.util.Scanner;
 
-public class UserPlayReceiver {
+public class RPSUserPlayReceiver {
     public static String getUserPlay() {
 
         System.out.println("rock, paper, or scissors?: ");
