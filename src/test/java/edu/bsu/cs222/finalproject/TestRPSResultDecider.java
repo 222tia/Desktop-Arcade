@@ -25,4 +25,25 @@ public class TestRPSResultDecider {
         Assertions.assertTrue(RPSResultDecider.winCondition(userPlay,computerPlay));
     }
 
+    @Test
+    public void testUserLoseConditionPaper() {
+        final String userPlay = "paper";
+        final String computerPlay = "scissors";
+        Assertions.assertFalse(RPSResultDecider.winCondition(userPlay,computerPlay));
+    }
+
+    @Test
+    public void testUserLoseConditionRock() {
+        final String userPlay = "rock";
+        final String computerPlay = "paper";
+        Assertions.assertFalse(RPSResultDecider.winCondition(userPlay,computerPlay));
+    }
+
+    @Test
+    public void testUserLoseConditionScissors() {
+        final String userPlay = "scissors";
+        final String computerPlay = "rock";
+        Assertions.assertFalse(RPSResultDecider.winCondition(userPlay,computerPlay));
+    }
+
 }
