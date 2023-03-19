@@ -15,24 +15,10 @@ public class BuncoCompTurn {
             System.out.println("Roll 2 = " + dice2Value);
             System.out.println("Roll 3 = " + dice3Value);
 
-            boolean pointGain = false;
-            boolean dice1PointGain = (dice1Value == roundNumber);
-            boolean dice2PointGain = (dice2Value == roundNumber);
-            boolean dice3PointGain = (dice3Value == roundNumber);
-            if (dice1PointGain) compScore = compScore + 1;
-            if (dice2PointGain) compScore = compScore + 1;
-            if (dice3PointGain) compScore = compScore + 1;
-            if (dice1PointGain || dice2PointGain || dice3PointGain){
-                pointGain = true;
-            }
-            boolean DiceTriples = false;
-            if ((dice1Value == dice2Value) && (dice2Value == dice3Value)) {
-                DiceTriples = true;
-                compScore = compScore + 5;
-                if (dice1PointGain) {
-                    compScore = compScore + 21;
-                }
-            }
+
+            boolean pointGain = ((dice1Value== roundNumber) || (dice2Value== roundNumber) || (dice3Value == roundNumber));
+            boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
+            compScore = BuncoClasses.Scoring(compScore, roundNumber, dice1Value, dice2Value, dice3Value);
             turnContinue = pointGain || DiceTriples;
             System.out.println("Your opponent's score is " + compScore);
 
