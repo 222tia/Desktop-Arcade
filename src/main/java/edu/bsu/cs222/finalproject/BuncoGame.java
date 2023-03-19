@@ -5,9 +5,6 @@ import java.io.IOException;
 public class BuncoGame {
 
     public static void main(String[] args) throws IOException {
-        int dice1Value = 0;
-        int dice2Value = 0;
-        int dice3Value = 0;
         int playerScore = 0;
         int opps = 0;
         int mykey = 0;
@@ -19,9 +16,9 @@ public class BuncoGame {
             boolean turnContinue;
             do {
                 System.out.println("\nRound #" + roundNumber);
-                dice1Value = BuncoClasses.DiceRoll();
-                dice2Value = BuncoClasses.DiceRoll();
-                dice3Value = BuncoClasses.DiceRoll();
+                int dice1Value = BuncoClasses.DiceRoll();
+                int dice2Value = BuncoClasses.DiceRoll();
+                int dice3Value = BuncoClasses.DiceRoll();
                 System.out.println("Roll 1 = " + dice1Value);
                 System.out.println("Roll 2 = " + dice2Value);
                 System.out.println("Roll 3 = " + dice3Value);
