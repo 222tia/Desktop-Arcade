@@ -13,7 +13,7 @@ public class RPSResultDecider {
         } else if (winCondition(userPlay, computerPlay)) {
             System.out.println("computer played " + computerPlay + ", you win!");
         } else {
-            System.out.println("tie!");
+            System.out.println("computer played " + computerPlay + ", tie!");
         }
     }
 }
