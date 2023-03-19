@@ -3,7 +3,7 @@ package edu.bsu.cs222.finalproject;
 import java.io.IOException;
 
 public class BuncoGame {
-    public static void main(String[] args) throws IOException {
+    public static void playBunco() throws IOException {
 
         int playerScore = 0;
         int compScore = 0;
