@@ -10,7 +10,7 @@ public class BuncoGame {
         int roundNumber = 1;
 
 
-        while (playerScore < 21) {
+        while (true) {
 
             boolean turnContinue;
             do {
