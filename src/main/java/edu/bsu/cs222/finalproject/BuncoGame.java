@@ -24,7 +24,7 @@ public class BuncoGame {
 
                 boolean pointGain = ((dice1Value== roundNumber) || (dice2Value== roundNumber) || (dice3Value == roundNumber));
                 boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
-                playerScore = BuncoClasses.Scoring(playerScore, roundNumber, dice1Value, dice2Value, dice3Value);
+                playerScore = BuncoDice.Scoring(playerScore, roundNumber, dice1Value, dice2Value, dice3Value);
                 turnContinue = pointGain || DiceTriples;
                 System.out.println("Your score is " + playerScore);
 
