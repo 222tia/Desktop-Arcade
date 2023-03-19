@@ -21,5 +21,5 @@ Emma "Jay" Jordan
 <br>• Java 19 SDK installed
 <br>• Latest release of this repository cloned in IntelliJ
 <h3>Run Instructions</h3>
-<b>Iteration 1:</b> To start the program, run the [namehere] Class. It will execute via the terminal.
+<b>Iteration 1:</b> To start the program, run the PlayDesktopArcade Class. It will execute via the terminal.
 
