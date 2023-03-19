@@ -20,5 +20,6 @@ Emma "Jay" Jordan
 • Latest edition of IntelliJ IDEA Community Edition installed
 <br>• Java 19 SDK installed
 <br>• Latest release of this repository cloned in IntelliJ
-<br>• To execute the application via the terminal, run the [namehere] Class
+<h3>Run Instructions</h3>
+<b>Iteration 1:</b> To start the program, run the [namehere] Class. It will execute via the terminal.
 
