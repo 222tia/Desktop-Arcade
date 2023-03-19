@@ -3,8 +3,8 @@ package edu.bsu.cs222.finalproject;
 import java.io.IOException;
 
 public class BuncoGame {
-
     public static void main(String[] args) throws IOException {
+
         int playerScore = 0;
         int compScore = 0;
         int roundNumber = 1;
@@ -24,8 +24,10 @@ public class BuncoGame {
 
                 boolean pointGain = ((dice1Value== roundNumber) || (dice2Value== roundNumber) || (dice3Value == roundNumber));
                 boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
-                playerScore = BuncoClasses.Scoring(playerScore, roundNumber, dice1Value, dice2Value, dice3Value);
+                playerScore = BuncoDice.Scoring(playerScore, roundNumber, dice1Value, dice2Value, dice3Value);
+
                 turnContinue = pointGain || DiceTriples;
+
                 System.out.println("Your score is " + playerScore);
 
                 if (playerScore >= 21) {
@@ -33,7 +35,7 @@ public class BuncoGame {
                     System.exit(0);
                 }
 
-                int mykey = System.in.read();
+                System.in.read();
 
 
             } while (turnContinue);

@@ -17,7 +17,7 @@ public class BuncoDice {
         if ((dice1 == dice2) && (dice2 == dice3)) {
             score = score + 5;
             if (dice1PointGain) {
-                score = score + 21;
+                score = score + 13;
             }
         }
         return score;
