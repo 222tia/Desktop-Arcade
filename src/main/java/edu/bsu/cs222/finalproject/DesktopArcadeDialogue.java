@@ -12,7 +12,15 @@ public class DesktopArcadeDialogue {
         System.out.println("dialogue1");
     }
     public static void BuncoRules(){
-        System.out.println("Bunco is played by rolling 3 dice. \nRounds are numbered from 1 to 6 before looping back to 1.\n\n1 point is gained when a dice roll is equal to the round number.\n5 points are gained when triples are rolled.\nIf the triples match the round number, you automatically win!!\n\nOtherwise, the winner is the first to get to 21 points!");
+        System.out.println("""
+                Bunco is played by rolling 3 dice.
+                Rounds are numbered from 1 to 6 before looping back to 1.
+                
+                1 point is gained when a dice roll is equal to the round number.
+                5 points are gained when triples are rolled.
+                If the triples match the round number, you automatically win!!
+                
+                Otherwise, the winner is the first to get to 21 points!""");
     }
     public static void incorrectInput(){
         System.out.println("Input not an option. Please try again.");
