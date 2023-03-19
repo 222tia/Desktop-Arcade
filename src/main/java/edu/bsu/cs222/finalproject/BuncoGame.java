@@ -5,12 +5,8 @@ import java.io.IOException;
 public class BuncoGame {
 
     public static void main(String[] args) throws IOException {
-        int dice1Value = 0;
-        int dice2Value = 0;
-        int dice3Value = 0;
         int playerScore = 0;
-        int opps = 0;
-        int mykey = 0;
+        int compScore = 0;
         int roundNumber = 1;
 
 
@@ -19,28 +15,32 @@ public class BuncoGame {
             boolean turnContinue;
             do {
                 System.out.println("\nRound #" + roundNumber);
-                dice1Value = BuncoClasses.DiceRoll();
-                dice2Value = BuncoClasses.DiceRoll();
-                dice3Value = BuncoClasses.DiceRoll();
+                int dice1Value = BuncoClasses.DiceRoll();
+                int dice2Value = BuncoClasses.DiceRoll();
+                int dice3Value = BuncoClasses.DiceRoll();
                 System.out.println("Roll 1 = " + dice1Value);
                 System.out.println("Roll 2 = " + dice2Value);
                 System.out.println("Roll 3 = " + dice3Value);
 
-
-                boolean pointGain = (dice1Value == roundNumber) || (dice2Value == roundNumber) || (dice3Value == roundNumber);
-                if (pointGain) playerScore = playerScore + 1;
+                boolean pointGain = false;
+                boolean dice1PointGain = (dice1Value == roundNumber);
+                boolean dice2PointGain = (dice2Value == roundNumber);
+                boolean dice3PointGain = (dice3Value == roundNumber);
+                if (dice1PointGain) playerScore = playerScore + 1;
+                if (dice2PointGain) playerScore = playerScore + 1;
+                if (dice3PointGain) playerScore = playerScore + 1;
+                if (dice1PointGain || dice2PointGain || dice3PointGain){
+                    pointGain = true;
+                }
                 boolean DiceTriples = false;
                 if ((dice1Value == dice2Value) && (dice2Value == dice3Value)) {
                     DiceTriples = true;
                     playerScore = playerScore + 5;
-                    if (pointGain) {
+                    if (dice1PointGain) {
                         playerScore = playerScore + 21;
                     }
                 }
-                turnContinue = false;
-                if (pointGain || DiceTriples) {
-                    turnContinue = true;
-                }
+                turnContinue = pointGain || DiceTriples;
                 System.out.println("Your score is " + playerScore);
 
                 if (playerScore >= 21) {
@@ -48,10 +48,11 @@ public class BuncoGame {
                     System.exit(0);
                 }
 
-                mykey = (int) System.in.read();
+                int mykey = System.in.read();
 
 
             } while (turnContinue);
+            compScore = BuncoCompTurn.CompTurn(compScore, roundNumber);
             roundNumber++;
             if (roundNumber > 6) {
                 roundNumber = 1;
