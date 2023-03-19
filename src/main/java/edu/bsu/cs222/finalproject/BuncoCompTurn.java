@@ -8,9 +8,9 @@ public class BuncoCompTurn {
         System.out.println("Computer Turn!");
         do {
             System.out.println("\nRound #" + roundNumber);
-            int dice1Value = BuncoClasses.DiceRoll();
-            int dice2Value = BuncoClasses.DiceRoll();
-            int dice3Value = BuncoClasses.DiceRoll();
+            int dice1Value = BuncoDice.DiceRoll();
+            int dice2Value = BuncoDice.DiceRoll();
+            int dice3Value = BuncoDice.DiceRoll();
             System.out.println("Roll 1 = " + dice1Value);
             System.out.println("Roll 2 = " + dice2Value);
             System.out.println("Roll 3 = " + dice3Value);
