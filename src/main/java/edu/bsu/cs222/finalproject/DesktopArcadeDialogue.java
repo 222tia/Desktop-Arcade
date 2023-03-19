@@ -24,6 +24,7 @@ public class DesktopArcadeDialogue {
         System.out.println("""
                 Bunco is played by rolling 3 dice.
                 Rounds are numbered from 1 to 6 before looping back to 1.
+                When you gain points you get to roll again! When no points are gained play passes and your turn is over.
                 
                 1 point is gained when a dice roll is equal to the round number.
                 5 points are gained when triples are rolled.
