@@ -9,7 +9,16 @@ public class DesktopArcadeDialogue {
                 2.) Bunco!""");
     }
     public static void RPSRules(){
-        System.out.println("dialogue1");
+        System.out.println("""
+                Rock, Paper, Scissors is played by playing Rock, Paper, or Scissors.
+                
+                The winner is determined by these rules:
+                
+                Rock beats Scissors
+                Scissors beats Paper
+                Paper beats Rock
+              
+                """);
     }
     public static void BuncoRules(){
         System.out.println("""
