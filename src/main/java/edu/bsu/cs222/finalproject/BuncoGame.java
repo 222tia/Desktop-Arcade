@@ -49,13 +49,12 @@ public class BuncoGame {
                 }
 
                 mykey = (int) System.in.read();
-                mykey = (int) System.in.read();
 
 
             } while (turnContinue);
             roundNumber++;
-            if (roundNumber == 6) {
-                roundNumber = 0;
+            if (roundNumber > 6) {
+                roundNumber = 1;
             }
         }
         }
