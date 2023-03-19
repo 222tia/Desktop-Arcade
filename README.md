@@ -17,9 +17,9 @@ Emma "Jay" Jordan
 <br>• JavaFX
 
 <h2>Instructions</h2>
-• Latest edition of IntelliJ IDEA Community Edition installed
+• The Latest edition of IntelliJ IDEA Community Edition installed
 <br>• Java 19 SDK installed
-<br>• Latest release of this repository cloned in IntelliJ
+<br>• The Latest release of this repository cloned in IntelliJ
 <h3>Run Instructions</h3>
 <b>Iteration 1:</b> To start the program, run the PlayDesktopArcade Class. It will execute via the terminal.
 
