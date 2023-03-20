@@ -1,10 +1,21 @@
 package edu.bsu.cs222.finalproject;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BuncoDice {
+    public final static List<Integer> diceRollList = new ArrayList<>();
 
     public static Integer DiceRoll(){
         return (int) (Math.random() * 6) + 1;
+    }
+
+    public static List<Integer> getDiceRolls() {
+        for (int i = 0; i < 3; i++) {
+            diceRollList.add(DiceRoll());
+        }
+        return diceRollList;
     }
 
     public static Integer Scoring(int score, int roundNumber, int dice1, int dice2, int dice3){

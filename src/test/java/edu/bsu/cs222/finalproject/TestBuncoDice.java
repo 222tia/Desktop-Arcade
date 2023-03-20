@@ -3,6 +3,8 @@ package edu.bsu.cs222.finalproject;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class TestBuncoDice {
     @Test
     public void testDiceRollOutput(){
@@ -52,5 +54,14 @@ public class TestBuncoDice {
         int die3 = 2;
         score = BuncoDice.Scoring(score, round, die1, die2, die3);
         Assertions.assertEquals(21, score);
+    }
+
+    @Test
+    public void testGetDiceRolls(){
+        List<Integer> diceRollList = BuncoDice.getDiceRolls();
+
+        for (int i = 0; i < 3; i++){
+            Assertions.assertTrue(diceRollList.get(i) <= 6);
+        }
     }
 }
