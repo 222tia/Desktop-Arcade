@@ -19,10 +19,15 @@ public class BuncoDice {
         return diceRollList;
     }
 
-    public static Integer Scoring(int score, int roundNumber, int dice1, int dice2, int dice3){
-        score = DiceScoring(score, roundNumber, dice1);
-        score = DiceScoring(score, roundNumber, dice2);
-        score = DiceScoring(score, roundNumber, dice3);
+    public static Integer Scoring(int score, int roundNumber, List<Integer> diceRollList){
+
+        int dice1 = diceRollList.get(0);
+        int dice2 = diceRollList.get(1);
+        int dice3 = diceRollList.get(2);
+
+        for (int i = 0; i < 3; i++) {
+            score = DiceScoring(score, roundNumber, diceRollList.get(i));
+        }
         if ((dice1 == dice2) && (dice2 == dice3)) {
             score = score + 5;
             if (dice1==roundNumber) {
@@ -32,9 +37,9 @@ public class BuncoDice {
         return score;
     }
 
-    public static Integer DiceScoring(int score, int round, int diceValue){
-        if(diceValue==round){
-            score=score+1;
+    public static Integer DiceScoring(int score, int round, int diceValue) {
+        if (diceValue == round) {
+            score = score + 1;
         }
         return score;
     }

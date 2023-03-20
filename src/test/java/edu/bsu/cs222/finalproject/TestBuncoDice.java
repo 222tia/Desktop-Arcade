@@ -16,10 +16,8 @@ public class TestBuncoDice {
     public void testScore1Point(){
         int score =0;
         int round = 1;
-        int die1 = 1;
-        int die2 = 2;
-        int die3 = 2;
-        score = BuncoDice.Scoring(score, round, die1, die2, die3);
+        List<Integer> diceRollList = List.of(1, 2, 2);
+        score = BuncoDice.Scoring(score, round, diceRollList);
         Assertions.assertEquals(1, score);
     }
 
@@ -27,10 +25,8 @@ public class TestBuncoDice {
     public void testScore2Point(){
         int score =0;
         int round = 1;
-        int die1 = 1;
-        int die2 = 1;
-        int die3 = 2;
-        score = BuncoDice.Scoring(score, round, die1, die2, die3);
+        List<Integer> diceRollList = List.of(1, 1, 2);
+        score = BuncoDice.Scoring(score, round, diceRollList);
         Assertions.assertEquals(2, score);
     }
 
@@ -38,10 +34,8 @@ public class TestBuncoDice {
     public void testScoreTriples(){
         int score =0;
         int round = 1;
-        int die1 = 2;
-        int die2 = 2;
-        int die3 = 2;
-        score = BuncoDice.Scoring(score, round, die1, die2, die3);
+        List<Integer> diceRollList = List.of(2, 2, 2);
+        score = BuncoDice.Scoring(score, round, diceRollList);
         Assertions.assertEquals(5, score);
     }
 
@@ -49,10 +43,8 @@ public class TestBuncoDice {
     public void testScoreBunco(){
         int score =0;
         int round = 2;
-        int die1 = 2;
-        int die2 = 2;
-        int die3 = 2;
-        score = BuncoDice.Scoring(score, round, die1, die2, die3);
+        List<Integer> diceRollList = List.of(2, 2, 2);
+        score = BuncoDice.Scoring(score, round, diceRollList);
         Assertions.assertEquals(21, score);
     }
 
