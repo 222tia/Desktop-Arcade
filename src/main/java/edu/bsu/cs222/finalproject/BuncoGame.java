@@ -6,6 +6,7 @@ import java.util.List;
 
 public class BuncoGame {
     static List<Integer> diceRollList = new ArrayList<>();
+    @SuppressWarnings("InfiniteLoopStatement")
     public static void playBunco() throws IOException {
 
         int playerScore = 0;
