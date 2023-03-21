@@ -3,8 +3,8 @@ package edu.bsu.cs222.finalproject;
 public class BuncoDialogue {
     public static void DiceOutput(int dice1, int dice2, int dice3){
         System.out.println("Roll 1 = " + dice1 +
-                "\n Roll 2 = " + dice2 +
-                "\n Roll 3 = " + dice3 );
+                "\nRoll 2 = " + dice2 +
+                "\nRoll 3 = " + dice3 );
     }
 
     public static void PlayerScoreDisplay (int score){
@@ -26,11 +26,11 @@ public class BuncoDialogue {
     }
 
     public static void PlayerTurnDisplay(){
-        System.out.println("It's Your Turn!");
+        System.out.println("\nIt's Your Turn!");
     }
 
     public static void CompTurnDisplay(){
-        System.out.println("Computer Turn!");
+        System.out.println("\nComputer Turn!");
     }
 
     public static void RoundDisplay(int round){

@@ -15,10 +15,9 @@ public class BuncoGame {
 
 
         while (true) {
-
+            BuncoDialogue.PlayerTurnDisplay();
             boolean turnContinue;
             do {
-                BuncoDialogue.PlayerTurnDisplay();
                 BuncoDialogue.RoundDisplay(roundNumber);
 
                 diceRollList = BuncoDice.getDiceRolls();
@@ -28,7 +27,6 @@ public class BuncoGame {
                 int dice3Value = diceRollList.get(2);
                 BuncoDialogue.DiceOutput(dice1Value, dice2Value, dice3Value);
 
-
                 boolean pointGain = ((dice1Value == roundNumber) || (dice2Value == roundNumber) || (dice3Value == roundNumber));
                 boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
                 playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
@@ -36,6 +34,7 @@ public class BuncoGame {
                 turnContinue = pointGain || DiceTriples;
 
                 BuncoDialogue.PlayerScoreDisplay(playerScore);
+                diceRollList.clear();
 
                 if (playerScore >= 21) {
                     BuncoDialogue.PlayerWinDisplay();

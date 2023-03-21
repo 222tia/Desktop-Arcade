@@ -26,6 +26,7 @@ public class BuncoCompTurn {
             compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
             turnContinue = pointGain || DiceTriples;
             BuncoDialogue.CompScoreDisplay(compScore);
+            diceRollList.clear();
 
             if (compScore >= 21) {
                 BuncoDialogue.CompWinDisplay();
