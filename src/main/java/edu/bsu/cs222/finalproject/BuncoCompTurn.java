@@ -23,7 +23,7 @@ public class BuncoCompTurn {
 
             boolean pointGain = ((dice1Value== roundNumber) || (dice2Value== roundNumber) || (dice3Value == roundNumber));
             boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
-            compScore = BuncoDice.Scoring(compScore, roundNumber, dice1Value, dice2Value, dice3Value);
+            compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
             turnContinue = pointGain || DiceTriples;
             BuncoDialogue.CompScoreDisplay(compScore);
 
