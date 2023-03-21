@@ -33,6 +33,9 @@ public class DesktopArcadeDialogue {
                 
                 Otherwise, the winner is the first to get to 21 points!""");
     }
+    public static void exitProgram(){
+        System.out.println("To exit the program at any time, press 'x'");
+    }
     public static void incorrectInput(){
         System.out.println("Input not an option. Please try again.");
     }
