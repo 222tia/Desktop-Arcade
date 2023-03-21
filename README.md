@@ -23,3 +23,7 @@ Emma "Jay" Jordan
 <h3>Run Instructions</h3>
 <b>Iteration 1:</b> To start the program, run the PlayDesktopArcade Class. It will execute via the terminal.
 
+<h2>Warnings</h2>
+• Contains HelloApplication.java and HelloController.java for usage in future iterations that will implement JavaFX
+<br>• Suppressed Error "'while' statement cannot complete without throwing an exception" within BuncoGame.java Class
+<br>• Suppressed Error "Result of 'InputStream.read()' is ignored" within BuncoDice.java class
