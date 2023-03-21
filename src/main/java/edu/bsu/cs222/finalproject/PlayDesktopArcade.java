@@ -6,19 +6,20 @@ import java.util.Scanner;
 public class PlayDesktopArcade extends DesktopArcadeDialogue{
     public static void main(String[] args) throws IOException {
         Scanner userChoice = new Scanner(System.in);
+        String GameSelection;
         do {
             DesktopArcadeDialogue.startUpDialogue();
-
-            if (userChoice.nextLine().equals("1")) {
+            GameSelection = userChoice.nextLine();
+            if (GameSelection.equals("1")) {
                 DesktopArcadeDialogue.RPSRules();
                 RPSGame.playRPS();
             }
-            if (userChoice.nextLine().equals("2")) {
+            if (GameSelection.equals("2")) {
                 DesktopArcadeDialogue.BuncoRules();
                 BuncoGame.playBunco();
             } else {
                 DesktopArcadeDialogue.incorrectInput();
             }
-        }while(!userChoice.nextLine().equals("1")&& !userChoice.nextLine().equals("2"));
+        }while(!GameSelection.equals("1")&& !GameSelection.equals("2"));
     }
 }
