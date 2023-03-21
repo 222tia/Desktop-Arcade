@@ -15,5 +15,6 @@ public class RPSResultDecider {
         } else {
             System.out.println("computer played " + computerPlay + ", tie!");
         }
+        System.exit(0);
     }
 }
