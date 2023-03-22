@@ -1,5 +1,7 @@
 package edu.bsu.cs222.finalproject;
 
+import RockPaperScissorsGame.RPSGame;
+
 import java.io.IOException;
 import java.util.Scanner;
 

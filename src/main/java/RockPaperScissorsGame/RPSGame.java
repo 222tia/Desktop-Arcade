@@ -1,4 +1,4 @@
-package edu.bsu.cs222.finalproject;
+package RockPaperScissorsGame;
 
 public class RPSGame {
     private final static String userPlay = RPSUserPlayReceiver.getUserPlay();

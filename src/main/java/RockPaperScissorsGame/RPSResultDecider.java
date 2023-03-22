@@ -1,4 +1,4 @@
-package edu.bsu.cs222.finalproject;
+package RockPaperScissorsGame;
 
 public class RPSResultDecider {
     public static boolean winCondition(String winningPlay, String losingPlay) {

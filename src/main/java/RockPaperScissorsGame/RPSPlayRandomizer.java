@@ -1,4 +1,4 @@
-package edu.bsu.cs222.finalproject;
+package RockPaperScissorsGame;
 
 import java.util.ArrayList;
 import java.util.Arrays;
