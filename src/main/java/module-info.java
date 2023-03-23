@@ -7,4 +7,6 @@ module finalproject {
     exports edu.bsu.cs222.finalproject;
     exports RockPaperScissorsGame;
     opens RockPaperScissorsGame to javafx.fxml;
+    exports singlePlayerBunco;
+    opens singlePlayerBunco to javafx.fxml;
 }

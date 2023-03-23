@@ -1,6 +1,7 @@
 package edu.bsu.cs222.finalproject;
 
 import RockPaperScissorsGame.RPSGame;
+import singlePlayerBunco.BuncoGame;
 
 import java.io.IOException;
 import java.util.Scanner;
