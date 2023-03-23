@@ -1,4 +1,4 @@
-package edu.bsu.cs222.finalproject;
+package TicTacToe;
 
 import java.lang.reflect.Array;
 
