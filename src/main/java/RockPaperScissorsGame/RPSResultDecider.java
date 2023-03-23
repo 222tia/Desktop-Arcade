@@ -7,7 +7,7 @@ public class RPSResultDecider {
                 (winningPlay.equals("paper") && losingPlay.equals("rock"));
     }
 
-    public static void getResult(String userPlay, String computerPlay){
+    public static void getRoundResult(String userPlay, String computerPlay){
         if (winCondition(computerPlay, userPlay)) {
             System.out.println("computer played " + computerPlay + ", computer score + 1");
         } else if (winCondition(userPlay, computerPlay)) {
@@ -16,4 +16,6 @@ public class RPSResultDecider {
             System.out.println("computer played " + computerPlay + ", tie. No score added.");
         }
     }
+
+
 }
