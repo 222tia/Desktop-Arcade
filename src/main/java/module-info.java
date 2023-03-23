@@ -9,4 +9,6 @@ module finalproject {
     opens RockPaperScissorsGame to javafx.fxml;
     exports singlePlayerBunco;
     opens singlePlayerBunco to javafx.fxml;
+    exports TicTacToe;
+    opens TicTacToe to javafx.fxml;
 }
