@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TTTGameBoard {
-    /*public static void showGameBoard(char[][] board){
-        System.out.println(board[0][0] + "|" +  board[0][1] + "|" +  board[0][2] );
-        System.out.println("-+-+-");
-        System.out.println(board[1][0] + "|" +  board[1][1] + "|" +  board[1][2] );
-        System.out.println("-+-+-");
-        System.out.println(board[2][0] + "|" +  board[2][1] + "|" +  board[2][2] );
-    }*/
+    public static void showGameBoard(ArrayList<String> board){
+        System.out.println(board.get(0) + " | " +  board.get(1) + " | " +  board.get(2) );
+        System.out.println("------------");
+        System.out.println(board.get(3) + " | " +  board.get(4) + " | " +  board.get(5) );
+        System.out.println("------------");
+        System.out.println(board.get(6) + " | " +  board.get(7) + " | " +  board.get(9) );
+    }
 
     public static boolean emptySpaceCheck(ArrayList<String> gameBoard, int Play){
         String b =gameBoard.get(Play);
