@@ -18,7 +18,6 @@ public class DesktopArcadeDialogue {
                 1.) Rock beats Scissors.
                 2.) Scissors beats Paper.
                 3.) Paper beats Rock.
-                
                 """);
     }
     public static void BuncoRules(){

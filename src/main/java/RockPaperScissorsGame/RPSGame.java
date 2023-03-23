@@ -18,6 +18,8 @@ public class RPSGame {
 
             System.out.println("\nYour score is: " + userScore + "\nComputer score is: " + computerScore);
 
+            RPSResultDecider.getGameResult(userScore, computerScore);
+
         }
 
     }
