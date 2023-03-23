@@ -101,4 +101,58 @@ public class TestRPSScoreKeeper {
         final int computerScore = 0;
         Assertions.assertEquals(0, RPSScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore));
     }
+
+    @Test
+    public void testUserWinsBy2(){
+        final int computerScore = 0;
+        final int userScore = 2;
+        Assertions.assertTrue(RPSScoreKeeper.checkScore(userScore, computerScore));
+    }
+
+    @Test
+    public void testUserWinsBy1(){
+        final int computerScore = 2;
+        final int userScore = 3;
+        Assertions.assertTrue(RPSScoreKeeper.checkScore(userScore, computerScore));
+    }
+    @Test
+    public void testComputerWinsBy2(){
+        final int computerScore = 2;
+        final int userScore = 0;
+        Assertions.assertTrue(RPSScoreKeeper.checkScore(computerScore, userScore));
+    }
+
+    @Test
+    public void testComputerWinsBy1(){
+        final int computerScore = 3;
+        final int userScore = 2;
+        Assertions.assertTrue(RPSScoreKeeper.checkScore(computerScore, userScore));
+    }
+    @Test
+    public void testNoWinnerEvenScore_ComputerScoreFirst(){
+        final int computerScore = 2;
+        final int userScore = 2;
+        Assertions.assertFalse(RPSScoreKeeper.checkScore(computerScore, userScore));
+    }
+
+    @Test
+    public void testNoWinnerEvenScore_UserScoreFirst(){
+        final int computerScore = 2;
+        final int userScore = 2;
+        Assertions.assertFalse(RPSScoreKeeper.checkScore(userScore, computerScore));
+    }
+
+    @Test
+    public void testNoWinnerUserScore1(){
+        final int computerScore = 0;
+        final int userScore = 1;
+        Assertions.assertFalse(RPSScoreKeeper.checkScore(userScore, computerScore));
+    }
+
+    @Test
+    public void testNoWinnerComputerScore1(){
+        final int computerScore = 0;
+        final int userScore = 1;
+        Assertions.assertFalse(RPSScoreKeeper.checkScore(computerScore, userScore));
+    }
 }
