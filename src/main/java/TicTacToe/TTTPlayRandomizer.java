@@ -3,7 +3,7 @@ package TicTacToe;
 import java.util.List;
 
 public class TTTPlayRandomizer {
-    private final static List<Integer> possibleInputs = List.of(1, 2, 3, 4, 5, 6, 7 ,8 ,9);
+    private final static List<Integer> possibleInputs = List.of(0, 1, 2, 3, 4, 5, 6, 7 ,8);
 
     public static int getRandomPlay() {
 
@@ -11,4 +11,6 @@ public class TTTPlayRandomizer {
         return (int) (Math.random() * 9);
 
     }
+
+
 }

@@ -1,11 +1,12 @@
 package TicTacToe;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TTTDialogue {
-    static char[][] gameBoard = {{' ', ' ', ' '},
-            {' ', ' ', ' '},
-            {' ', ' ', ' '}};
+    private static final ArrayList<String> gameBoard = new ArrayList<>(
+            Arrays.asList(" "," "," "," "," "," "," "," "," "));
 
     public static void Instructions(){
         System.out.println("""
@@ -17,7 +18,7 @@ public class TTTDialogue {
                   Type the number of your chosen space.
                 """);
 
-        TTTGameBoard.showGameBoard(gameBoard);
+        //TTTGameBoard.showGameBoard(gameBoard);
     }
 
 }
