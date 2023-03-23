@@ -10,14 +10,15 @@ public class DesktopArcadeDialogue {
     }
     public static void RPSRules(){
         System.out.println("""
-                Rock, Paper, Scissors is played by playing Rock, Paper, or Scissors.
+                In Rock, Paper, Scissors! You will play a best of 3 against an AI by
+                playing Rock, Paper, or Scissors.
                 
-                The winner is determined by these rules:
+                The winner of the round is determined by these rules:
                 
-                Rock beats Scissors
-                Scissors beats Paper
-                Paper beats Rock
-              
+                1.) Rock beats Scissors.
+                2.) Scissors beats Paper.
+                3.) Paper beats Rock.
+                
                 """);
     }
     public static void BuncoRules(){
