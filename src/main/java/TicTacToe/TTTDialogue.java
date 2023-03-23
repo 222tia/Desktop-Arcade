@@ -3,6 +3,10 @@ package TicTacToe;
 import java.lang.reflect.Array;
 
 public class TTTDialogue {
+    static char[][] gameBoard = {{' ', ' ', ' '},
+            {' ', ' ', ' '},
+            {' ', ' ', ' '}};
+
     public static void Instructions(){
         System.out.println("""
                               1 | 2 | 3
@@ -12,9 +16,8 @@ public class TTTDialogue {
                               7 | 8 | 9
                   Type the number of your chosen space.
                 """);
+
+        TTTGameBoard.showGameBoard(gameBoard);
     }
 
-    /*public static void BoardDisplay(Array board){
-        System.out.println("\n "+board[0]+" | "+board[1]+" | \"++\"\n------------\n   |   |\n------------\n   |   |");
-    }*/
 }
