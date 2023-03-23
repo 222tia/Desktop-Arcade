@@ -10,6 +10,7 @@ public class DesktopArcadeDialogue {
     }
     public static void RPSRules(){
         System.out.println("""
+                
                 In Rock, Paper, Scissors! You will play a best of 3 against an AI by
                 playing Rock, Paper, or Scissors.
                 
@@ -22,6 +23,7 @@ public class DesktopArcadeDialogue {
     }
     public static void BuncoRules(){
         System.out.println("""
+                
                 Bunco is played by rolling 3 dice.
                 Rounds are numbered from 1 to 6 before looping back to 1.
                 When you gain points you get to roll again! When no points are gained play passes and your turn is over.
