@@ -18,14 +18,8 @@ public class RPSGame {
 
             System.out.println("\nYour score is: " + userScore + "\nComputer score is: " + computerScore);
 
-            // TODO move this to it's own method in ResultDecider
-            if (userScore == 3) {
-                System.out.println("\n You win!");
-                System.exit(0);
-            } else if (computerScore == 3){
-                System.out.println("\n You lose!");
-                System.exit(0);
-            }
+            RPSScoreKeeper.checkScore(userScore, computerScore);
+
         }
 
     }

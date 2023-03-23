@@ -9,11 +9,11 @@ public class RPSResultDecider {
 
     public static void getResult(String userPlay, String computerPlay){
         if (winCondition(computerPlay, userPlay)) {
-            System.out.println("computer played " + computerPlay + ", you lose!");
+            System.out.println("computer played " + computerPlay + ", computer score + 1");
         } else if (winCondition(userPlay, computerPlay)) {
-            System.out.println("computer played " + computerPlay + ", you win!");
+            System.out.println("computer played " + computerPlay + ", your score + 1");
         } else {
-            System.out.println("computer played " + computerPlay + ", tie!");
+            System.out.println("computer played " + computerPlay + ", tie. No score added.");
         }
     }
 }

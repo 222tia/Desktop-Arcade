@@ -14,4 +14,14 @@ public class RPSScoreKeeper {
         }
         return score;
     }
+
+    public static void checkScore(int userScore, int computerScore){
+        if (userScore == 3) {
+            System.out.println("\nYou win!");
+            System.exit(0);
+        } else if (computerScore == 3){
+            System.out.println("\nYou lose!");
+            System.exit(0);
+        }
+    }
 }
