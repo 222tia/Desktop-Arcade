@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class RPSUserPlayReceiver {
     public static String getUserPlay() {
 
-        System.out.println("\nRock, Paper, or Scissors?: ");
-
         Scanner userPlayScanner = new Scanner(System.in);
         String userPlay = userPlayScanner.nextLine().toLowerCase();
 

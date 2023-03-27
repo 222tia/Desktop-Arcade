@@ -8,6 +8,7 @@ public class RPSGame {
 
         while (userScore< 3 || computerScore < 3) {
 
+            System.out.println("\nRock, Paper, or Scissors?: ");
             String userPlay = RPSUserPlayReceiver.getUserPlay();
             String computerPlay = RPSPlayRandomizer.getRandomPlay();
 
