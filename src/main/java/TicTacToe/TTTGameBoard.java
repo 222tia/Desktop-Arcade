@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class TTTGameBoard {
 
     public static boolean emptySpaceCheck(ArrayList<String> gameBoard, int Play){
-        String b =gameBoard.get(Play);
+        String b = gameBoard.get(Play);
         return b.equals(" ");
     }
 

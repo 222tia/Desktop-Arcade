@@ -5,18 +5,19 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TTTTurnMove {
-    private final static List<Integer> possibleInputs = List.of(1, 2, 3, 4, 5, 6, 7 ,8 ,9);
+    private final static List<Integer> possibleMoves = List.of(1, 2, 3, 4, 5, 6, 7 ,8 ,9);
 
     public static int getUserTurnMove() {
 
-        Scanner userPlayScanner = new Scanner(System.in);
-        int userPlay = userPlayScanner.nextInt(); // Scanner.nextInt() might not be testable
 
-        if (!possibleInputs.contains(userPlay)) {
-            System.err.println("Invalid input (enter a number 1-9).");
+        Scanner userPlayScanner = new Scanner(System.in);
+        int userTurn = userPlayScanner.nextInt(); // Scanner.nextInt() might not be testable
+
+        if (!possibleMoves.contains(userTurn)) {
+            TTTDialogue.invalidInput();
         }
 
-        return userPlay;
+        return userTurn;
 
     }
 

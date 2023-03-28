@@ -34,4 +34,8 @@ public class TTTDialogue {
     public static void improperSpace() {
         System.out.println("That space is not empty");
     }
+
+    public static void invalidInput(){
+        System.out.println("Invalid input (enter a number 1-9).");
+    }
 }
