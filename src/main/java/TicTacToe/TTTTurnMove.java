@@ -1,14 +1,14 @@
 package TicTacToe;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class TTTGetUserPlay {
+public class TTTTurnMove {
     private final static List<Integer> possibleInputs = List.of(1, 2, 3, 4, 5, 6, 7 ,8 ,9);
 
     public static int getUserPlay() {
 
-        System.out.println("\nEnter a number 1-9 to play on the board: ");
 
         Scanner userPlayScanner = new Scanner(System.in);
         int userPlay = userPlayScanner.nextInt(); // Scanner.nextInt() might not be testable
@@ -19,6 +19,21 @@ public class TTTGetUserPlay {
 
         return userPlay;
 
+    }
+
+    public static int RunCompTurn(ArrayList<String> board){
+        TTTDialogue.CompTurn();
+        boolean check = false;
+        int turn;
+        do {
+            turn = getRandomPlay();
+            check = TTTGameBoard.emptySpaceCheck(board, turn);
+        }while(!check);
+            return turn;
+    }
+
+    public static int getRandomPlay() {
+        return (int) (Math.random() * 9);
     }
 }
 
