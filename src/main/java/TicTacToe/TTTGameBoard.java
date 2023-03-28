@@ -1,11 +1,8 @@
 package TicTacToe;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TTTGameBoard {
-    public static final ArrayList<String> gameBoard = new ArrayList<>(
-            Arrays.asList(" "," "," "," "," "," "," "," "," "));
 
     public static boolean emptySpaceCheck(ArrayList<String> gameBoard, int Play){
         String b =gameBoard.get(Play);
@@ -17,9 +14,9 @@ public class TTTGameBoard {
         return gameBoard;
     }
 
-    public static ArrayList<String>gameBoard() {
-        final ArrayList<String> gameBoard = new ArrayList<>(
-                Arrays.asList(" "," "," "," "," "," "," "," "," "));
-        return gameBoard;
-    }
+//    public static ArrayList<String>gameBoard() {
+//        final ArrayList<String> gameBoard = new ArrayList<>(
+//                Arrays.asList(" "," "," "," "," "," "," "," "," "));
+//        return gameBoard;
+//    }
 }
