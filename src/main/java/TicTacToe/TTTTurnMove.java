@@ -14,7 +14,7 @@ public class TTTTurnMove {
         int userPlay = userPlayScanner.nextInt(); // Scanner.nextInt() might not be testable
 
         if (!possibleInputs.contains(userPlay)) {
-            System.err.println("Invalid input (check spelling).");
+            System.err.println("Invalid input (enter a number 1-9).");
         }
 
         return userPlay;
