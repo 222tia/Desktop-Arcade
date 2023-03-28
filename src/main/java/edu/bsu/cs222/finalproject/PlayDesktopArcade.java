@@ -21,9 +21,13 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
             if (GameSelection.equals("2")) {
                 DesktopArcadeDialogue.BuncoRules();
                 BuncoGame.playBunco();
-            } else {
+            }
+            if (GameSelection.equals("3") {
+                DesktopArcadeDialogue.TTTRules();
+                TTTGame.playTTT();
+            }else{
                 DesktopArcadeDialogue.incorrectInput();
             }
-        }while(!GameSelection.equals("1")&& !GameSelection.equals("2"));
+        }while(!GameSelection.equals("1")&& !GameSelection.equals("2") && !GameSelection.equals("3"));
     }
 }

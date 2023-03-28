@@ -1,14 +1,22 @@
 package edu.bsu.cs222.finalproject;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class DAGUIController {
     @FXML
-    private Label welcomeText;
+    public Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void onRPSClick(ActionEvent actionEvent) {
+
     }
+
+    public void onBuncoClick(ActionEvent actionEvent) {
+    }
+
+    public void onTTTClick(ActionEvent actionEvent) {
+    }
+
 }
