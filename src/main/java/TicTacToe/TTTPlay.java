@@ -11,7 +11,7 @@ public class TTTPlay {
             int play = TTTTurnMove.getUserTurnMove();
             openSpace = TTTGameBoard.emptySpaceCheck(Board, play);
             if (!openSpace) {
-                TTTDialogue.inproperSpace();
+                TTTDialogue.improperSpace();
             }
         }while (!openSpace);
     }

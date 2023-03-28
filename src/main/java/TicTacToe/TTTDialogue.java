@@ -1,8 +1,6 @@
 package TicTacToe;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TTTDialogue {
 
@@ -29,11 +27,11 @@ public class TTTDialogue {
         System.out.println(board.get(6) + " | " +  board.get(7) + " | " +  board.get(9) );
     }
 
-    public static void CompTurn(){
+    public static void compTurn(){
         System.out.println("It's the Computer's turn!");
     }
 
-    public static void inproperSpace() {
+    public static void improperSpace() {
         System.out.println("That space is not empty");
     }
 }

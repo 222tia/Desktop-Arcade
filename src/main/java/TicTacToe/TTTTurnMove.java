@@ -21,7 +21,7 @@ public class TTTTurnMove {
     }
 
     public static int getCompTurnMove(ArrayList<String> board){
-        TTTDialogue.CompTurn();
+        TTTDialogue.compTurn();
         boolean check;
         int turn;
         do {
