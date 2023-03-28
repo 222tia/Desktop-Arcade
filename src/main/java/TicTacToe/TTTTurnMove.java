@@ -25,13 +25,13 @@ public class TTTTurnMove {
         boolean check;
         int turn;
         do {
-            turn = getRandomPlay();
+            turn = getRandomMove();
             check = TTTGameBoard.emptySpaceCheck(board, turn);
         }while(!check);
             return turn;
     }
 
-    public static int getRandomPlay() {
+    public static int getRandomMove() {
         return (int) (Math.random() * 9);
     }
 }
