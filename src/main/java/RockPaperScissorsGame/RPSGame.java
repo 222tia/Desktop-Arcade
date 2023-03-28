@@ -12,14 +12,14 @@ public class RPSGame {
             String userPlay = RPSUserPlayReceiver.getUserPlay();
             String computerPlay = RPSPlayRandomizer.getRandomPlay();
 
-            RPSResultDecider.getRoundResult(userPlay, computerPlay);
+            RPSDialogue.showRoundResult(userPlay, computerPlay);
 
             userScore = RPSScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
             computerScore = RPSScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
 
             System.out.println("\nYour score is: " + userScore + "\nComputer score is: " + computerScore);
 
-            RPSResultDecider.getGameResult(userScore, computerScore);
+            RPSDialogue.showGameResult(userScore, computerScore);
 
         }
 
