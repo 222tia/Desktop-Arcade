@@ -8,28 +8,25 @@ public class TTTTurnMove {
     private final static List<Integer> possibleMoves = List.of(1, 2, 3, 4, 5, 6, 7 ,8 ,9);
 
     public static int getUserTurnMove() {
-
-
-        Scanner userPlayScanner = new Scanner(System.in);
-        int userTurn = userPlayScanner.nextInt(); // Scanner.nextInt() might not be testable
+        Scanner userTurnMoveScanner = new Scanner(System.in);
+        int userTurn = userTurnMoveScanner.nextInt();
 
         if (!possibleMoves.contains(userTurn)) {
             TTTDialogue.invalidInput();
         }
 
         return userTurn;
-
     }
 
     public static int getCompTurnMove(ArrayList<String> board){
         TTTDialogue.compTurn();
-        boolean check;
-        int turn;
+        boolean checkEmptySpace;
+        int compTurn;
         do {
-            turn = getRandomMove();
-            check = TTTGameBoard.emptySpaceCheck(board, turn);
-        }while(!check);
-            return turn;
+            compTurn = getRandomMove();
+            checkEmptySpace = TTTGameBoard.emptySpaceCheck(board, compTurn);
+        } while(!checkEmptySpace);
+            return compTurn;
     }
 
     public static int getRandomMove() {
