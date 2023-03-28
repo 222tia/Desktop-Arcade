@@ -8,7 +8,7 @@ public class TTTPlay {
         TTTDialogue.Instructions();
         boolean openSpace;
         do {
-            int play = TTTTurnMove.getUserPlay();
+            int play = TTTTurnMove.getUserTurnMove();
             openSpace = TTTGameBoard.emptySpaceCheck(Board, play);
             if (!openSpace) {
                 TTTDialogue.inproperSpace();
