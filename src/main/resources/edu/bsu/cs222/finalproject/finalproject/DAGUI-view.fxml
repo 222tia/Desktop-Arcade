@@ -18,35 +18,42 @@
       <VBox.margin>
          <Insets />
       </VBox.margin></Label>
-   <Text fill="#e95da5" strokeType="OUTSIDE" strokeWidth="0.0" text="★○★○★○★○★○★○★○★○★○★○★○★○★" textAlignment="CENTER" wrappingWidth="431.0078125">
-      <font>
-         <Font name="OCR A Extended" size="18.0" />
-      </font>
-   </Text>
-    <Button onAction="#onRPSClick" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: EA8FEA;" text="Rock, Paper, Scissors" textAlignment="CENTER" textFill="#ad3aad">
-      <font>
-         <Font name="Constantia Bold" size="12.0" />
-      </font>
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor></Button>
-   <Button mnemonicParsing="false" onAction="#onBuncoClick" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: bbdcf2;" text="Bunco!" textFill="#5d9cc6">
-      <font>
-         <Font name="Constantia Bold" size="12.0" />
-      </font>
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor></Button>
-   <Button mnemonicParsing="false" onAction="#onTTTClick" prefHeight="24.0" prefWidth="250.0" style="-fx-background-color: b2abff;" text="Tic, Tac, Toe" textFill="#5a52d7">
-      <font>
-         <Font name="Constantia Bold" size="12.0" />
-      </font>
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor></Button>
-   <Text fill="#e95da5" layoutX="45.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="★○★○★○★○★○★○★○★○★○★○★○★○★" textAlignment="CENTER" wrappingWidth="431.0078125">
-      <font>
-         <Font name="OCR A Extended" size="18.0" />
-      </font>
-   </Text>
+   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="349.0" spacing="20.0">
+      <children>
+         <Text fill="#e95da5" strokeType="OUTSIDE" strokeWidth="0.0" text="★○★○★○★○★○★○★○★○★○★○★○★○★" textAlignment="CENTER" wrappingWidth="431.0078125">
+            <font>
+               <Font name="OCR A Extended" size="18.0" />
+            </font>
+         </Text>
+          <Button onAction="#onRPSClick" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: EA8FEA;" text="Rock, Paper, Scissors" textAlignment="CENTER" textFill="#ad3aad">
+            <font>
+               <Font name="Constantia Bold" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#onBuncoClick" prefHeight="24.0" prefWidth="251.0" style="-fx-background-color: bbdcf2;" text="Bunco!" textFill="#5d9cc6">
+            <font>
+               <Font name="Constantia Bold" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#onTTTClick" prefHeight="24.0" prefWidth="250.0" style="-fx-background-color: b2abff;" text="Tic, Tac, Toe" textFill="#5a52d7">
+            <font>
+               <Font name="Constantia Bold" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Text fill="#e95da5" strokeType="OUTSIDE" strokeWidth="0.0" text="★○★○★○★○★○★○★○★○★○★○★○★○★" textAlignment="CENTER" wrappingWidth="431.0078125">
+            <font>
+               <Font name="OCR A Extended" size="18.0" />
+            </font>
+         </Text>
+      </children>
+   </VBox>
 </VBox>

@@ -61,3 +61,5 @@ jlink {
 jlinkZip {
     group = 'distribution'
 }
+
+mainClassName = 'edu.bsu.cs222.finalproject.DAGUIApplication'

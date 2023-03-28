@@ -10,13 +10,15 @@ public class DAGUIController {
 
     @FXML
     public void onRPSClick(ActionEvent actionEvent) {
-
+        DesktopArcadeDialogue.RPSRules();
     }
 
     public void onBuncoClick(ActionEvent actionEvent) {
+        DesktopArcadeDialogue.BuncoRules();
     }
 
     public void onTTTClick(ActionEvent actionEvent) {
+        DesktopArcadeDialogue.TTTRules();
     }
 
 }
