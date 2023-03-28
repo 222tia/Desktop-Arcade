@@ -2,8 +2,8 @@ package TicTacToe;
 
 import java.util.ArrayList;
 
-public class TTTPlay {
-    public static void TTTRun(){
+public class TTTGame {
+    public static void playTTT(){
         ArrayList<String> Board =TTTGameBoard.gameBoard();
         TTTDialogue.Instructions();
         boolean openSpace;

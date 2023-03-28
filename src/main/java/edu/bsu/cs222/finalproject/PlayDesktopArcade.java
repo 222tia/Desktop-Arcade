@@ -1,7 +1,7 @@
 package edu.bsu.cs222.finalproject;
 
 import RockPaperScissorsGame.RPSGame;
-import TicTacToe.TTTPlay;
+import TicTacToe.TTTGame;
 import singlePlayerBunco.BuncoGame;
 
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
             }
             if (GameSelection.equals("3")) {
                 DesktopArcadeDialogue.TTTRules();
-                TTTPlay.TTTRun();
+                TTTGame.playTTT();
             }else{
                 DesktopArcadeDialogue.incorrectInput();
             }
