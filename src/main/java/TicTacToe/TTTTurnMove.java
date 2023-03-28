@@ -23,7 +23,7 @@ public class TTTTurnMove {
 
     public static int RunCompTurn(ArrayList<String> board){
         TTTDialogue.CompTurn();
-        boolean check = false;
+        boolean check;
         int turn;
         do {
             turn = getRandomPlay();

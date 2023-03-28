@@ -17,7 +17,7 @@ public class TTTGameBoard {
         return gameBoard;
     }
 
-    public static ArrayList gameBoard() {
+    public static ArrayList<String>gameBoard() {
         final ArrayList<String> gameBoard = new ArrayList<>(
                 Arrays.asList(" "," "," "," "," "," "," "," "," "));
         return gameBoard;

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class TTTPlay {
     public static void TTTRun(){
-        ArrayList Board =TTTGameBoard.gameBoard();
+        ArrayList<String> Board =TTTGameBoard.gameBoard();
         TTTDialogue.Instructions();
-        boolean openSpace=false;
+        boolean openSpace;
         do {
             int play = TTTTurnMove.getUserPlay();
             openSpace = TTTGameBoard.emptySpaceCheck(Board, play);
