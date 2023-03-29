@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class DAGUIController {
+public class DAController {
     @FXML
     public Label welcomeText;
 
