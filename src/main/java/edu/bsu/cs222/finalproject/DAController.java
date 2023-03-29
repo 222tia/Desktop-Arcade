@@ -9,6 +9,11 @@ public class DAController {
     public Label welcomeText;
 
     @FXML
+    protected void onHelloButtonClick() {
+        welcomeText.setText("Welcome to JavaFX Application!");
+    }
+
+    @FXML
     public void onRPSClick(ActionEvent actionEvent) {
         DesktopArcadeDialogue.RPSRules();
     }
