@@ -25,10 +25,10 @@ public class TTTGame {
             }
         }while (!openSpace);
 
-        TTTGameBoard.showUpdatedGameBaord(gameBoard, userPlay, userLetter);
+        TTTGameBoard.showUpdatedGameBoard(gameBoard, userPlay, userLetter);
 
         compPlay = TTTTurnMove.getCompTurnMove(gameBoard);
-        TTTGameBoard.showUpdatedGameBaord(gameBoard, compPlay, compLetter);
+        TTTGameBoard.showUpdatedGameBoard(gameBoard, compPlay, compLetter);
 
     }
 }

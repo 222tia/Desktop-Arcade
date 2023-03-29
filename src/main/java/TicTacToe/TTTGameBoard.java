@@ -14,7 +14,7 @@ public class TTTGameBoard {
         return gameBoard;
     }
 
-    public static void showUpdatedGameBaord(ArrayList<String> gameBoard, int play, String letter){
+    public static void showUpdatedGameBoard(ArrayList<String> gameBoard, int play, String letter){
         ArrayList<String> updatedGameBoard = updateGameBoard(gameBoard, play, letter);
         System.out.println(" " + updatedGameBoard.get(0) + " | " + updatedGameBoard.get(1) + " | " + updatedGameBoard.get(2) +
                 "\n------------\n" +
