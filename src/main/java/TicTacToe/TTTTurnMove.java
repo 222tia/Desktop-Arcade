@@ -15,7 +15,7 @@ public class TTTTurnMove {
             TTTDialogue.invalidInput();
         }
 
-        return userTurn;
+        return userTurn - 1;
     }
 
     public static int getCompTurnMove(ArrayList<String> board){
