@@ -7,6 +7,10 @@ public class TTTGame {
 
     public static ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
+    public static final String userLetter = "X";
+    public static final String compLetter = "O";
+    static int userPlay;
+    static int compPlay;
     public static void playTTT(){
 //        ArrayList<String> Board =TTTGameBoard.gameBoard();
 //        I think we can just declare the arraylist as a variable in the class instead of having a
@@ -14,11 +18,17 @@ public class TTTGame {
         TTTDialogue.Instructions();
         boolean openSpace;
         do {
-            int play = TTTTurnMove.getUserTurnMove();
-            openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, play);
+            userPlay = TTTTurnMove.getUserTurnMove();
+            openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
             if (!openSpace) {
                 TTTDialogue.improperSpace();
             }
         }while (!openSpace);
+
+        TTTGameBoard.showUpdatedGameBaord(gameBoard, userPlay, userLetter);
+
+        compPlay = TTTTurnMove.getCompTurnMove(gameBoard);
+        TTTGameBoard.showUpdatedGameBaord(gameBoard, compPlay, compLetter);
+
     }
 }
