@@ -21,4 +21,14 @@ public class TestTTTGameBoard {
         int play = 1;
         Assertions.assertTrue(TTTGameBoard.emptySpaceCheck(gameBoard,play));
     }
+
+    @Test
+    public void testUpdateGameBoard(){
+        int play = 0;
+        String letter = "X";
+        ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList(" ", " ", " ", " ", " ", " ", " ", " ", " "));
+        ArrayList<String> expectedUpdatedGameBoard = new ArrayList<>(Arrays.asList("X", " ", " ", " ", " ", " ", " ", " ", " "));
+        ArrayList<String> updatedGameBoard = TTTGameBoard.updateGameBoard(gameBoard, play, letter);
+        Assertions.assertEquals(expectedUpdatedGameBoard, updatedGameBoard);
+    }
 }
