@@ -1,5 +1,7 @@
 package edu.bsu.cs222.finalproject;
 
+import edu.bsu.cs222.finalproject.DesktopArcadeDialogue;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +42,7 @@ public class BuncoGame {
                     BuncoDialogue.PlayerWinDisplay();
                 }
 
-                BuncoDice.EnterContinue();
+                DesktopArcadeDialogue.EnterContinue();
 
 
             } while (turnContinue);

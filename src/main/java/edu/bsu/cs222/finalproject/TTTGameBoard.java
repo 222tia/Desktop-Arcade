@@ -16,6 +16,7 @@ public class TTTGameBoard {
 
     public static void showUpdatedGameBoard(ArrayList<String> gameBoard, int play, String letter){
         ArrayList<String> updatedGameBoard = updateGameBoard(gameBoard, play, letter);
+        //TTTDialogue.showGameBoard(updatedGameBoard);
         System.out.println(" " + updatedGameBoard.get(0) + " | " + updatedGameBoard.get(1) + " | " + updatedGameBoard.get(2) +
                 "\n------------\n" +
                 " " + updatedGameBoard.get(3) + " | " + updatedGameBoard.get(4) + " | " + updatedGameBoard.get(5) +

@@ -2,6 +2,8 @@ package edu.bsu.cs222.finalproject;
 
 import java.util.ArrayList;
 
+import static java.lang.System.exit;
+
 public class TTTDialogue {
 
     public static void Instructions(){
@@ -37,5 +39,14 @@ public class TTTDialogue {
 
     public static void invalidInput(){
         System.out.println("Invalid input (enter a number 1-9).");
+    }
+
+    public static void userWinDialogue() {
+        System.out.println("You win!");
+        exit(1);
+    }
+
+    public static void compWinDialogue() {
+        System.out.println("Sorry, you lose!");
     }
 }
