@@ -22,11 +22,11 @@ public class TTTDialogue {
     }
 
     public static void showGameBoard(ArrayList<String> board){
-        System.out.println(" " + board.get(0) + " | " + board.get(1) + " | " + board.get(2) +
-                "\n------------\n" +
-                " " + board.get(3) + " | " + board.get(4) + " | " + board.get(5) +
-                "\n------------\n" +
-                " " + board.get(6) + " | " + board.get(7) + " | " + board.get(8));
+        System.out.println("              " + board.get(0) + " | " + board.get(1) + " | " + board.get(2) +
+                "\n             ------------\n" +
+                "              " + board.get(3) + " | " + board.get(4) + " | " + board.get(5) +
+                "\n             ------------\n" +
+                "              " + board.get(6) + " | " + board.get(7) + " | " + board.get(8));
     }
 
     public static void compTurn(){
