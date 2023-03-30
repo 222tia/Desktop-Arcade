@@ -50,4 +50,9 @@ public class TTTDialogue {
         System.out.println("Sorry, you lose!");
         System.exit(0);
     }
+
+    public static String TTTXorOChoice(){
+        System.out.println("Do you want to play as Xs or Os?");
+        return ("O");
+    }
 }
