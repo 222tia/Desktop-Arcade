@@ -1,4 +1,4 @@
-package RockPaperScissorsGame;
+package edu.bsu.cs222.finalproject;
 
 public class RPSScoreKeeper {
     public static int addUserScore(String computerPlay, String userPlay, int score){

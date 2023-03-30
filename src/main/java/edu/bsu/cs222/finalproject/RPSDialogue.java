@@ -1,4 +1,4 @@
-package RockPaperScissorsGame;
+package edu.bsu.cs222.finalproject;
 
 public class RPSDialogue extends RPSResultDecider{
     public static void showRoundResult(String userPlay, String computerPlay){

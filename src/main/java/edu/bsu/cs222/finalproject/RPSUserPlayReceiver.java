@@ -1,4 +1,4 @@
-package RockPaperScissorsGame;
+package edu.bsu.cs222.finalproject;
 
 import java.util.Scanner;
 

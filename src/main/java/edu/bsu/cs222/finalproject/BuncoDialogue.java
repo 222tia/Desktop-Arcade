@@ -1,4 +1,4 @@
-package singlePlayerBunco;
+package edu.bsu.cs222.finalproject;
 
 public class BuncoDialogue {
     public static void DiceOutput(int dice1, int dice2, int dice3){

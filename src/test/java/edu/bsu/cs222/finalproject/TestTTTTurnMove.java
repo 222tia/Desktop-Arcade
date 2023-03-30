@@ -1,6 +1,5 @@
 package edu.bsu.cs222.finalproject;
 
-import TicTacToe.TTTTurnMove;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

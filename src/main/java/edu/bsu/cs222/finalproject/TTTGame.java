@@ -1,4 +1,4 @@
-package TicTacToe;
+package edu.bsu.cs222.finalproject;
 
 import java.util.ArrayList;
 import java.util.Arrays;

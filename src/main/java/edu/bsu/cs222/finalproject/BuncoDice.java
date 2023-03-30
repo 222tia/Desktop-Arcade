@@ -1,4 +1,4 @@
-package singlePlayerBunco;
+package edu.bsu.cs222.finalproject;
 
 
 import java.io.IOException;
