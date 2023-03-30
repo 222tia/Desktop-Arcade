@@ -34,15 +34,19 @@ public class TTTGame {
             TTTGameBoard.showUpdatedGameBoard(gameBoard, userPlay, userLetter);
             userWin = TTTGetResults.checkBoard(userLetter, gameBoard);
             DesktopArcadeDialogue.EnterContinue();
+
             if(userWin){
                 TTTDialogue.userWinDialogue();
             }
+
             compPlay = TTTTurnMove.getCompTurnMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, compPlay, compLetter);
             compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
+
             if(compWin){
                 TTTDialogue.compWinDialogue();
             }
+
         }while((!userWin)&&(!compWin));
 
     }
