@@ -32,5 +32,10 @@ public class TTTTurnMove {
     public static int getRandomMove() {
         return (int) (Math.random() * 9);
     }
+
+    /*public static Integer CompAI(ArrayList<String> board, int play){
+
+    }*/
+
 }
 
