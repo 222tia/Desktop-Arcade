@@ -19,10 +19,10 @@ public class TTTTurnMove {
         return userTurn - 1;
     }
 
-    public static int getCompTurnMove(ArrayList<String> board){
+    public static int getCompTurnMove(ArrayList<String> board, String letter){
         TTTDialogue.compTurn();
         boolean checkEmptySpace;
-        int compTurn = TTTTurnLogic.TurnLogicCheck(board);
+        int compTurn = TTTTurnLogic.TurnLogicCheck(board, letter);
         if (compTurn==9) {
             do {
                 compTurn = getRandomMove();
@@ -34,6 +34,22 @@ public class TTTTurnMove {
 
     public static int getRandomMove() {
         return (int) (Math.random() * 9);
+    }
+
+    public static String XorOChoice() {
+        TTTDialogue.LetterChoiceDialogue();
+        String letter;
+        do{
+            Scanner userLetterScanner = new Scanner(System.in);
+            letter = userLetterScanner.nextLine();
+            if ((letter.equals("O"))||(letter.equals("X"))){
+                return letter;
+            }
+            else{
+                TTTDialogue.InvalidInput();
+            }
+        } while (!letter.equals("O") && !letter.equals("X"));
+        return letter;
     }
 
 }

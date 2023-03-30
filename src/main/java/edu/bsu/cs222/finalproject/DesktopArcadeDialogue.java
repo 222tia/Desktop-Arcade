@@ -43,7 +43,6 @@ public class DesktopArcadeDialogue {
                 
                 Tic-Tac-Toe is played by using a 3x3 grid.
                 Players take turns to select a spot in the grid to put an X or an O.
-                You are X!
                 If a player gets 3 in a row vertically, horizontally, or diagonally they win!
                 Press enter to continue play.
                 """);

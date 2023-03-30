@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class TTTTurnLogic {
 
-    public static Integer TurnLogicCheck(ArrayList<String> gameBoard){
-        int compTurn = RowsAI("O", gameBoard);
+    public static Integer TurnLogicCheck(ArrayList<String> gameBoard, String letter){
+        int compTurn = RowsAI(letter, gameBoard);
         if (compTurn==9){
-            compTurn = ColumnsAI("O", gameBoard);
+            compTurn = ColumnsAI(letter, gameBoard);
             if (compTurn==9){
-                compTurn = DiagonalsAI("O", gameBoard);
+                compTurn = DiagonalsAI(letter, gameBoard);
             }
         }
         return compTurn;

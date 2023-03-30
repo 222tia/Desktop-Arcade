@@ -10,8 +10,7 @@ public class TTTGame {
 
     public static ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
-    public static final String userLetter = "X";
-    public static final String compLetter = "O";
+
     static int userPlay;
     static int compPlay;
     public static void playTTT() throws IOException {
@@ -20,6 +19,14 @@ public class TTTGame {
 //        method to return it, but I left it commented out in case I'm wrong
         boolean userWin;
         boolean compWin;
+        String compLetter;
+        String userLetter = TTTTurnMove.XorOChoice();
+        if (userLetter.equals("O")){
+            compLetter="X";
+        }
+        else{
+            compLetter="O";
+        }
         do {
             TTTDialogue.Instructions();
             boolean openSpace;
@@ -39,7 +46,7 @@ public class TTTGame {
                 TTTDialogue.userWinDialogue();
             }
 
-            compPlay = TTTTurnMove.getCompTurnMove(gameBoard);
+            compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, compPlay, compLetter);
             compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
 

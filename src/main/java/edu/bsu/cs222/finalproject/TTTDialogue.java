@@ -2,7 +2,6 @@ package edu.bsu.cs222.finalproject;
 
 import java.util.ArrayList;
 
-import static java.lang.System.exit;
 
 public class TTTDialogue {
 
@@ -51,8 +50,11 @@ public class TTTDialogue {
         System.exit(0);
     }
 
-    public static String TTTXorOChoice(){
+    public static void LetterChoiceDialogue() {
         System.out.println("Do you want to play as Xs or Os?");
-        return ("O");
+    }
+
+    public static void InvalidInput() {
+        System.out.println("Invalid input. Do you want to play as Xs or Os?");
     }
 }
