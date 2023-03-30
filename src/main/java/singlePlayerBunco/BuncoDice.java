@@ -45,8 +45,6 @@ public class BuncoDice {
         return score;
     }
 
-    public static void EnterContinue() throws IOException {
-        System.in.read();
-    }
+
 
 }

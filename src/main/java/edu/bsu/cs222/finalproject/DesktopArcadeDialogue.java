@@ -1,5 +1,7 @@
 package edu.bsu.cs222.finalproject;
 
+import java.io.IOException;
+
 public class DesktopArcadeDialogue {
     public static void startUpDialogue(){
         System.out.println("""
@@ -46,6 +48,10 @@ public class DesktopArcadeDialogue {
     }
     public static void incorrectInput(){
         System.out.println("Input not an option. Please try again.");
+    }
+
+    public static void EnterContinue() throws IOException {
+        System.in.read();
     }
 
 }
