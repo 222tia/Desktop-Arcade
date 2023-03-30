@@ -48,5 +48,6 @@ public class TTTDialogue {
 
     public static void compWinDialogue() {
         System.out.println("Sorry, you lose!");
+        exit(1);
     }
 }
