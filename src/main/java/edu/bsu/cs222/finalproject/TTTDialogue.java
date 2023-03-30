@@ -43,11 +43,11 @@ public class TTTDialogue {
 
     public static void userWinDialogue() {
         System.out.println("You win!");
-        exit(1);
+        System.exit(0);
     }
 
     public static void compWinDialogue() {
         System.out.println("Sorry, you lose!");
-        exit(1);
+        System.exit(0);
     }
 }
