@@ -19,10 +19,4 @@ public class TTTGameBoard {
         TTTDialogue.showGameBoard(updatedGameBoard);
     }
 
-
-//    public static ArrayList<String>gameBoard() {
-//        final ArrayList<String> gameBoard = new ArrayList<>(
-//                Arrays.asList(" "," "," "," "," "," "," "," "," "));
-//        return gameBoard;
-//    }
 }
