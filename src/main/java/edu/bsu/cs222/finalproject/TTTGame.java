@@ -1,6 +1,5 @@
 package edu.bsu.cs222.finalproject;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,14 +8,12 @@ public class TTTGame {
 
     public static ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
-
     static int userPlay;
     static int compPlay;
+    static boolean userWin;
+    static boolean compWin;
+    static String compLetter;
     public static void playTTT() throws IOException {
-
-        boolean userWin;
-        boolean compWin;
-        String compLetter;
         String userLetter = TTTTurnMove.XorOChoice();
         if (userLetter.equals("O")){
             compLetter="X";

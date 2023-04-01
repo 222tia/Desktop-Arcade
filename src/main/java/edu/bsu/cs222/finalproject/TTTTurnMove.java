@@ -8,14 +8,15 @@ public class TTTTurnMove {
     private final static List<String> possibleMoves = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9");
 
     public static int getUserTurnMove() {
+
         Scanner userTurnMoveScanner = new Scanner(System.in);
         String userInput = userTurnMoveScanner.nextLine();
 
         if (!possibleMoves.contains(userInput)) {
-            TTTDialogue.invalidInput();
+            TTTDialogue.invalidUserInput();
         }
-        int userTurn = Integer.parseInt(userInput);
 
+        int userTurn = Integer.parseInt(userInput);
         return userTurn - 1;
     }
 
@@ -46,7 +47,7 @@ public class TTTTurnMove {
                 return letter;
             }
             else{
-                TTTDialogue.InvalidInput();
+                TTTDialogue.invalidXorOInput();
             }
         } while (!letter.equals("O") && !letter.equals("X"));
         return letter;

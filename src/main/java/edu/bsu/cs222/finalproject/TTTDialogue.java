@@ -36,7 +36,7 @@ public class TTTDialogue {
         System.out.println("That space is not empty");
     }
 
-    public static void invalidInput(){
+    public static void invalidUserInput(){
         System.out.println("Invalid input (enter a number 1-9).");
     }
 
@@ -54,7 +54,7 @@ public class TTTDialogue {
         System.out.println("Do you want to play as Xs or Os?");
     }
 
-    public static void InvalidInput() {
+    public static void invalidXorOInput() {
         System.out.println("Invalid input. Do you want to play as Xs or Os?");
     }
 }
