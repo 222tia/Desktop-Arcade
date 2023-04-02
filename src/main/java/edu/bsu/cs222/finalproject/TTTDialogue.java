@@ -33,11 +33,11 @@ public class TTTDialogue {
     }
 
     public static void improperSpace() {
-        System.out.println("That space is not empty");
+        System.err.println("That space is not empty");
     }
 
     public static void invalidUserInput(){
-        System.out.println("Invalid input (enter a number 1-9).");
+        System.err.println("Invalid input (enter a number 1-9).");
     }
 
     public static void userWinDialogue() {
@@ -50,10 +50,10 @@ public class TTTDialogue {
         System.exit(0);
     }
 
-    public static void LetterChoiceDialogue() {
+    public static void letterChoiceDialogue() {
         System.out.println("Do you want to play as Xs or Os?");
     }
 
-    public static void invalidLetterChoice() {System.out.println("Invalid input. Do you want to play as Xs or Os?");
+    public static void invalidLetterChoice() {System.err.println("Invalid input. Do you want to play as Xs or Os?");
     }
 }

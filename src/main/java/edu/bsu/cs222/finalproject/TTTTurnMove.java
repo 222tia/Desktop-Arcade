@@ -10,10 +10,19 @@ public class TTTTurnMove {
     public static int getUserTurnMove() {
 
         Scanner userTurnMoveScanner = new Scanner(System.in);
-        int userTurn = userTurnMoveScanner.nextInt();
+        boolean isNotInteger = true;
+        int userTurn = -1;
 
-        if (!possibleMoves.contains(userTurn)) {
-            TTTDialogue.invalidUserInput();
+        while (isNotInteger) {
+            if (userTurnMoveScanner.hasNextInt()){
+                if (possibleMoves.contains(userTurnMoveScanner.nextInt())){
+                    userTurn = userTurnMoveScanner.nextInt();
+                    isNotInteger = false;
+                }
+            } else {
+                TTTDialogue.invalidUserInput();
+                userTurnMoveScanner.next();
+            }
         }
 
         return userTurn - 1;
@@ -37,7 +46,7 @@ public class TTTTurnMove {
     }
 
     public static String letterChoice() {
-        TTTDialogue.LetterChoiceDialogue();
+        TTTDialogue.letterChoiceDialogue();
         String letter;
         do{
             Scanner userLetterScanner = new Scanner(System.in);

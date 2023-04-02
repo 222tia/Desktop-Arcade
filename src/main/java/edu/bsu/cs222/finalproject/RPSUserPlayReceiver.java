@@ -11,6 +11,7 @@ public class RPSUserPlayReceiver {
         if (!userPlay.matches("rock|paper|scissors")) {
             System.err.println("Invalid input (check spelling).");
         }
+
         return userPlay;
     }
 }

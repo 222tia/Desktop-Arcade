@@ -51,7 +51,7 @@ public class DesktopArcadeDialogue {
         System.out.println("To exit the program at any time, press 'x'");
     }
     public static void incorrectInput(){
-        System.out.println("Input not an option. Please try again.");
+        System.err.println("Input not an option. Please try again.");
     }
 
     public static void EnterContinue() throws IOException {
