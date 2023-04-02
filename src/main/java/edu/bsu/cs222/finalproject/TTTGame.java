@@ -12,6 +12,7 @@ public class TTTGame {
     static int compPlay;
     static boolean userWin;
     static boolean compWin;
+    static boolean draw;
     static String compLetter;
     public static void playTTT() throws IOException {
         String userLetter = TTTTurnMove.letterChoice();
@@ -25,7 +26,7 @@ public class TTTGame {
             TTTDialogue.Instructions();
             boolean openSpace;
             do {
-                userPlay = TTTTurnMove.getUserTurnMove();
+                userPlay = TTTTurnMove.getUserMove();
                 openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
                 if (!openSpace) {
                     TTTDialogue.improperSpace();
@@ -34,18 +35,32 @@ public class TTTGame {
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, userPlay, userLetter);
             userWin = TTTGetResults.checkBoard(userLetter, gameBoard);
+            if(!userWin){
+                draw = TTTGetResults.checkDraw(gameBoard);
+            }
             DesktopArcadeDialogue.EnterContinue();
 
             if(userWin){
                 TTTDialogue.userWinDialogue();
             }
+            if(draw){
+                TTTDialogue.drawOutcomeDialogue();
+            }
 
-            compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter);
+            TTTDialogue.compTurn();
+            compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, compPlay, compLetter);
             compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
+            if(!compWin){
+                draw = TTTGetResults.checkDraw(gameBoard);
+            }
+            DesktopArcadeDialogue.EnterContinue();
 
             if(compWin){
                 TTTDialogue.compWinDialogue();
+            }
+            if(draw){
+                TTTDialogue.drawOutcomeDialogue();
             }
 
         }while((!userWin)&&(!compWin));

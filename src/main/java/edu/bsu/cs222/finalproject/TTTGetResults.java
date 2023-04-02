@@ -23,4 +23,8 @@ public class TTTGetResults {
         return (gameBoard.get(0).equals(letter) && gameBoard.get(4).equals(letter) && gameBoard.get(8).equals(letter)) ||
                 (gameBoard.get(2).equals(letter) && gameBoard.get(4).equals(letter) && gameBoard.get(6).equals(letter));
     }
+
+    public static boolean checkDraw(ArrayList<String> gameBoard){
+        return !(gameBoard.contains(" "));
+    }
 }

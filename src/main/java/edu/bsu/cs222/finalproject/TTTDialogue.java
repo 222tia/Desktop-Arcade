@@ -56,4 +56,9 @@ public class TTTDialogue {
 
     public static void invalidLetterChoice() {System.err.println("Invalid input. Do you want to play as Xs or Os?");
     }
+
+    public static void drawOutcomeDialogue() {
+        System.out.println("The game ends in a draw.");
+        System.exit(0);
+    }
 }
