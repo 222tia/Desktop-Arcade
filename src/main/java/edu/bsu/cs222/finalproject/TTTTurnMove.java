@@ -5,18 +5,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TTTTurnMove {
-    private final static List<String> possibleMoves = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9");
+    private final static List<Integer> possibleMoves = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
     public static int getUserTurnMove() {
 
         Scanner userTurnMoveScanner = new Scanner(System.in);
-        String userInput = userTurnMoveScanner.nextLine();
+        int userTurn = userTurnMoveScanner.nextInt();
 
-        if (!possibleMoves.contains(userInput)) {
+        if (!possibleMoves.contains(userTurn)) {
             TTTDialogue.invalidUserInput();
         }
 
-        int userTurn = Integer.parseInt(userInput);
         return userTurn - 1;
     }
 
@@ -42,7 +41,7 @@ public class TTTTurnMove {
         String letter;
         do{
             Scanner userLetterScanner = new Scanner(System.in);
-            letter = userLetterScanner.nextLine();
+            letter = userLetterScanner.nextLine().toUpperCase();
             if ((letter.equals("O"))||(letter.equals("X"))){
                 return letter;
             }
@@ -50,7 +49,7 @@ public class TTTTurnMove {
                 TTTDialogue.invalidLetterChoice();
             }
         } while (!letter.equals("O") && !letter.equals("X"));
-        return letter.toUpperCase();
+        return letter;
     }
 
 }
