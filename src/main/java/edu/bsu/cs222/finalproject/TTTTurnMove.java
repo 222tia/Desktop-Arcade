@@ -37,7 +37,7 @@ public class TTTTurnMove {
         return (int) (Math.random() * 9);
     }
 
-    public static String XorOChoice() {
+    public static String letterChoice() {
         TTTDialogue.LetterChoiceDialogue();
         String letter;
         do{
@@ -47,10 +47,10 @@ public class TTTTurnMove {
                 return letter;
             }
             else{
-                TTTDialogue.invalidXorOInput();
+                TTTDialogue.invalidLetterChoice();
             }
         } while (!letter.equals("O") && !letter.equals("X"));
-        return letter;
+        return letter.toUpperCase();
     }
 
 }

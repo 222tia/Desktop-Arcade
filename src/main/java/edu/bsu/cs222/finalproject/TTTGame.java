@@ -14,7 +14,7 @@ public class TTTGame {
     static boolean compWin;
     static String compLetter;
     public static void playTTT() throws IOException {
-        String userLetter = TTTTurnMove.XorOChoice();
+        String userLetter = TTTTurnMove.letterChoice();
         if (userLetter.equals("O")){
             compLetter="X";
         }

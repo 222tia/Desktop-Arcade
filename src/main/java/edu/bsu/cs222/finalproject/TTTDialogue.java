@@ -54,7 +54,6 @@ public class TTTDialogue {
         System.out.println("Do you want to play as Xs or Os?");
     }
 
-    public static void invalidXorOInput() {
-        System.out.println("Invalid input. Do you want to play as Xs or Os?");
+    public static void invalidLetterChoice() {System.out.println("Invalid input. Do you want to play as Xs or Os?");
     }
 }
