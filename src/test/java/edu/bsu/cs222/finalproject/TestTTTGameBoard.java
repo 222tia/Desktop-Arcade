@@ -30,4 +30,14 @@ public class TestTTTGameBoard {
         ArrayList<String> updatedGameBoard = TTTGameBoard.updateGameBoard(gameBoard, play, letter);
         Assertions.assertEquals(expectedUpdatedGameBoard, updatedGameBoard);
     }
+
+    @Test
+    public void testUpdateFilledGameBoard(){
+        int play = 8;
+        String letter = "X";
+        ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("O", "X", " ", "X", " ", " ", " ", "0", " "));
+        ArrayList<String> expectedUpdatedGameBoard = new ArrayList<>(Arrays.asList("O", "X", " ", "X", " ", " ", " ", "0", "X"));
+        ArrayList<String> updatedGameBoard = TTTGameBoard.updateGameBoard(gameBoard, play, letter);
+        Assertions.assertEquals(expectedUpdatedGameBoard, updatedGameBoard);
+    }
 }
