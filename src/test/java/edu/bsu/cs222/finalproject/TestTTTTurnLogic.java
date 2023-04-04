@@ -23,4 +23,12 @@ public class TestTTTTurnLogic {
         Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
     }
 
+    @Test
+    public void testColumnLogic() {
+        ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", " ", " ", "X", " ", " ", " ", " ", " "));
+        String letter = "X";
+        int expectedComPlay = 6;
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+    }
+
 }
