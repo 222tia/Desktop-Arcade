@@ -25,15 +25,15 @@ public class TTTTurnMove {
         return userTurn - 1;
     }
 
-    public static int getCompTurnMove(ArrayList<String> board, String CompLetter, String UserLetter){
+    public static int getCompTurnMove(ArrayList<String> gameBoard, String compLetter, String userLetter){
         boolean checkEmptySpace;
-        int compTurn = TTTTurnLogic.TurnLogicCheck(board, CompLetter);
+        int compTurn = TTTTurnLogic.TurnLogicCheck(gameBoard, compLetter);
         if (compTurn==9) {
-            compTurn = TTTTurnLogic.TurnLogicCheck(board, UserLetter);
+            compTurn = TTTTurnLogic.TurnLogicCheck(gameBoard, userLetter);
             if (compTurn == 9) {
                 do {
                     compTurn = getRandomMove();
-                    checkEmptySpace = TTTGameBoard.emptySpaceCheck(board, compTurn);
+                    checkEmptySpace = TTTGameBoard.emptySpaceCheck(gameBoard, compTurn);
                 } while (!checkEmptySpace);
             }
         }

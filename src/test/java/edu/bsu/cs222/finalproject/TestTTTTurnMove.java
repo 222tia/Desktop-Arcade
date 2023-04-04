@@ -4,10 +4,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TestTTTTurnMove {
-    private final static List<Integer> possibleMoves = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    private final static List<Integer> possibleMoves = List.of(0, 1, 2, 3, 4, 5, 6, 7, 8);
 
     @Test
     public void testGetRandomMove() {
@@ -17,8 +19,17 @@ public class TestTTTTurnMove {
 
     @Test
     public void testGetRandomMoveFails() {
-        final int randomMove = 10;
+        final int randomMove = 9;
         Assertions.assertFalse(possibleMoves.contains(randomMove));
+    }
+
+    @Test
+    public void testGetCompTurnMove(){
+        ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", " ", " ", " ", " ", " ", " ", " ", " "));
+        final String compLetter = "O";
+        final String userLetter = "X";
+        final int compTurn = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
+        Assertions.assertTrue(possibleMoves.contains(compTurn));
     }
 
     @Test
