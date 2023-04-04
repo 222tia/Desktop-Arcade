@@ -9,7 +9,9 @@ public class DesktopArcadeDialogue {
                 To play, please enter the number of the corresponding game:
                 1.) Rock Paper Scissors!
                 2.) Bunco!
-                3.) Tic Tac Toe!""");
+                3.) Tic Tac Toe!
+                
+                To exit the program, press 'x'""");
     }
     public static void RPSRules(){
         System.out.println("""
@@ -58,5 +60,9 @@ public class DesktopArcadeDialogue {
         System.in.read();
     }
 
+    protected static void exit() {
+        System.out.println("Goodbye!");
+        System.exit(0);
+    }
 }
 

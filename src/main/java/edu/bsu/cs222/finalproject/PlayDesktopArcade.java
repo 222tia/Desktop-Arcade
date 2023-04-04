@@ -9,7 +9,7 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
         String GameSelection;
         do {
             DesktopArcadeDialogue.startUpDialogue();
-            DesktopArcadeDialogue.exitProgram();
+            //DesktopArcadeDialogue.exitProgram();
             GameSelection = userChoice.nextLine();
             if (GameSelection.equals("1")) {
                 DesktopArcadeDialogue.RPSRules();
@@ -22,6 +22,9 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
             if (GameSelection.equals("3")) {
                 DesktopArcadeDialogue.TTTRules();
                 TTTGame.playTTT();
+            }
+            if (GameSelection.equals("x")) {
+                DesktopArcadeDialogue.exit();
             }else{
                 DesktopArcadeDialogue.incorrectInput();
             }
