@@ -1,11 +1,9 @@
 package edu.bsu.cs222.finalproject;
 
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("ResultOfMethodCallIgnored")
 public class BuncoDice {
     public final static List<Integer> diceRollList = new ArrayList<>();
 

@@ -49,13 +49,13 @@ public class DesktopArcadeDialogue {
                 Press enter to continue play.
                 """);
     }
-    public static void exitProgram(){
-        System.out.println("To exit the program at any time, press 'x'");
-    }
+
     public static void incorrectInput(){
         System.err.println("Input not an option. Please try again.");
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    //allows user to press enter to continue play. The result of method is not needed.
     public static void EnterContinue() throws IOException {
         System.in.read();
     }

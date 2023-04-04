@@ -5,29 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TTTTurnMove {
-    private final static List<Integer> possibleMoves = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
     private final static List<String> possibleMovesString = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9");
 
-    public static int getUserTurnMove() {
-
-        Scanner userTurnMoveScanner = new Scanner(System.in);
-        boolean isNotInteger = true;
-        int userTurn = -1;
-
-        while (isNotInteger) {
-            if (userTurnMoveScanner.hasNextInt()){
-                if (possibleMoves.contains(userTurnMoveScanner.nextInt())){
-                    userTurn = userTurnMoveScanner.nextInt();
-                    isNotInteger = false;
-                }
-            } else {
-                TTTDialogue.invalidUserInput();
-                userTurnMoveScanner.next();
-            }
-        }
-
-        return userTurn - 1;
-    }
 
     public static int getUserMove() {
         boolean isNotInteger = true;

@@ -20,4 +20,12 @@ public class RPSDialogue extends RPSResultDecider{
             System.exit(0);
         }
     }
+
+    public static void inputPrompt() {
+        System.out.println("\nRock, Paper, or Scissors?: ");
+    }
+
+    public static void showScore(int userScore, int computerScore) {
+        System.out.println("\nYour score is: " + userScore + "\nComputer score is: " + computerScore);
+    }
 }
