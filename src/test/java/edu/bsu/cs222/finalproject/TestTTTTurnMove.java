@@ -36,15 +36,31 @@ public class TestTTTTurnMove {
     public void testUserInput2() {
         final String input = "2";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
-        final int expectedOutput = 1;
-        Assertions.assertEquals(expectedOutput, TTTTurnMove.getUserMove());
+        final int output = 1;
+        Assertions.assertEquals(output, TTTTurnMove.getUserMove());
     }
 
     @Test
     public void testUserInput9() {
         final String input = "9";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
-        final int expectedOutput = 8;
-        Assertions.assertEquals(expectedOutput, TTTTurnMove.getUserMove());
+        final int output = 8;
+        Assertions.assertEquals(output, TTTTurnMove.getUserMove());
+    }
+
+    @Test
+    public void testLetterChoiceX(){
+        final String input = "x";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        final String letter = "X";
+        Assertions.assertEquals(letter, TTTTurnMove.letterChoice());
+    }
+
+    @Test
+    public void testLetterChoice0(){
+        final String input = "o";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        final String letter = "O";
+        Assertions.assertEquals(letter, TTTTurnMove.letterChoice());
     }
 }
