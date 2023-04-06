@@ -1,8 +1,8 @@
-module edu.bsu.cs222.finalretribution {
+module edu.bsu.cs222 {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens edu.bsu.cs222.finalretribution to javafx.fxml;
-    exports edu.bsu.cs222.finalretribution;
+    opens edu.bsu.cs222 to javafx.fxml;
+    exports edu.bsu.cs222;
 }
