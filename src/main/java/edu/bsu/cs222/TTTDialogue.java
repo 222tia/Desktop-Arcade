@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 import java.util.ArrayList;
 
 
@@ -15,7 +17,7 @@ public class TTTDialogue {
                   Type the number of your chosen space.
                 """);
 
-        //TTTGameBoard.showGameBoard(gameBoard);
+        //edu.bsu.cs222.TTTGameBoard.showGameBoard(gameBoard);
     }
 
     public static void showGameBoard(ArrayList<String> board){

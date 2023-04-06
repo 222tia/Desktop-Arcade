@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 public class RPSScoreKeeper {
     public static int addUserScore(String computerPlay, String userPlay, int score){
         if (RPSResultDecider.winCondition(userPlay, computerPlay)) {

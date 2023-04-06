@@ -21,9 +21,9 @@ Emma "Jay" Jordan
 <br>• Java 19 SDK installed
 <br>• The Latest release of this repository cloned in IntelliJ
 <h3>Run Instructions</h3>
-<b>Iteration 1:</b> To start the program, run the PlayDesktopArcade Class. It will execute via the terminal.
+<b>Iteration 1:</b> To start the program, run the edu.bsu.cs222.PlayDesktopArcade Class. It will execute via the terminal.
 
 <h2>Warnings</h2>
-• Contains HelloApplication.java and HelloController.java for usage in future iterations that will implement JavaFX
-<br>• Suppressed Error "'while' statement cannot complete without throwing an exception" within BuncoGame.java Class
-<br>• Suppressed Error "Result of 'InputStream.read()' is ignored" within BuncoDice.java class
+• Contains edu.bsu.cs222.HelloApplication.java and edu.bsu.cs222.HelloController.java for usage in future iterations that will implement JavaFX
+<br>• Suppressed Error "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.BuncoGame.java Class
+<br>• Suppressed Error "Result of 'InputStream.read()' is ignored" within edu.bsu.cs222.BuncoDice.java class

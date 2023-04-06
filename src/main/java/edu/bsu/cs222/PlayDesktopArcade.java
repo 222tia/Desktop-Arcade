@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -7,7 +9,7 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
         String GameSelection;
         do {
             DesktopArcadeDialogue.startUpDialogue();
-            //DesktopArcadeDialogue.exitProgram();
+            //edu.bsu.cs222.DesktopArcadeDialogue.exitProgram();
             GameSelection = userChoice.nextLine();
             if (GameSelection.equals("1")) {
                 DesktopArcadeDialogue.RPSRules();

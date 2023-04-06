@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 public class RPSResultDecider {
     public static boolean winCondition(String winningPlay, String losingPlay) {
         return (winningPlay.equals("rock") && losingPlay.equals("scissors")) ||

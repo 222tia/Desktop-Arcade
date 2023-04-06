@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 public class RPSDialogue extends RPSResultDecider{
     public static void showRoundResult(String userPlay, String computerPlay){
         if (winCondition(computerPlay, userPlay)) {

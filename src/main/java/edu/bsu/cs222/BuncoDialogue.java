@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 public class BuncoDialogue {
     public static void DiceOutput(int dice1, int dice2, int dice3){
         System.out.println("Roll 1 = " + dice1 +

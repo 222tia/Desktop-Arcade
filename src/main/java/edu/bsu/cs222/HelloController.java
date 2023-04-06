@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 

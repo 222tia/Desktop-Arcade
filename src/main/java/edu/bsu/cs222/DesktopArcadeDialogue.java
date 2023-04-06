@@ -1,3 +1,5 @@
+package edu.bsu.cs222;
+
 import java.io.IOException;
 
 public class DesktopArcadeDialogue {
