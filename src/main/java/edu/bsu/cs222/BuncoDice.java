@@ -3,6 +3,7 @@ package edu.bsu.cs222;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("SameReturnValue")
 public class BuncoDice {
     public final static List<Integer> diceRollList = new ArrayList<>();
 

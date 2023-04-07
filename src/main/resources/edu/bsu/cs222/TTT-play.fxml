@@ -3,13 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.2-ea">
+
       <VBox prefHeight="200.0" prefWidth="300.0">
-         <children>
+
             <TextArea disable="true" prefHeight="550.0" prefWidth="300.0" />
             <TextField />
-         </children>
+
       </VBox>
       <GridPane prefWidth="296.0">
         <columnConstraints>
@@ -23,5 +23,5 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-   </children>
+
 </HBox>

@@ -24,6 +24,8 @@ Emma "Jay" Jordan
 <b>Iteration 1:</b> To start the program, run the edu.bsu.cs222.PlayDesktopArcade Class. It will execute via the terminal.
 
 <h2>Warnings</h2>
-• Contains edu.bsu.cs222.GUIApplication.java and edu.bsu.cs222.GUIController.java for usage in future iterations that will implement JavaFX
-<br>• Suppressed Error "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.BuncoGame.java Class
-<br>• Suppressed Error "Result of 'InputStream.read()' is ignored" within edu.bsu.cs222.BuncoDice.java class
+<br>• Suppressed Warning "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.BuncoGame.java Class as it completed fine without an exception.
+<br>• Suppressed Warning "Result of 'InputStream.read()' is ignored" within edu.bsu.cs222.BuncoDice.java class as InputStream.read() is necessary for the application to run and is used.
+<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.BuncoDice.java as it is meant to return the same value.
+<br>• 
+

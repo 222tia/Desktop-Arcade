@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class TTTGame {
 
-    public static ArrayList<String> gameBoard = new ArrayList<>(
+    public static final ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
     static int userPlay;
     static int compPlay;

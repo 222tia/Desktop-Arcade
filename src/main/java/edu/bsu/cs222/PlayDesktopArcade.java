@@ -9,7 +9,6 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
         String GameSelection;
         do {
             DesktopArcadeDialogue.startUpDialogue();
-            //edu.bsu.cs222.DesktopArcadeDialogue.exitProgram();
             GameSelection = userChoice.nextLine();
             if (GameSelection.equals("1")) {
                 DesktopArcadeDialogue.RPSRules();

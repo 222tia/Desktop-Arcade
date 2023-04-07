@@ -13,7 +13,7 @@ public class DesktopArcadeDialogue {
                 
                 To exit the program, press 'x'""");
     }
-    public static String RPSRules(){
+    public static void RPSRules(){
         System.out.println("""
                 
                 In Rock, Paper, Scissors! You will play a best of 3 against an AI by
@@ -25,9 +25,8 @@ public class DesktopArcadeDialogue {
                 2.) Scissors beats Paper.
                 3.) Paper beats Rock.
                 """);
-        return null;
     }
-    public static String BuncoRules(){
+    public static void BuncoRules(){
         System.out.println("""
                 
                 Bunco is played by rolling 3 dice.
@@ -40,7 +39,6 @@ public class DesktopArcadeDialogue {
                 If the triples match the round number, you automatically win!!
                 
                 Otherwise, the winner is the first to get to 21 points!""");
-        return null;
     }
     public static void TTTRules() {
         System.out.println("""
