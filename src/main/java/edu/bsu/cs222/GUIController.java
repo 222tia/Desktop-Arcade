@@ -1,14 +1,20 @@
 package edu.bsu.cs222;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class GUIController {
-    @FXML
-    private Label welcomeText;
+public class GUIController implements Initializable {
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
     @FXML
-    protected void onRPSClick() {
+    private void onRPSClick() {
+
     }
 
     @FXML
@@ -19,4 +25,5 @@ public class GUIController {
     protected void onTTTClick(){
 
     }
+
 }
