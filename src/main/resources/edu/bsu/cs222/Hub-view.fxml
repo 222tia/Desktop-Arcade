@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: FDF4F5; -fx-background-radius: 5px; -fx-border-color: #f9dee1; -fx-border-style: dotted; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="CENTER" prefHeight="109.0" prefWidth="421.0" text="Desktop Arcade">
+      <font>
+         <Font name="Cooper Black" size="50.0" />
+      </font></Label>
+    <Button onAction="#onRPSClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: E8A0BF;" text="Rock, Paper, Scissors">
+      <font>
+         <Font name="Cooper Black" size="12.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#onBuncoClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: BA90C6;" text="Bunco">
+      <font>
+         <Font name="Cooper Black" size="12.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#onTTTClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: C0DBEA;" text="Tic, Tac, Toe">
+      <font>
+         <Font name="Cooper Black" size="12.0" />
+      </font>
+   </Button>
+</VBox>

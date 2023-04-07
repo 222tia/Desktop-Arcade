@@ -24,6 +24,6 @@ Emma "Jay" Jordan
 <b>Iteration 1:</b> To start the program, run the edu.bsu.cs222.PlayDesktopArcade Class. It will execute via the terminal.
 
 <h2>Warnings</h2>
-• Contains edu.bsu.cs222.HelloApplication.java and edu.bsu.cs222.HelloController.java for usage in future iterations that will implement JavaFX
+• Contains edu.bsu.cs222.GUIApplication.java and edu.bsu.cs222.GUIController.java for usage in future iterations that will implement JavaFX
 <br>• Suppressed Error "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.BuncoGame.java Class
 <br>• Suppressed Error "Result of 'InputStream.read()' is ignored" within edu.bsu.cs222.BuncoDice.java class
