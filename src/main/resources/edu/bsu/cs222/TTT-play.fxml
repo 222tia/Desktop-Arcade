@@ -7,7 +7,7 @@
    <children>
       <VBox prefHeight="200.0" prefWidth="300.0">
          <children>
-            <TextArea prefHeight="550.0" prefWidth="300.0" />
+            <TextArea disable="true" prefHeight="550.0" prefWidth="300.0" />
             <TextField />
          </children>
       </VBox>
