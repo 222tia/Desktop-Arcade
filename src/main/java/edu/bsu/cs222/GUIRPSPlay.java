@@ -10,8 +10,6 @@ import javafx.scene.control.TextArea;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static edu.bsu.cs222.RPSResultDecider.winCondition;
-
 public class GUIRPSPlay implements Initializable {
 
     @FXML
@@ -34,7 +32,24 @@ public class GUIRPSPlay implements Initializable {
 
     @FXML
     public void onPlayClick() {
-       gameTextArea.setText("test");
-       scoreTextArea.setText("second");
+
+//        int userScore = 0;
+//        int computerScore = 0;
+
+//        while (userScore< 3 || computerScore < 3) {
+
+            String userPlay = userPlayChoice.getValue();
+            String computerPlay = RPSPlayRandomizer.getRandomPlay();
+
+            gameTextArea.setText(RPSDialogue.showRoundResult(userPlay, computerPlay));
+
+//            userScore = RPSScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
+//            computerScore = RPSScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
+
+//            scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
+
+//            gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
+
+//        }
     }
 }
