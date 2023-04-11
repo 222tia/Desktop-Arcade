@@ -1,14 +1,18 @@
 package edu.bsu.cs222;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class GUIBuncoPlay {
+public class GUIBuncoPlay implements Initializable {
 
     static List<Integer> diceRollList = new ArrayList<>();
+    public TextArea buncoRuleArea;
     public TextArea buncoTextArea;
     public TextArea buncoScoreArea;
     public int playerScore = 0;
@@ -83,6 +87,7 @@ public class GUIBuncoPlay {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         buncoRuleArea.setText(GUIBuncoDialogue.GUIBuncoRules());
+
     }
 }
 
