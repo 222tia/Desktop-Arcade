@@ -4,55 +4,55 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox fx:id="TTTScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUITTTPlay">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUITTTPlay">
 
       <VBox prefHeight="200.0" prefWidth="300.0">
       <TextArea fx:id="ruleBox" disable="true" prefHeight="500.0" prefWidth="200.0" />
-            <TextField />
+            <TextField fx:id="userInput" />
 
       </VBox>
     <FlowPane prefHeight="500.0" prefWidth="250.0">
-        <TextArea disable="true" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space1" disable="true" prefHeight="150.0" prefWidth="83.0">
      <FlowPane.margin>
          <Insets bottom="5.0" top="10.0" />
      </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space2" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space3" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space4" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="560.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space5" disable="true" layoutX="10.0" layoutY="560.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="1110.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space6" disable="true" layoutX="10.0" layoutY="1110.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="1660.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space7" disable="true" layoutX="10.0" layoutY="1660.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="2210.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space8" disable="true" layoutX="10.0" layoutY="2210.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
         </TextArea>
-        <TextArea disable="true" layoutX="10.0" layoutY="2760.0" prefHeight="150.0" prefWidth="83.0">
+        <TextArea fx:id="space9" disable="true" layoutX="10.0" layoutY="2760.0" prefHeight="150.0" prefWidth="83.0">
            <FlowPane.margin>
                <Insets bottom="5.0" top="10.0" />
            </FlowPane.margin>
