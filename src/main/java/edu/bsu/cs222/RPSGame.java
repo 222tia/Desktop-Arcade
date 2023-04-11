@@ -5,10 +5,15 @@ public class RPSGame {
 
         int userScore = 0;
         int computerScore = 0;
+        int roundNumber = 0;
 
         while (userScore< 3 || computerScore < 3) {
 
+            roundNumber+=1;
+            System.out.println(RPSDialogue.showRoundNumber(roundNumber));
+
             RPSDialogue.inputPrompt();
+
             String userPlay = RPSUserPlayReceiver.getUserPlay();
             String computerPlay = RPSPlayRandomizer.getRandomPlay();
 
@@ -19,8 +24,10 @@ public class RPSGame {
 
             System.out.println(RPSDialogue.showScore(userScore, computerScore));
 
-            System.out.println(RPSDialogue.showGameResult(userScore, computerScore));
-
+            if (RPSScoreKeeper.checkScore(computerScore, userScore) || RPSScoreKeeper.checkScore(userScore, computerScore)){
+                System.out.println(RPSDialogue.showGameResult(userScore, computerScore));
+                System.exit(0);
+            }
         }
 
     }

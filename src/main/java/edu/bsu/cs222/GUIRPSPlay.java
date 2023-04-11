@@ -22,8 +22,9 @@ public class GUIRPSPlay implements Initializable {
     private Button playButton;
 
     private final String[] playChoices = {"rock", " paper", "scissors"};
-    int userScore = 0;
-    int computerScore = 0;
+    public int userScore = 0;
+    public int computerScore = 0;
+    public int roundNumber = 0;
 
     public void initialize(URL location, ResourceBundle resources) {
         userPlayChoice.getItems().addAll(playChoices);
@@ -37,17 +38,20 @@ public class GUIRPSPlay implements Initializable {
 
         if (userScore< 3 || computerScore < 3) {
 
+            roundNumber+=1;
+
             String userPlay = userPlayChoice.getValue();
             String computerPlay = RPSPlayRandomizer.getRandomPlay();
 
-            gameTextArea.setText(RPSDialogue.showRoundResult(userPlay, computerPlay));
+            gameTextArea.setText("Round " + roundNumber + "\n\n" +
+                    RPSDialogue.showRoundResult(userPlay, computerPlay));
 
             userScore = RPSScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
             computerScore = RPSScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
 
             scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
 
-            gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
+//            gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
 
         }
     }

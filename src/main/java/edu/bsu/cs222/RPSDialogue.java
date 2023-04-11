@@ -32,4 +32,8 @@ public class RPSDialogue extends RPSResultDecider{
     public static String showScore(int userScore, int computerScore) {
         return "\nYour score is: " + userScore + "\nComputer score is: " + computerScore;
     }
+
+    public static String showRoundNumber(int roundNumber){
+        return "\n\n/// Round " + roundNumber + " ///";
+    }
 }
