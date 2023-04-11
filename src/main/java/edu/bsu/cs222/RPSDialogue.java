@@ -14,11 +14,13 @@ public class RPSDialogue extends RPSResultDecider{
     }
 
     public static String showGameResult(int userScore, int computerScore){
-        String gameResultMessage = "";
+        String gameResultMessage;
         if (RPSScoreKeeper.checkScore(userScore, computerScore)){
             gameResultMessage = "\nGame over, you won!";
         } else if (RPSScoreKeeper.checkScore(computerScore, userScore)){
             gameResultMessage = "\nGame over, you lost!";
+        } else {
+            gameResultMessage = "";
         }
         return gameResultMessage;
     }
@@ -29,5 +31,9 @@ public class RPSDialogue extends RPSResultDecider{
 
     public static String showScore(int userScore, int computerScore) {
         return "\nYour score is: " + userScore + "\nComputer score is: " + computerScore;
+    }
+
+    public static String showRoundNumber(int roundNumber){
+        return "\n\n/// Round " + roundNumber + " ///";
     }
 }
