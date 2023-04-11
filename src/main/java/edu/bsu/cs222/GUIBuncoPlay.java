@@ -1,18 +1,12 @@
 package edu.bsu.cs222;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
-public class GUIBuncoPlay implements Initializable {
-    @FXML
-    TextArea buncoRuleArea;
+public class GUIBuncoPlay {
 
     static List<Integer> diceRollList = new ArrayList<>();
     public TextArea buncoTextArea;
@@ -23,7 +17,7 @@ public class GUIBuncoPlay implements Initializable {
     public int turnOrder = 1;
 
     @FXML
-    public void onBuncoDiceClick() throws IOException {
+    public void onBuncoDiceClick() {
 
 
         if((playerScore<21)&&(compScore<21)) {
@@ -45,7 +39,11 @@ public class GUIBuncoPlay implements Initializable {
 
             boolean pointGain = ((dice1Value == roundNumber) || (dice2Value == roundNumber) || (dice3Value == roundNumber));
             boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
-            playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
+            if (turnOrder == 1) {
+                playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
+            } else {
+                compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
+            }
 
             turnContinue = pointGain || DiceTriples;
 
@@ -59,22 +57,22 @@ public class GUIBuncoPlay implements Initializable {
                 buncoTextArea.appendText(GUIBuncoDialogue.CompWinDisplay());
             }
 
-            if ((turnContinue) && (turnOrder == 1)) {
+            if ((turnContinue) && (turnOrder == 1) && (playerScore < 21)) {
                 buncoTextArea.appendText(GUIBuncoDialogue.PlayerContinueDisplay());
             }
-            if ((turnContinue) && (turnOrder == 2)) {
+            if ((turnContinue) && (turnOrder == 2) && (compScore < 21)) {
                 buncoTextArea.appendText(GUIBuncoDialogue.CompContinueDisplay());
-            } else {
+            }
+            if(!turnContinue) {
                 if (turnOrder == 1) {
                     turnOrder = 2;
                 } else {
                     turnOrder = 1;
+                    roundNumber++;
+                    if (roundNumber > 6) {
+                        roundNumber = 1;
+                    }
                 }
-            }
-
-            roundNumber++;
-            if (roundNumber > 6) {
-                roundNumber = 1;
             }
         }
         else{
