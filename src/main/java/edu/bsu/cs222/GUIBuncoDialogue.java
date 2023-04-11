@@ -46,5 +46,4 @@ public class GUIBuncoDialogue {
                 
                 Otherwise, the winner is the first to get to 21 points!""";
     }
-    public static String RestartDisplay() {return("\nPlease restart the game");}
 }
