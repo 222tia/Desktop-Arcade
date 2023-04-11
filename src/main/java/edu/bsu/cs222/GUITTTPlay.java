@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,8 +19,13 @@ public class GUITTTPlay implements Initializable {
     @FXML
     private TextArea space1, space2, space3, space4, space5, space6, space7, space8, space9;
 
+    @FXML
+    public void onTTTInput() throws IOException {
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-            ruleBox.appendText(DesktopArcadeDialogue.GUITTTRules());
+            ruleBox.appendText(GUITTTDialogue.GUITTTRules());
         }
 }

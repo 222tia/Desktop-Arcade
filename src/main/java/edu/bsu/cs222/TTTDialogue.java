@@ -16,8 +16,6 @@ public class TTTDialogue {
                               7 | 8 | 9
                   Type the number of your chosen space.
                 """);
-
-        //edu.bsu.cs222.TTTGameBoard.showGameBoard(gameBoard);
     }
 
     public static void showGameBoard(ArrayList<String> board){

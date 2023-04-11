@@ -86,7 +86,7 @@ public class GUIBuncoPlay implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        buncoRuleArea.setText(DesktopArcadeDialogue.GUIBuncoRules());
+        buncoRuleArea.setText(GUIBuncoDialogue.GUIBuncoRules());
     }
 }
 
