@@ -2,10 +2,14 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBuncoPlay">
-      <TextArea fx:id="buncoRuleArea" disable="true" prefHeight="250.0" prefWidth="554.0"/>
-      <TextArea fx:id="buncoTextArea" disable="true" prefHeight="150.0" prefWidth="554.0" promptText="Let's play Bunco!" />
-      <TextArea fx:id="buncoScoreArea" disable="true" prefHeight="15.0" prefWidth="554.0" promptText="Scores" />
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: BA90C6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBuncoPlay">
+      <TextArea fx:id="buncoRuleArea" disable="true" prefHeight="120.0" prefWidth="600.0" wrapText="true">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></TextArea>
+      <TextArea fx:id="buncoTextArea" disable="true" prefHeight="150.0" prefWidth="554.0" promptText="Let's play Bunco!" wrapText="true" />
+      <TextArea fx:id="buncoScoreArea" disable="true" prefHeight="80.0" prefWidth="600.0" promptText="Scores" wrapText="true" />
       <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onBuncoDiceClick" text="Roll Dice!" textAlignment="CENTER" translateX="250.0" translateY="10.0" />
 </VBox>
