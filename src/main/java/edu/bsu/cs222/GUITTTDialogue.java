@@ -24,38 +24,47 @@ public class GUITTTDialogue {
                 "              " + board.get(6) + " | " + board.get(7) + " | " + board.get(8);
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String compTurn(){
         return "It's the Computer's turn!";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String improperSpace() {
         return "That space is not empty";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String invalidUserInput(){
         return "Invalid input (enter a number 1-9).";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String userWinDialogue() {
         return "You win!";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String compWinDialogue() {
         return "Sorry, you lose!";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String letterChoiceDialogue() {
         return "Do you want to play as Xs or Os?";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String invalidLetterChoice() {
         return "Invalid input. Do you want to play as Xs or Os?";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String drawOutcomeDialogue() {
         return "The game ends in a draw.";
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static String GUITTTRules(){
         return """
                 Tic-Tac-Toe is played by using a 3x3 grid.

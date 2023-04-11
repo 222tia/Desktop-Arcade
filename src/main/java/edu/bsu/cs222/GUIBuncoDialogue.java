@@ -1,5 +1,6 @@
 package edu.bsu.cs222;
 
+@SuppressWarnings("SameReturnValue")
 public class GUIBuncoDialogue {
     public static String RollOutput(int dice1, int dice2, int dice3) {
         return ("\nRoll 1 = " + dice1 + "\nRoll 2 = " + dice2 + "\nRoll 3 = " + dice3);

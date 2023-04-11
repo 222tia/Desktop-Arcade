@@ -66,7 +66,7 @@ public class DesktopArcadeDialogue {
     }
 
     public static String GUIRPSRules(){
-        String RPSRules = """
+        return  """
                 In Rock, Paper, Scissors! You will play a best of 3 against an AI by
                 playing Rock, Paper, or Scissors.
                 
@@ -75,7 +75,6 @@ public class DesktopArcadeDialogue {
                 1.) Rock beats Scissors.
                 2.) Scissors beats Paper.
                 3.) Paper beats Rock.""";
-        return RPSRules;
     }
 }
 
