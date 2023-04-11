@@ -22,6 +22,8 @@ public class GUIRPSPlay implements Initializable {
     private Button playButton;
 
     private final String[] playChoices = {"rock", " paper", "scissors"};
+    int userScore = 0;
+    int computerScore = 0;
 
     public void initialize(URL location, ResourceBundle resources) {
         userPlayChoice.getItems().addAll(playChoices);
@@ -33,23 +35,20 @@ public class GUIRPSPlay implements Initializable {
     @FXML
     public void onPlayClick() {
 
-//        int userScore = 0;
-//        int computerScore = 0;
-
-//        while (userScore< 3 || computerScore < 3) {
+        if (userScore< 3 || computerScore < 3) {
 
             String userPlay = userPlayChoice.getValue();
             String computerPlay = RPSPlayRandomizer.getRandomPlay();
 
             gameTextArea.setText(RPSDialogue.showRoundResult(userPlay, computerPlay));
 
-//            userScore = RPSScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
-//            computerScore = RPSScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
+            userScore = RPSScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
+            computerScore = RPSScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
 
-//            scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
+            scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
 
-//            gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
+            gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
 
-//        }
+        }
     }
 }
