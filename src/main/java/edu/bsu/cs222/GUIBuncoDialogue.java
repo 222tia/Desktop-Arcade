@@ -10,7 +10,7 @@ public class GUIBuncoDialogue {
     }
 
     public static String PlayerTurnDisplay(){
-        return("\nIt's Your Turn!");
+        return("It's Your Turn!");
     }
 
     public static String ScoreDisplay(int playerScore, int compScore){
@@ -29,7 +29,22 @@ public class GUIBuncoDialogue {
         return("\n\nYou Lose! Better luck next time!");
     }
 
-    public static String CompTurnDisplay() {return("\nIt's Your Opponent's Turn!"); }
+    public static String CompTurnDisplay() {return("It's Your Opponent's Turn!"); }
 
+    public static String RestartDisplay() {return("Please restart the game");}
+
+    public static String GUIBuncoRules(){
+        return """
+                Bunco is played by rolling 3 dice.
+                Rounds are numbered from 1 to 6 before looping back to 1.
+                When you gain points you get to roll again! When no points are gained play passes and your turn is over.
+                Click the Button to continue play.
+                
+                1 point is gained when a dice roll is equal to the round number.
+                5 points are gained when triples are rolled.
+                If the triples match the round number, you automatically win!!
+                
+                Otherwise, the winner is the first to get to 21 points!""";
+    }
     public static String RestartDisplay() {return("\nPlease restart the game");}
 }

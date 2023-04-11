@@ -20,7 +20,7 @@ public class GUIBuncoPlay {
     public void onBuncoDiceClick() {
 
 
-        if ((playerScore < 21) && (compScore < 21)) {
+        if((playerScore<21)&&(compScore<21)) {
             buncoScoreArea.setText(GUIBuncoDialogue.ScoreDisplay(playerScore, compScore));
             if (turnOrder == 1) {
                 buncoTextArea.setText(GUIBuncoDialogue.PlayerTurnDisplay());
@@ -75,11 +75,15 @@ public class GUIBuncoPlay {
                 }
             }
         }
-        else {
-        buncoTextArea.appendText(GUIBuncoDialogue.RestartDisplay());
-          }
-}
+        else{
+            buncoTextArea.appendText(GUIBuncoDialogue.RestartDisplay());
+        }
             }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        buncoRuleArea.setText(GUIBuncoDialogue.GUIBuncoRules());
+    }
+}
 
 
