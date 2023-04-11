@@ -3,9 +3,6 @@ package edu.bsu.cs222;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
-
-import java.awt.*;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +17,10 @@ public class GUIBuncoPlay {
     public int turnOrder = 1;
 
     @FXML
-    public void onBuncoDiceClick() throws IOException {
+    public void onBuncoDiceClick() {
 
 
-        if((playerScore<21)&&(compScore<21)) {
+        if ((playerScore < 21) && (compScore < 21)) {
             buncoScoreArea.setText(GUIBuncoDialogue.ScoreDisplay(playerScore, compScore));
             if (turnOrder == 1) {
                 buncoTextArea.setText(GUIBuncoDialogue.PlayerTurnDisplay());
@@ -42,7 +39,11 @@ public class GUIBuncoPlay {
 
             boolean pointGain = ((dice1Value == roundNumber) || (dice2Value == roundNumber) || (dice3Value == roundNumber));
             boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
-            playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
+            if (turnOrder == 1) {
+                playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
+            } else {
+                compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
+            }
 
             turnContinue = pointGain || DiceTriples;
 
@@ -56,28 +57,29 @@ public class GUIBuncoPlay {
                 buncoTextArea.appendText(GUIBuncoDialogue.CompWinDisplay());
             }
 
-            if ((turnContinue) && (turnOrder == 1)) {
+            if ((turnContinue) && (turnOrder == 1) && (playerScore < 21)) {
                 buncoTextArea.appendText(GUIBuncoDialogue.PlayerContinueDisplay());
             }
-            if ((turnContinue) && (turnOrder == 2)) {
+            if ((turnContinue) && (turnOrder == 2) && (compScore < 21)) {
                 buncoTextArea.appendText(GUIBuncoDialogue.CompContinueDisplay());
-            } else {
+            }
+            if(!turnContinue) {
                 if (turnOrder == 1) {
                     turnOrder = 2;
                 } else {
                     turnOrder = 1;
+                    roundNumber++;
+                    if (roundNumber > 6) {
+                        roundNumber = 1;
+                    }
                 }
             }
+        }
+        else {
+        buncoTextArea.appendText(GUIBuncoDialogue.RestartDisplay());
+          }
+}
+            }
 
-            roundNumber++;
-            if (roundNumber > 6) {
-                roundNumber = 1;
-            }
-        }
-        else{
-            buncoTextArea.appendText(GUIBuncoDialogue.RestartDisplay());
-        }
-            }
-        }
 
 

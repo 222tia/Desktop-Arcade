@@ -10,7 +10,7 @@ public class GUIBuncoDialogue {
     }
 
     public static String PlayerTurnDisplay(){
-        return("It's Your Turn!");
+        return("\nIt's Your Turn!");
     }
 
     public static String ScoreDisplay(int playerScore, int compScore){
@@ -29,7 +29,7 @@ public class GUIBuncoDialogue {
         return("\n\nYou Lose! Better luck next time!");
     }
 
-    public static String CompTurnDisplay() {return("It's Your Opponent's Turn!"); }
+    public static String CompTurnDisplay() {return("\nIt's Your Opponent's Turn!"); }
 
-    public static String RestartDisplay() {return("Please restart the game");}
+    public static String RestartDisplay() {return("\nPlease restart the game");}
 }
