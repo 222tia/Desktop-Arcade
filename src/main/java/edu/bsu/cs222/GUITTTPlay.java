@@ -85,19 +85,18 @@ public class GUITTTPlay implements Initializable {
                 compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
                 TTTGameBoard.updateGameBoard(gameBoard, compPlay, compLetter);
                 GameDisplay(gameBoard);
-            }
-            compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
-            if(!compWin){
-                draw = TTTGetResults.checkDraw(gameBoard);
-            }
+                compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
+                if (!compWin) {
+                    draw = TTTGetResults.checkDraw(gameBoard);
+                }
 
-            if(compWin){
-                ruleBox.appendText(GUITTTDialogue.compWinDialogue());
+                if (compWin) {
+                    ruleBox.appendText(GUITTTDialogue.compWinDialogue());
+                }
+                if (draw) {
+                    ruleBox.appendText(GUITTTDialogue.drawOutcomeDialogue());
+                }
             }
-            if(draw){
-                ruleBox.appendText(GUITTTDialogue.drawOutcomeDialogue());
-            }
-
         }
         else{
             ruleBox.setText(GUITTTDialogue.EndDialogue());
