@@ -19,6 +19,8 @@ public class GUIRPSPlay implements Initializable {
     @FXML
     private TextArea gameTextArea;
     @FXML
+    private TextArea rulesTextArea;
+    @FXML
     private Button playButton;
 
     private final String[] playChoices = {"rock", "paper", "scissors"};
@@ -28,7 +30,7 @@ public class GUIRPSPlay implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         userPlayChoice.getItems().addAll(playChoices);
-        gameTextArea.setText(DesktopArcadeDialogue.GUIRPSRules());
+        rulesTextArea.setText(DesktopArcadeDialogue.GUIRPSRules());
         scoreTextArea.setText("Play to begin!");
         playButton.setOnAction(event -> onPlayClick());
     }
@@ -52,7 +54,7 @@ public class GUIRPSPlay implements Initializable {
             scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
 
             if (RPSScoreKeeper.checkScore(computerScore, userScore) || RPSScoreKeeper.checkScore(userScore, computerScore)){
-                gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
+                gameTextArea.setText((RPSDialogue.showGameResult(userScore, computerScore)) + RPSDialogue.RestartDisplay());
             }
 
         }

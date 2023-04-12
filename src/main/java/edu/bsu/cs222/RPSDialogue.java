@@ -36,4 +36,6 @@ public class RPSDialogue extends RPSResultDecider{
     public static String showRoundNumber(int roundNumber){
         return "\n\n/// Round " + roundNumber + " ///";
     }
+
+    public static String RestartDisplay() {return("\n\nPlease restart the game");}
 }
