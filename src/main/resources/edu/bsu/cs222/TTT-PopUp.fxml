@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="153.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUITTTPopUP">
+   <children>
+      <Label layoutX="58.0" layoutY="18.0" prefHeight="51.0" prefWidth="106.0" text="Choose your letter!" textAlignment="CENTER" />
+      <ChoiceBox layoutX="25.0" layoutY="91.0" prefHeight="26.0" prefWidth="183.0" />
+   </children>
+</AnchorPane>

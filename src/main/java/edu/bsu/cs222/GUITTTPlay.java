@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 public class GUITTTPlay implements Initializable {
     @FXML
     private TextArea ruleBox;
+    private final String[] letterChoice = {"X", "O"};
     @FXML
     private TextField userInput;
     @FXML
@@ -24,6 +25,6 @@ public class GUITTTPlay implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-            ruleBox.appendText(GUITTTDialogue.GUITTTRules());
+        ruleBox.appendText(GUITTTDialogue.GUITTTRules());
         }
 }
