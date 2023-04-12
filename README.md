@@ -27,8 +27,10 @@ Emma "Jay" Jordan
 <h2>Warnings</h2>
 <br>• Suppressed Warning "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.BuncoGame.java Class as it completed fine without an exception.
 <br>• Suppressed Warning "Result of 'InputStream.read()' is ignored" within edu.bsu.cs222.BuncoDice.java class as InputStream.read() is necessary for the application to run and is used.
+<br>• Suppressed Warning "Result of 'System.in.read()' is ignored" within edu.bsu.cs222.DesktopArcadeDialogue.java class as InputStream.read() as it allows users to press enter to play.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.BuncoDice.java as it is meant to return the same value.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.DesktopArcadeDialogue.java as it is meant to return the same value.
+<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.GUIBuncoDialogue.java as it is meant to return the same value.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.GUITTTDialogue.java as it is meant to return the same value.
 <br>• Suppressed Warning "Redundant 'throws' clause" within edu.bsu.cs222.GUITTTPlay.java as the exception is thrown in the Initialize method.
 

@@ -56,7 +56,6 @@ public class DesktopArcadeDialogue {
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    //allows user to press enter to continue play. The result of method is not needed.
     public static void EnterContinue() throws IOException {
         System.in.read();
     }
