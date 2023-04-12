@@ -33,5 +33,12 @@ public class GUITTTPlay implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         ruleBox.appendText(GUITTTDialogue.GUITTTRules());
         letterChoiceBox.getItems().addAll(letterChoice);
+        userInput.setOnKeyPressed(event -> {
+            try {
+                onTTTInput();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
         }
 }

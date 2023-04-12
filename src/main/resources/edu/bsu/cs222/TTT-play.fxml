@@ -14,7 +14,7 @@
             <ChoiceBox fx:id="letterChoiceBox" prefWidth="150.0" />
          </children>
       </HBox>
-            <TextField fx:id="userInput" />
+            <TextField fx:id="userInput" onKeyPressed="#onTTTInput" />
 
       </VBox>
     <FlowPane prefHeight="500.0" prefWidth="250.0">
