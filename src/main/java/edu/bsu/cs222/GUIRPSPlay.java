@@ -21,7 +21,7 @@ public class GUIRPSPlay implements Initializable {
     @FXML
     private Button playButton;
 
-    private final String[] playChoices = {"rock", " paper", "scissors"};
+    private final String[] playChoices = {"rock", "paper", "scissors"};
     public int userScore = 0;
     public int computerScore = 0;
     public int roundNumber = 0;
@@ -51,7 +51,9 @@ public class GUIRPSPlay implements Initializable {
 
             scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
 
-//            gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
+            if (RPSScoreKeeper.checkScore(computerScore, userScore) || RPSScoreKeeper.checkScore(userScore, computerScore)){
+                gameTextArea.setText(RPSDialogue.showGameResult(userScore, computerScore));
+            }
 
         }
     }
