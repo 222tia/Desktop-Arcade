@@ -41,17 +41,24 @@ public class GUITTTDialogue {
 
     @SuppressWarnings("SameReturnValue")
     public static String userWinDialogue() {
-        return "\nYou win!";
+        return "\n\n\nYou win!";
     }
 
     @SuppressWarnings("SameReturnValue")
     public static String compWinDialogue() {
-        return "\nSorry, you lose!";
+        return "\n\n\nSorry, you lose!";
     }
 
 
     public static String drawOutcomeDialogue() {
-        return "\nThe game ends in a draw.";
+        return "\n\n\nThe game ends in a draw.";
+    }
+    public static String noSetLetterDialogue() {
+        return "\nYou need to choose your letter.";
+    }
+
+    public static String EndDialogue() {
+        return "The game is over. Please restart.";
     }
 
     @SuppressWarnings("SameReturnValue")

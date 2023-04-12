@@ -25,6 +25,16 @@ public class TTTTurnMove {
         return userTurn - 1;
     }
 
+    public static int checkUserMove(String userTurnString){
+        int userTurn;
+            if (possibleMovesString.contains(userTurnString)) {
+                userTurn = Integer.parseInt(userTurnString);
+                return userTurn - 1;
+            } else {
+                return 9;
+            }
+    }
+
     public static int getCompTurnMove(ArrayList<String> gameBoard, String compLetter, String userLetter){
         boolean checkEmptySpace;
         int compTurn = TTTTurnLogic.TurnLogicCheck(gameBoard, compLetter);

@@ -19,8 +19,8 @@ public class GUITTTPlay implements Initializable {
 
     public ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
-    public String userLetter = "X";
-    public String compLetter = "O";
+    public String userLetter = " ";
+    public String compLetter = " ";
     static int userPlay;
     static int compPlay;
     static boolean userWin;
@@ -40,23 +40,32 @@ public class GUITTTPlay implements Initializable {
     @FXML
     public void onTTTInput() throws IOException {
         userLetter = letterChoiceBox.getValue();
+        int compTurnCheck=1;
         if (userLetter.equals("O")){
             compLetter="X";
         }
         else{
             compLetter="O";
         }
-        do {
+        if((!userWin)&&(!compWin)&&(!draw)){
             boolean openSpace;
-            do {
-                userPlay = Integer.parseInt(userInput.getText());
+                String userTextInput = (userInput.getText());
+                userPlay = TTTTurnMove.checkUserMove(userTextInput);
                 openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
-                if (!openSpace) {
-                    ruleBox.appendText(GUITTTDialogue.improperSpace());
+                if (userPlay==9){
+                    ruleBox.appendText(GUITTTDialogue.invalidUserInput());
+                    compTurnCheck=0;
                 }
-            } while (!openSpace);
+                else {
+                    if (!openSpace) {
+                        ruleBox.appendText(GUITTTDialogue.improperSpace());
+                        compTurnCheck = 0;
+                    }
+                    else{
+                        gameBoard = TTTGameBoard.updateGameBoard(gameBoard, userPlay, userLetter);
+                    }
+                }
 
-            gameBoard = TTTGameBoard.updateGameBoard(gameBoard, userPlay, userLetter);
             GameDisplay(gameBoard);
             userWin = TTTGetResults.checkBoard(userLetter, gameBoard);
             if(!userWin){
@@ -65,14 +74,18 @@ public class GUITTTPlay implements Initializable {
 
             if(userWin){
                 ruleBox.appendText(GUITTTDialogue.userWinDialogue());
+                compTurnCheck = 0;
             }
             if(draw){
                 ruleBox.appendText(GUITTTDialogue.drawOutcomeDialogue());
+                compTurnCheck = 0;
             }
 
-            compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
-            gameBoard = TTTGameBoard.updateGameBoard(gameBoard, compPlay, compLetter);
-            GameDisplay(gameBoard);
+            if(compTurnCheck==1) {
+                compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
+                gameBoard = TTTGameBoard.updateGameBoard(gameBoard, compPlay, compLetter);
+                GameDisplay(gameBoard);
+            }
             compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
             if(!compWin){
                 draw = TTTGetResults.checkDraw(gameBoard);
@@ -85,7 +98,10 @@ public class GUITTTPlay implements Initializable {
                 ruleBox.appendText(GUITTTDialogue.drawOutcomeDialogue());
             }
 
-        }while((!userWin)&&(!compWin));
+        }
+        else{
+            ruleBox.setText(GUITTTDialogue.EndDialogue());
+        }
     }
 
     public void GameDisplay(ArrayList<String> gameBoard){
@@ -104,10 +120,13 @@ public class GUITTTPlay implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         ruleBox.appendText(GUITTTDialogue.GUITTTRules());
         letterChoiceBox.getItems().addAll(letterChoice);
+        userInput.setEditable(false);
+        letterChoiceBox.setOnAction(event -> userInput.setEditable(true));
         userInput.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
                     onTTTInput();
+                    letterChoiceBox.setDisable(true);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
