@@ -38,7 +38,7 @@ public class GUIRPSPlay implements Initializable {
     @FXML
     public void onPlayClick() {
 
-        if (userScore< 3 || computerScore < 3) {
+        if (userScore< 2 || computerScore < 2) {
 
             roundNumber+=1;
 
@@ -54,7 +54,7 @@ public class GUIRPSPlay implements Initializable {
             scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
 
             if (RPSScoreKeeper.checkScore(computerScore, userScore) || RPSScoreKeeper.checkScore(userScore, computerScore)){
-                gameTextArea.setText((RPSDialogue.showGameResult(userScore, computerScore)) + RPSDialogue.RestartDisplay());
+                gameTextArea.appendText((RPSDialogue.showGameResult(userScore, computerScore)) + RPSDialogue.RestartDisplay());
             }
 
         }

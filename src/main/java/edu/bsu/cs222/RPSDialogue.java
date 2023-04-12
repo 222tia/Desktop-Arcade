@@ -16,9 +16,9 @@ public class RPSDialogue extends RPSResultDecider{
     public static String showGameResult(int userScore, int computerScore){
         String gameResultMessage;
         if (RPSScoreKeeper.checkScore(userScore, computerScore)){
-            gameResultMessage = "\nGame over, you won!";
+            gameResultMessage = "\n\nGame over, you won!";
         } else if (RPSScoreKeeper.checkScore(computerScore, userScore)){
-            gameResultMessage = "\nGame over, you lost!";
+            gameResultMessage = "\n\nGame over, you lost!";
         } else {
             gameResultMessage = "";
         }
