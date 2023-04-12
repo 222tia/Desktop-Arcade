@@ -2,6 +2,7 @@ package edu.bsu.cs222;
 
 
 
+@SuppressWarnings("SameReturnValue")
 public class GUITTTDialogue {
     public static String improperSpace() {
         return "\nThat space is not empty";

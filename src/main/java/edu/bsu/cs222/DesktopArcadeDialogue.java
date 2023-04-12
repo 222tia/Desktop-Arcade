@@ -2,6 +2,7 @@ package edu.bsu.cs222;
 
 import java.io.IOException;
 
+@SuppressWarnings("SameReturnValue")
 public class DesktopArcadeDialogue {
     public static void startUpDialogue(){
         System.out.println("""

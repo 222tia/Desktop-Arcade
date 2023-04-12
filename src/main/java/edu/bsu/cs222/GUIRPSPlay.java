@@ -8,7 +8,6 @@ import javafx.scene.control.TextArea;
 
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class GUIRPSPlay implements Initializable {

@@ -13,11 +13,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
+@SuppressWarnings("RedundantThrows")
 public class GUITTTPlay implements Initializable {
     @FXML
     private TextArea ruleBox;
 
-    public ArrayList<String> gameBoard = new ArrayList<>(
+    public final ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
     public String userLetter = " ";
     public String compLetter = " ";

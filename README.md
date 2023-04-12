@@ -22,10 +22,14 @@ Emma "Jay" Jordan
 <br>• The Latest release of this repository cloned in IntelliJ
 <h3>Run Instructions</h3>
 <b>Iteration 1:</b> To start the program, run the edu.bsu.cs222.PlayDesktopArcade Class. It will execute via the terminal.
+<br><b>Iteration 2:</b> To start the program via the terminal, follow the <i>Iteration 1</i> run instructions. To start the program via the GUI, navigate to Grade > finalRetribution > Tasks > Application > Run
 
 <h2>Warnings</h2>
 <br>• Suppressed Warning "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.BuncoGame.java Class as it completed fine without an exception.
 <br>• Suppressed Warning "Result of 'InputStream.read()' is ignored" within edu.bsu.cs222.BuncoDice.java class as InputStream.read() is necessary for the application to run and is used.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.BuncoDice.java as it is meant to return the same value.
-<br>• 
+<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.DesktopArcadeDialogue.java as it is meant to return the same value.
+<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.GUITTTDialogue.java as it is meant to return the same value.
+<br>• Suppressed Warning "Redundant 'throws' clause" within edu.bsu.cs222.GUITTTPlay.java as the exception is thrown in the Initialize method.
+
 
