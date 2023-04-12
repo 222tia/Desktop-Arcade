@@ -3,66 +3,157 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUITTTPlay">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-border-color: #42C2FF; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-color: #85F4FF; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUITTTPlay">
 
-      <VBox prefHeight="200.0" prefWidth="300.0">
-      <TextArea fx:id="ruleBox" disable="true" prefHeight="500.0" prefWidth="200.0" wrapText="true" />
-      <HBox prefHeight="33.0" prefWidth="300.0">
+      <VBox prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #85F4FF;" HBox.hgrow="SOMETIMES">
+      <TextArea fx:id="ruleBox" editable="false" prefHeight="400.0" prefWidth="368.0" style="-fx-background-color: #85F4FF;" wrapText="true" VBox.vgrow="SOMETIMES">
+         <font>
+            <Font name="Bookman Old Style Bold" size="14.0" />
+         </font></TextArea>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="368.0" style="-fx-background-color: #85F4FF;" VBox.vgrow="SOMETIMES">
          <children>
-            <Label prefHeight="18.0" prefWidth="149.0" text="Choose your letter!" />
-            <ChoiceBox fx:id="letterChoiceBox" prefWidth="150.0" />
+            <Label text=" ( \   / ) &#10; (˶ ˘ ᵕ ˘ ) &#10;c( っ    っ" textFill="#1d96ce" HBox.hgrow="SOMETIMES">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="149.0" text="Choose your letter!" textAlignment="CENTER" textFill="#1d96ce" HBox.hgrow="SOMETIMES">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="15.0" />
+               </font></Label>
+            <ChoiceBox fx:id="letterChoiceBox" prefWidth="50.0" style="-fx-background-color: #EFFFFD; -fx-border-radius: 5px; -fx-border-color: #EFFFFD; -fx-border-style: solid;" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></ChoiceBox>
          </children>
       </HBox>
-            <TextField fx:id="userInput" onKeyPressed="#onTTTInput" promptText="Type your selection and hit enter" />
+            <TextField fx:id="userInput" onKeyPressed="#onTTTInput" prefHeight="33.0" prefWidth="314.0" promptText="Type your selection and hit enter" style="-fx-background-color: #EFFFFD; -fx-border-color: #EFFFFD; -fx-border-radius: 5px; -fx-border-style: solid;">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font>
+      </TextField>
 
       </VBox>
-    <FlowPane prefHeight="500.0" prefWidth="250.0">
-        <TextArea fx:id="space1" disable="true" prefHeight="150.0" prefWidth="83.0">
-     <FlowPane.margin>
-         <Insets bottom="5.0" top="10.0" />
-     </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space2" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space3" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space4" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space5" disable="true" layoutX="10.0" layoutY="560.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space6" disable="true" layoutX="10.0" layoutY="1110.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space7" disable="true" layoutX="10.0" layoutY="1660.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space8" disable="true" layoutX="10.0" layoutY="2210.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-        <TextArea fx:id="space9" disable="true" layoutX="10.0" layoutY="2760.0" prefHeight="150.0" prefWidth="83.0">
-           <FlowPane.margin>
-               <Insets bottom="5.0" top="10.0" />
-           </FlowPane.margin>
-        </TextArea>
-    </FlowPane>
+   <GridPane prefHeight="250.0" HBox.hgrow="SOMETIMES">
+     <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+           <TextArea fx:id="space1" disable="true" editable="false" style="-fx-background-color: #85F4FF;">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space2" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.columnIndex="1">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space3" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.columnIndex="2">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space4" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.rowIndex="1">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space5" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space6" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space7" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.rowIndex="2">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space8" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+           <TextArea fx:id="space9" disable="true" editable="false" style="-fx-background-color: #85F4FF;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <font>
+               <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets />
+            </GridPane.margin>
+           </TextArea>
+      </children>
+      <padding>
+         <Insets left="10.0" />
+      </padding>
+   </GridPane>
+   <padding>
+      <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+   </padding>
 
 </HBox>

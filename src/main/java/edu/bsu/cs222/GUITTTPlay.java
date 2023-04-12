@@ -62,7 +62,7 @@ public class GUITTTPlay implements Initializable {
                         compTurnCheck = 0;
                     }
                     else{
-                        gameBoard = TTTGameBoard.updateGameBoard(gameBoard, userPlay, userLetter);
+                        TTTGameBoard.updateGameBoard(gameBoard, userPlay, userLetter);
                     }
                 }
 
@@ -83,7 +83,7 @@ public class GUITTTPlay implements Initializable {
 
             if(compTurnCheck==1) {
                 compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
-                gameBoard = TTTGameBoard.updateGameBoard(gameBoard, compPlay, compLetter);
+                TTTGameBoard.updateGameBoard(gameBoard, compPlay, compLetter);
                 GameDisplay(gameBoard);
             }
             compWin = TTTGetResults.checkBoard(compLetter, gameBoard);

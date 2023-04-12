@@ -30,50 +30,46 @@
       </VBox.margin></TextArea>
     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
         <VBox.margin>
-            <Insets left="50.0" right="50.0" top="10.0"/>
+            <Insets left="50.0" right="50.0" top="10.0" />
         </VBox.margin>
         <opaqueInsets>
-            <Insets/>
+            <Insets />
         </opaqueInsets>
         <Label alignment="BOTTOM_LEFT" text=" /)/)&#10;( . .) &#10;(    )ა " textFill="#d9acf5">
            <font>
-               <Font size="20.0"/>
+               <Font size="20.0" />
            </font>
            <HBox.margin>
-               <Insets/>
+               <Insets />
            </HBox.margin>
         </Label>
-        <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity"
-                mnemonicParsing="false" onAction="#onBuncoDiceClick" prefHeight="50.0" prefWidth="200.0"
-                style="-fx-background-color: D9ACF5; -fx-border-color: D9ACF5; -fx-border-radius: 5px; -fx-border-style: solid;"
-                text="Roll Dice!" textAlignment="CENTER">
+        <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBuncoDiceClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: D9ACF5; -fx-border-color: D9ACF5; -fx-border-radius: 5px; -fx-border-style: solid;" text="Roll Dice!" textAlignment="CENTER">
         <font>
-            <Font name="Bookman Old Style" size="24.0"/>
+            <Font name="Bookman Old Style" size="24.0" />
         </font>
         <textFill>
             <LinearGradient endY="0.718676122931442" startX="1.0">
                 <stops>
                     <Stop>
                         <color>
-                            <Color red="0.4972222149372101" green="0.16203702986240387" blue="1.0"/>
+                            <Color red="0.4972222149372101" green="0.16203702986240387" blue="1.0" />
                         </color>
                     </Stop>
                     <Stop offset="1.0">
                         <color>
-                            <Color red="0.686274528503418" green="0.062745101749897" blue="0.8784313797950745"/>
+                            <Color red="0.686274528503418" green="0.062745101749897" blue="0.8784313797950745" />
                         </color>
                     </Stop>
                 </stops>
             </LinearGradient>
         </textFill>
         <HBox.margin>
-            <Insets left="50.0" right="50.0"/>
+            <Insets left="50.0" right="50.0" />
         </HBox.margin>
         </Button>
-        <Label alignment="BOTTOM_LEFT" layoutX="137.0" layoutY="13.0" text="   /)/)&#10;  (. . )&#10;૮(    )"
-               textFill="#d9acf5">
+        <Label alignment="BOTTOM_LEFT" layoutX="137.0" layoutY="13.0" text="   /)/)&#10;  (. . )&#10;૮(    )" textFill="#d9acf5">
            <font>
-               <Font size="20.0"/>
+               <Font size="20.0" />
            </font>
         </Label>
     </HBox>
