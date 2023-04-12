@@ -36,7 +36,7 @@
             <Insets left="5.0" />
          </HBox.margin>
          <textFill>
-            <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0" startX="1.0">
+            <LinearGradient cycleMethod="REPEAT" startX="1.0">
                <stops>
                   <Stop>
                      <color>
@@ -52,5 +52,8 @@
             </LinearGradient>
          </textFill></Button>
    </HBox>
+   <padding>
+      <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+   </padding>
 
 </VBox>
