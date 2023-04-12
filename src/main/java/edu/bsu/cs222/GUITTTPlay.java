@@ -51,12 +51,12 @@ public class GUITTTPlay implements Initializable {
             boolean openSpace;
                 String userTextInput = (userInput.getText());
                 userPlay = TTTTurnMove.checkUserMove(userTextInput);
-                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
                 if (userPlay==9){
                     ruleBox.appendText(GUITTTDialogue.invalidUserInput());
                     compTurnCheck=0;
                 }
                 else {
+                    openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
                     if (!openSpace) {
                         ruleBox.appendText(GUITTTDialogue.improperSpace());
                         compTurnCheck = 0;
