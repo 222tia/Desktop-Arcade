@@ -6,7 +6,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-background-radius: 10px; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-color: #865DFF; -fx-border-color: #645CBB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBuncoPlay">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-background-radius: 10px; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-color: #865DFF; -fx-border-color: #645CBB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBuncoPlay">
       <TextArea fx:id="buncoRuleArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="625.0" style="-fx-background-color: #865DFF;" wrapText="true" VBox.vgrow="SOMETIMES">
       <font>
          <Font name="Bookman Old Style Bold" size="14.0" />
@@ -37,32 +37,53 @@
       <padding>
          <Insets left="10.0" right="10.0" />
       </padding></TextArea>
-      <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBuncoDiceClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: D9ACF5; -fx-border-color: D9ACF5; -fx-border-radius: 5px; -fx-border-style: solid;" text="Roll Dice!" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
-      <font>
-         <Font name="Bookman Old Style" size="24.0" />
-      </font>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+      <children>
+         <Label alignment="BOTTOM_LEFT" text=" /)/)&#10;( . .) &#10;(    )ა " textFill="#d9acf5">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBuncoDiceClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: D9ACF5; -fx-border-color: D9ACF5; -fx-border-radius: 5px; -fx-border-style: solid;" text="Roll Dice!" textAlignment="CENTER">
+            <font>
+               <Font name="Bookman Old Style" size="24.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="0.718676122931442" startX="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.4972222149372101" green="0.16203702986240387" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.686274528503418" green="0.062745101749897" blue="0.8784313797950745" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <HBox.margin>
+               <Insets left="50.0" right="50.0" />
+            </HBox.margin>
+         </Button>
+         <Label alignment="BOTTOM_LEFT" layoutX="137.0" layoutY="13.0" text="   /)/)&#10;  (. . )&#10;૮(    )" textFill="#d9acf5">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+      </children>
       <VBox.margin>
-         <Insets top="10.0" />
+         <Insets left="50.0" right="50.0" top="10.0" />
       </VBox.margin>
-      <rotationAxis>
-         <Point3D />
-      </rotationAxis>
-      <textFill>
-         <LinearGradient endX="1.0" endY="0.718676122931442" startX="1.0">
-            <stops>
-               <Stop>
-                  <color>
-                     <Color red="0.4972222149372101" green="0.16203702986240387" blue="1.0" />
-                  </color>
-               </Stop>
-               <Stop offset="1.0">
-                  <color>
-                     <Color red="0.6845831274986267" green="0.06159999966621399" blue="0.8799999952316284" />
-                  </color>
-               </Stop>
-            </stops>
-         </LinearGradient>
-      </textFill></Button>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </HBox>
    <padding>
       <Insets bottom="5.0" top="5.0" />
    </padding>

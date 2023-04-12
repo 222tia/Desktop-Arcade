@@ -2,15 +2,22 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIRPSPlay">
-   <TextArea fx:id="rulesTextArea" editable="false" prefHeight="197.0" prefWidth="600.0" />
-   <TextArea fx:id="gameTextArea" editable="false" prefHeight="107.0" prefWidth="600.0" />
-   <TextArea fx:id="scoreTextArea" editable="false" prefHeight="72.0" prefWidth="600.0" />
-   <HBox prefHeight="26.0" prefWidth="600.0">
-      <Label prefHeight="24.0" prefWidth="211.0" text="What would you like to play?" />
-      <ChoiceBox fx:id="userPlayChoice" accessibleRole="TEXT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="173.0" />
-      <Button fx:id="playButton" mnemonicParsing="false" onAction="#onPlayClick" prefHeight="25.0" prefWidth="150.0" text="Play!" />
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-border-radius: 10px; -fx-border-style: solid; -fx-border-color: #9A208C; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIRPSPlay">
+   <TextArea fx:id="rulesTextArea" editable="false" prefHeight="197.0" prefWidth="600.0" VBox.vgrow="SOMETIMES" />
+   <TextArea fx:id="gameTextArea" editable="false" prefHeight="107.0" prefWidth="600.0" VBox.vgrow="SOMETIMES" />
+   <TextArea fx:id="scoreTextArea" editable="false" prefHeight="72.0" prefWidth="600.0" VBox.vgrow="SOMETIMES" />
+   <HBox prefHeight="26.0" prefWidth="650.0">
+      <Label prefHeight="24.0" prefWidth="211.0" text="What would you like to play?" HBox.hgrow="SOMETIMES">
+         <font>
+            <Font name="Harrington" size="12.0" />
+         </font></Label>
+      <ChoiceBox fx:id="userPlayChoice" accessibleRole="TEXT" prefHeight="25.0" prefWidth="173.0" HBox.hgrow="SOMETIMES" />
+      <Button fx:id="playButton" mnemonicParsing="false" onAction="#onPlayClick" prefHeight="25.0" prefWidth="150.0" text="Play!" HBox.hgrow="SOMETIMES">
+         <font>
+            <Font name="Harrington" size="12.0" />
+         </font></Button>
    </HBox>
 
 </VBox>
