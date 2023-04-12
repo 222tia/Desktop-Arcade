@@ -8,7 +8,13 @@
 
       <VBox prefHeight="200.0" prefWidth="300.0">
       <TextArea fx:id="ruleBox" disable="true" prefHeight="500.0" prefWidth="200.0" wrapText="true" />
-            <TextField fx:id="userInput" />
+      <HBox prefHeight="33.0" prefWidth="300.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="149.0" text="Choose your letter!" />
+            <ChoiceBox fx:id="letterChoiceBox" prefWidth="150.0" />
+         </children>
+      </HBox>
+            <TextField fx:id="userInput" onKeyPressed="#onTTTInput" />
 
       </VBox>
     <FlowPane prefHeight="500.0" prefWidth="250.0">
