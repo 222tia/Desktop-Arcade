@@ -31,37 +31,27 @@ public class GUITTTDialogue {
 
     @SuppressWarnings("SameReturnValue")
     public static String improperSpace() {
-        return "That space is not empty";
+        return "\nThat space is not empty";
     }
 
     @SuppressWarnings("SameReturnValue")
     public static String invalidUserInput(){
-        return "Invalid input (enter a number 1-9).";
+        return "\nInvalid input (enter a number 1-9).";
     }
 
     @SuppressWarnings("SameReturnValue")
     public static String userWinDialogue() {
-        return "You win!";
+        return "\nYou win!";
     }
 
     @SuppressWarnings("SameReturnValue")
     public static String compWinDialogue() {
-        return "Sorry, you lose!";
+        return "\nSorry, you lose!";
     }
 
-    @SuppressWarnings("SameReturnValue")
-    public static String letterChoiceDialogue() {
-        return "Do you want to play as Xs or Os?";
-    }
 
-    @SuppressWarnings("SameReturnValue")
-    public static String invalidLetterChoice() {
-        return "Invalid input. Do you want to play as Xs or Os?";
-    }
-
-    @SuppressWarnings("SameReturnValue")
     public static String drawOutcomeDialogue() {
-        return "The game ends in a draw.";
+        return "\nThe game ends in a draw.";
     }
 
     @SuppressWarnings("SameReturnValue")

@@ -32,7 +32,7 @@ public class GUIBuncoDialogue {
 
     public static String CompTurnDisplay() {return("It's Your Opponent's Turn!"); }
 
-    public static String RestartDisplay() {return("Please restart the game");}
+    public static String RestartDisplay() {return("\nPlease restart the game");}
 
     public static String GUIBuncoRules(){
         return """
