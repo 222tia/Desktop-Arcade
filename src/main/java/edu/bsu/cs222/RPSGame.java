@@ -12,7 +12,7 @@ public class RPSGame {
             roundNumber+=1;
             System.out.println(RPSDialogue.showRoundNumber(roundNumber));
 
-            RPSDialogue.inputPrompt();
+            System.out.println(RPSDialogue.inputPrompt());
 
             String userPlay = RPSUserPlayReceiver.getUserPlay();
             String computerPlay = RPSPlayRandomizer.getRandomPlay();

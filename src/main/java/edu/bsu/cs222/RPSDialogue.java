@@ -25,8 +25,8 @@ public class RPSDialogue extends RPSResultDecider{
         return gameResultMessage;
     }
 
-    public static void inputPrompt() {
-        System.out.println("\nRock, Paper, or Scissors?: ");
+    public static String inputPrompt() {
+        return "\nRock, Paper, or Scissors?: ";
     }
 
     public static String showScore(int userScore, int computerScore) {
@@ -37,5 +37,5 @@ public class RPSDialogue extends RPSResultDecider{
         return "\n\n/// Round " + roundNumber + " ///";
     }
 
-    public static String RestartDisplay() {return("\n\nPlease restart the game");}
+    public static String RestartDisplay() {return"\n\nPlease restart the game";}
 }
