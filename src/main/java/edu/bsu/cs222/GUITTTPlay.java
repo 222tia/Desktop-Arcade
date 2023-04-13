@@ -127,6 +127,7 @@ public class GUITTTPlay implements Initializable {
                 try {
                     onTTTInput();
                     letterChoiceBox.setDisable(true);
+                    userInput.clear();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
