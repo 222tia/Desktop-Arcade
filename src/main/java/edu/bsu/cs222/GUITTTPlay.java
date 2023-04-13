@@ -35,7 +35,23 @@ public class GUITTTPlay implements Initializable {
     @FXML
     private TextArea space1, space2, space3, space4, space5, space6, space7, space8, space9;
 
-    public GUITTTPlay() {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ruleBox.appendText(DesktopArcadeDialogue.TTTRules());
+        letterChoiceBox.getItems().addAll(letterChoice);
+        userInput.setEditable(false);
+        letterChoiceBox.setOnAction(event -> userInput.setEditable(true));
+        userInput.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    onTTTInput();
+                    letterChoiceBox.setDisable(true);
+                    userInput.clear();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
     }
 
     @FXML
@@ -115,23 +131,4 @@ public class GUITTTPlay implements Initializable {
         space8.setText(gameBoard.get(7));
         space9.setText(gameBoard.get(8));
     }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        ruleBox.appendText(DesktopArcadeDialogue.TTTRules());
-        letterChoiceBox.getItems().addAll(letterChoice);
-        userInput.setEditable(false);
-        letterChoiceBox.setOnAction(event -> userInput.setEditable(true));
-        userInput.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ENTER) {
-                try {
-                    onTTTInput();
-                    letterChoiceBox.setDisable(true);
-                    userInput.clear();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        });
-        }
 }

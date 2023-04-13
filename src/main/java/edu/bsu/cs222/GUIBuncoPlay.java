@@ -20,6 +20,12 @@ public class GUIBuncoPlay implements Initializable {
     public int roundNumber = 1;
     public int turnOrder = 1;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        buncoRuleArea.setText(DesktopArcadeDialogue.BuncoRules());
+
+    }
+
     @FXML
     public void onBuncoDiceClick() {
 
@@ -84,11 +90,6 @@ public class GUIBuncoPlay implements Initializable {
         }
             }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        buncoRuleArea.setText(DesktopArcadeDialogue.BuncoRules());
-
-    }
 }
 
 
