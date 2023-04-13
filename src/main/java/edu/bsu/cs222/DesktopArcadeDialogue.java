@@ -14,8 +14,8 @@ public class DesktopArcadeDialogue {
                 
                 To exit the program, press 'x'""");
     }
-    public static void RPSRules(){
-        System.out.println("""
+    public static String RPSRules(){
+        return("""
                 
                 In Rock, Paper, Scissors! You will play a best of 3 against an AI by
                 playing Rock, Paper, or Scissors.
@@ -27,8 +27,8 @@ public class DesktopArcadeDialogue {
                 3.) Paper beats Rock.
                 """);
     }
-    public static void BuncoRules(){
-        System.out.println("""
+    public static String BuncoRules(){
+        return("""
                 
                 Bunco is played by rolling 3 dice.
                 Rounds are numbered from 1 to 6 before looping back to 1.
@@ -41,8 +41,8 @@ public class DesktopArcadeDialogue {
                 
                 Otherwise, the winner is the first to get to 21 points!""");
     }
-    public static void TTTRules() {
-        System.out.println("""
+    public static String TTTRules() {
+        return("""
                 
                 Tic-Tac-Toe is played by using a 3x3 grid.
                 Players take turns to select a spot in the grid to put an X or an O.
@@ -65,16 +65,5 @@ public class DesktopArcadeDialogue {
         System.exit(0);
     }
 
-    public static String GUIRPSRules(){
-        return  """
-                In Rock, Paper, Scissors! You will play a best of 3 against an AI by
-                playing Rock, Paper, or Scissors.
-                
-                The winner of the round is determined by these rules:
-                
-                1.) Rock beats Scissors.
-                2.) Scissors beats Paper.
-                3.) Paper beats Rock.""";
-    }
 }
 

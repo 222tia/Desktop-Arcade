@@ -11,15 +11,15 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
             DesktopArcadeDialogue.startUpDialogue();
             GameSelection = userChoice.nextLine();
             if (GameSelection.equals("1")) {
-                DesktopArcadeDialogue.RPSRules();
+                System.out.println(DesktopArcadeDialogue.RPSRules());
                 RPSGame.playRPS();
             }
             if (GameSelection.equals("2")) {
-                DesktopArcadeDialogue.BuncoRules();
+                System.out.println(DesktopArcadeDialogue.BuncoRules());
                 BuncoGame.playBunco();
             }
             if (GameSelection.equals("3")) {
-                DesktopArcadeDialogue.TTTRules();
+                System.out.println(DesktopArcadeDialogue.TTTRules());
                 TTTGame.playTTT();
             }
             if (GameSelection.equals("x")) {

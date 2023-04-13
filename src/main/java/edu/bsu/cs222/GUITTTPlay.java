@@ -118,7 +118,7 @@ public class GUITTTPlay implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ruleBox.appendText(GUITTTDialogue.GUITTTRules());
+        ruleBox.appendText(DesktopArcadeDialogue.TTTRules());
         letterChoiceBox.getItems().addAll(letterChoice);
         userInput.setEditable(false);
         letterChoiceBox.setOnAction(event -> userInput.setEditable(true));

@@ -30,7 +30,7 @@ public class GUIRPSPlay implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         userPlayChoice.getItems().addAll(playChoices);
-        rulesTextArea.setText(DesktopArcadeDialogue.GUIRPSRules());
+        rulesTextArea.setText(DesktopArcadeDialogue.RPSRules());
         scoreTextArea.setText("Play to begin!");
         playButton.setOnAction(event -> onPlayClick());
     }
