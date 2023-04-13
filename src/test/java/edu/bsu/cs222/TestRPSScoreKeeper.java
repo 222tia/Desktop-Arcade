@@ -110,8 +110,8 @@ public class TestRPSScoreKeeper {
 
     @Test
     public void testUserWinsBy1(){
-        final int computerScore = 2;
-        final int userScore = 3;
+        final int computerScore = 1;
+        final int userScore = 2;
         Assertions.assertTrue(RPSScoreKeeper.checkScore(userScore, computerScore));
     }
     @Test
@@ -123,8 +123,8 @@ public class TestRPSScoreKeeper {
 
     @Test
     public void testComputerWinsBy1(){
-        final int computerScore = 3;
-        final int userScore = 2;
+        final int computerScore = 2;
+        final int userScore = 1;
         Assertions.assertTrue(RPSScoreKeeper.checkScore(computerScore, userScore));
     }
     @Test

@@ -16,7 +16,6 @@ public class RPSScoreKeeper {
     }
 
     public static Boolean checkScore(int winningScore, int losingScore){
-        return (winningScore == 2) && (losingScore == 0) ||
-                (winningScore == 3) && (losingScore <= 2);
+        return (winningScore == 2) && (losingScore <= 1);
     }
 }
