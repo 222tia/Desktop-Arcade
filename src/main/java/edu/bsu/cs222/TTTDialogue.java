@@ -38,12 +38,14 @@ public class TTTDialogue {
         return "Invalid input (enter a number 1-9).";
     }
 
-    public static String userWinDialogue() {
-        return "You win!";
+    public static void userWinDialogue() {
+        System.out.println("You win!");
+        System.exit(0);
     }
 
-    public static String compWinDialogue() {
-        return "Sorry, you lose!";
+    public static void compWinDialogue() {
+        System.out.println("Sorry, you lose!");
+        System.exit(0);
     }
 
     public static String letterChoiceDialogue() {
@@ -54,7 +56,8 @@ public class TTTDialogue {
         return "Invalid input. Do you want to play as Xs or Os?";
     }
 
-    public static String drawOutcomeDialogue() {
-        return "The game ends in a draw.";
+    public static void drawOutcomeDialogue() {
+        System.out.println("The game ends in a draw.");
+        System.exit(0);
     }
 }

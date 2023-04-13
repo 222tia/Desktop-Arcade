@@ -18,7 +18,7 @@ public class TTTTurnMove {
                 userTurn = Integer.parseInt(userTurnString);
                 isNotInteger = false;
             } else {
-                TTTDialogue.invalidUserInput();
+                System.out.println(TTTDialogue.invalidUserInput());
                 userTurnString = userTurnMoveScanner.nextLine();
             }
         }while(isNotInteger);
@@ -55,13 +55,13 @@ public class TTTTurnMove {
     }
 
     public static String letterChoice() {
-        TTTDialogue.letterChoiceDialogue();
+        System.out.println(TTTDialogue.letterChoiceDialogue());
         String letter;
         do{
             Scanner userLetterScanner = new Scanner(System.in);
             letter = userLetterScanner.nextLine().toUpperCase();
             if (!(letter.equals("O"))&&!(letter.equals("X"))){
-                TTTDialogue.invalidLetterChoice();
+                System.out.println(TTTDialogue.invalidLetterChoice());
             }
         } while (!letter.equals("O") && !letter.equals("X"));
         return letter;

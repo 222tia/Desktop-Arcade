@@ -23,13 +23,13 @@ public class TTTGame {
             compLetter="O";
         }
         do {
-            TTTDialogue.inputInstructions();
+            System.out.println(TTTDialogue.inputInstructions());
             boolean openSpace;
             do {
                 userPlay = TTTTurnMove.getUserMove();
                 openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
                 if (!openSpace) {
-                    TTTDialogue.improperSpace();
+                    System.out.println(TTTDialogue.improperSpace());
                 }
             } while (!openSpace);
 
@@ -47,7 +47,7 @@ public class TTTGame {
                 TTTDialogue.drawOutcomeDialogue();
             }
 
-            TTTDialogue.compTurn();
+            System.out.println(TTTDialogue.compTurn());
             compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, compPlay, compLetter);
             compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
