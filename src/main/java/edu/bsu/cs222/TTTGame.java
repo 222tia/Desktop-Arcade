@@ -23,7 +23,7 @@ public class TTTGame {
             compLetter="O";
         }
         do {
-            TTTDialogue.Instructions();
+            TTTDialogue.inputInstructions();
             boolean openSpace;
             do {
                 userPlay = TTTTurnMove.getUserMove();
