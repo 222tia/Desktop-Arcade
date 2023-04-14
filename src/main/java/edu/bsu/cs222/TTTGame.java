@@ -10,10 +10,10 @@ public class TTTGame {
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
     static int userPlay;
     static int compPlay;
-    static boolean userWin;
-    static boolean compWin;
-    static boolean draw;
-    static boolean Continue;
+    static boolean userWin=false;
+    static boolean compWin=false;
+    static boolean draw=false;
+    static boolean Continue=true;
     static String compLetter;
     public static void playTTT() throws IOException {
         String userLetter = TTTTurnMove.letterChoice();
@@ -57,7 +57,6 @@ public class TTTGame {
             if(!compWin){
                 draw = TTTGetResults.checkDraw(gameBoard);
             }
-            DesktopArcadeDialogue.EnterContinue();
 
             if(compWin){
                 System.out.println(TTTDialogue.compWinDialogue());
@@ -67,7 +66,7 @@ public class TTTGame {
                 System.out.println(TTTDialogue.drawOutcomeDialogue());
                 System.exit(0);
             }
-
+            DesktopArcadeDialogue.EnterContinue();
         }while(Continue);
 
     }
