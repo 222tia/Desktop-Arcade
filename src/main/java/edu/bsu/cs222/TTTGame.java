@@ -13,6 +13,7 @@ public class TTTGame {
     static boolean userWin;
     static boolean compWin;
     static boolean draw;
+    static boolean Continue;
     static String compLetter;
     public static void playTTT() throws IOException {
         String userLetter = TTTTurnMove.letterChoice();
@@ -41,10 +42,12 @@ public class TTTGame {
             DesktopArcadeDialogue.EnterContinue();
 
             if(userWin){
-                TTTDialogue.userWinDialogue();
+                System.out.println(TTTDialogue.userWinDialogue());
+                System.exit(0);
             }
             if(draw){
-                TTTDialogue.drawOutcomeDialogue();
+                System.out.println(TTTDialogue.drawOutcomeDialogue());
+                System.exit(0);
             }
 
             System.out.println(TTTDialogue.compTurn());
@@ -57,13 +60,15 @@ public class TTTGame {
             DesktopArcadeDialogue.EnterContinue();
 
             if(compWin){
-                TTTDialogue.compWinDialogue();
+                System.out.println(TTTDialogue.compWinDialogue());
+                System.exit(0);
             }
             if(draw){
-                TTTDialogue.drawOutcomeDialogue();
+                System.out.println(TTTDialogue.drawOutcomeDialogue());
+                System.exit(0);
             }
 
-        }while((!userWin)&&(!compWin));
+        }while(Continue);
 
     }
 }

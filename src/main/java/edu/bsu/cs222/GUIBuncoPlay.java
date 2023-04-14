@@ -22,7 +22,7 @@ public class GUIBuncoPlay implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        buncoRuleArea.setText(DesktopArcadeDialogue.BuncoRules());
+        buncoRuleArea.setText(BuncoDialogue.GUIBuncoRules());
 
     }
 
@@ -31,21 +31,21 @@ public class GUIBuncoPlay implements Initializable {
 
 
         if((playerScore<21)&&(compScore<21)) {
-            buncoScoreArea.setText(GUIBuncoDialogue.ScoreDisplay(playerScore, compScore));
+            buncoScoreArea.setText(BuncoDialogue.ScoreDisplay(playerScore, compScore));
             if (turnOrder == 1) {
-                buncoTextArea.setText(GUIBuncoDialogue.PlayerTurnDisplay());
+                buncoTextArea.setText(BuncoDialogue.PlayerTurnDisplay());
             } else {
-                buncoTextArea.setText(GUIBuncoDialogue.CompTurnDisplay());
+                buncoTextArea.setText(BuncoDialogue.CompTurnDisplay());
             }
             boolean turnContinue;
-            buncoTextArea.appendText(GUIBuncoDialogue.GUIRoundDisplay(roundNumber));
+            buncoTextArea.appendText(BuncoDialogue.RoundDisplay(roundNumber));
 
             diceRollList = BuncoDice.getDiceRolls();
 
             int dice1Value = diceRollList.get(0);
             int dice2Value = diceRollList.get(1);
             int dice3Value = diceRollList.get(2);
-            buncoTextArea.appendText(GUIBuncoDialogue.RollOutput(dice1Value, dice2Value, dice3Value));
+            buncoTextArea.appendText(BuncoDialogue.DiceOutput(dice1Value, dice2Value, dice3Value));
 
             boolean pointGain = ((dice1Value == roundNumber) || (dice2Value == roundNumber) || (dice3Value == roundNumber));
             boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
@@ -57,21 +57,21 @@ public class GUIBuncoPlay implements Initializable {
 
             turnContinue = pointGain || DiceTriples;
 
-            buncoScoreArea.setText(GUIBuncoDialogue.ScoreDisplay(playerScore, compScore));
+            buncoScoreArea.setText(BuncoDialogue.ScoreDisplay(playerScore, compScore));
             diceRollList.clear();
 
             if (playerScore >= 21) {
-                buncoTextArea.appendText(GUIBuncoDialogue.PlayerWinDisplay());
+                buncoTextArea.appendText(BuncoDialogue.PlayerWinDisplay());
             }
             if (compScore >= 21) {
-                buncoTextArea.appendText(GUIBuncoDialogue.CompWinDisplay());
+                buncoTextArea.appendText(BuncoDialogue.CompWinDisplay());
             }
 
             if ((turnContinue) && (turnOrder == 1) && (playerScore < 21)) {
-                buncoTextArea.appendText(GUIBuncoDialogue.PlayerContinueDisplay());
+                buncoTextArea.appendText(BuncoDialogue.PlayerContinueDisplay());
             }
             if ((turnContinue) && (turnOrder == 2) && (compScore < 21)) {
-                buncoTextArea.appendText(GUIBuncoDialogue.CompContinueDisplay());
+                buncoTextArea.appendText(BuncoDialogue.CompContinueDisplay());
             }
             if(!turnContinue) {
                 if (turnOrder == 1) {
@@ -86,7 +86,7 @@ public class GUIBuncoPlay implements Initializable {
             }
         }
         else{
-            buncoTextArea.appendText(GUIBuncoDialogue.RestartDisplay());
+            buncoTextArea.appendText(BuncoDialogue.RestartDisplay());
         }
             }
 

@@ -37,7 +37,7 @@ public class GUITTTPlay implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ruleBox.appendText(DesktopArcadeDialogue.TTTRules());
+        ruleBox.appendText(TTTDialogue.GUITTTRules());
         letterChoiceBox.getItems().addAll(letterChoice);
         userInput.setEditable(false);
         letterChoiceBox.setOnAction(event -> userInput.setEditable(true));
@@ -69,13 +69,13 @@ public class GUITTTPlay implements Initializable {
                 String userTextInput = (userInput.getText());
                 userPlay = TTTTurnMove.checkUserMove(userTextInput);
                 if (userPlay==9){
-                    ruleBox.appendText(GUITTTDialogue.invalidUserInput());
+                    ruleBox.appendText(TTTDialogue.invalidUserInput());
                     compTurnCheck=0;
                 }
                 else {
                     openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
                     if (!openSpace) {
-                        ruleBox.appendText(GUITTTDialogue.improperSpace());
+                        ruleBox.appendText(TTTDialogue.improperSpace());
                         compTurnCheck = 0;
                     }
                     else{
@@ -90,11 +90,11 @@ public class GUITTTPlay implements Initializable {
             }
 
             if(userWin){
-                ruleBox.appendText(GUITTTDialogue.userWinDialogue());
+                ruleBox.appendText(TTTDialogue.userWinDialogue());
                 compTurnCheck = 0;
             }
             if(draw){
-                ruleBox.appendText(GUITTTDialogue.drawOutcomeDialogue());
+                ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
                 compTurnCheck = 0;
             }
 
@@ -108,15 +108,15 @@ public class GUITTTPlay implements Initializable {
                 }
 
                 if (compWin) {
-                    ruleBox.appendText(GUITTTDialogue.compWinDialogue());
+                    ruleBox.appendText(TTTDialogue.compWinDialogue());
                 }
                 if (draw) {
-                    ruleBox.appendText(GUITTTDialogue.drawOutcomeDialogue());
+                    ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
                 }
             }
         }
         else{
-            ruleBox.setText(GUITTTDialogue.EndDialogue());
+            ruleBox.setText(TTTDialogue.EndDialogue());
         }
     }
 

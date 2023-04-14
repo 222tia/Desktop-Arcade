@@ -15,17 +15,17 @@ public class BuncoGame {
 
 
         while (true) {
-            BuncoDialogue.PlayerTurnDisplay();
+            System.out.println(BuncoDialogue.PlayerTurnDisplay());
             boolean turnContinue;
             do {
-                BuncoDialogue.RoundDisplay(roundNumber);
+                System.out.println(BuncoDialogue.RoundDisplay(roundNumber));
 
                 diceRollList = BuncoDice.getDiceRolls();
 
                 int dice1Value = diceRollList.get(0);
                 int dice2Value = diceRollList.get(1);
                 int dice3Value = diceRollList.get(2);
-                BuncoDialogue.DiceOutput(dice1Value, dice2Value, dice3Value);
+                System.out.println(BuncoDialogue.DiceOutput(dice1Value, dice2Value, dice3Value));
 
                 boolean pointGain = ((dice1Value == roundNumber) || (dice2Value == roundNumber) || (dice3Value == roundNumber));
                 boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
@@ -33,11 +33,11 @@ public class BuncoGame {
 
                 turnContinue = pointGain || DiceTriples;
 
-                BuncoDialogue.PlayerScoreDisplay(playerScore);
+                System.out.println(BuncoDialogue.PlayerScoreDisplay(playerScore));
                 diceRollList.clear();
 
                 if (playerScore >= 21) {
-                    BuncoDialogue.PlayerWinDisplay();
+                    System.out.println(BuncoDialogue.PlayerWinDisplay());
                 }
 
                 DesktopArcadeDialogue.EnterContinue();

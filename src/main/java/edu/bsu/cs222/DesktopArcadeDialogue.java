@@ -2,10 +2,9 @@ package edu.bsu.cs222;
 
 import java.io.IOException;
 
-@SuppressWarnings("SameReturnValue")
 public class DesktopArcadeDialogue {
-    public static void startUpDialogue(){
-        System.out.println("""
+    public static String startUpDialogue(){
+        return("""
                 Welcome to Desktop Arcade
                 To play, please enter the number of the corresponding game:
                 1.) Rock Paper Scissors!
@@ -56,6 +55,7 @@ public class DesktopArcadeDialogue {
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
+    //allows user to press enter to continue play. The result of method is not needed.
     public static void EnterContinue() throws IOException {
         System.in.read();
     }
@@ -64,6 +64,4 @@ public class DesktopArcadeDialogue {
         System.out.println("Goodbye!");
         System.exit(0);
     }
-
 }
-

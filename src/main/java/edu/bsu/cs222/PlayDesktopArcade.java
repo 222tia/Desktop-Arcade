@@ -8,7 +8,7 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue{
         Scanner userChoice = new Scanner(System.in);
         String GameSelection;
         do {
-            DesktopArcadeDialogue.startUpDialogue();
+            System.out.println(DesktopArcadeDialogue.startUpDialogue());
             GameSelection = userChoice.nextLine();
             if (GameSelection.equals("1")) {
                 System.out.println(DesktopArcadeDialogue.RPSRules());
