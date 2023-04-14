@@ -18,7 +18,7 @@ public class BuncoDialogue {
     public static String PlayerContinueDisplay(){
         return("\n\nYou gained points, so you get to roll again!");
     }
-    public static String CompContinueDisplay(){return("\n\nYour opponent gained points, and get to roll again!");}
+    public static String CompContinueDisplay(){return("\n\nYour opponent gained points, and gets to roll again!");}
 
     public static String PlayerWinDisplay(){
         return("\n\nBunco! You Win!");
