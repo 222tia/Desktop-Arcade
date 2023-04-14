@@ -3,6 +3,7 @@ package edu.bsu.cs222;
 import java.util.ArrayList;
 
 
+@SuppressWarnings("SameReturnValue")
 public class TTTDialogue {
 
     public static String inputInstructions(){

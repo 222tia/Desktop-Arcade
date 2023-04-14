@@ -1,5 +1,6 @@
 package edu.bsu.cs222;
 
+@SuppressWarnings("SameReturnValue")
 public class RPSDialogue extends RPSResultDecider{
     public static String showRoundResult(String userPlay, String computerPlay){
         String roundResultMessage;

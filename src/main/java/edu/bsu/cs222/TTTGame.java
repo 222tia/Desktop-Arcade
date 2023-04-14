@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+@SuppressWarnings("LoopConditionNotUpdatedInsideLoop")
 public class TTTGame {
 
     public static final ArrayList<String> gameBoard = new ArrayList<>(
@@ -13,7 +14,7 @@ public class TTTGame {
     static boolean userWin=false;
     static boolean compWin=false;
     static boolean draw=false;
-    static boolean Continue=true;
+    static final boolean Continue=true;
     static String compLetter;
     public static void playTTT() throws IOException {
         String userLetter = TTTTurnMove.letterChoice();
