@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BuncoMultiplayer {
-    public static void playBuncoMultiplayer(){
-        System.out.println("test Bunco multiplayer");
-    }
     static List<Integer> diceRollList = new ArrayList<>();
     public static int player2Turn(int player2Score, int roundNumber) throws IOException {
             boolean turnContinue;
