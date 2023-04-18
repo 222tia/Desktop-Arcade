@@ -30,7 +30,7 @@ public class TTTMultiplayer {
         System.out.println(TTTDialogue.showMultiplayerLetterChoice(userOneLetter, userTwoLetter));
 
         do {
-            System.out.println(TTTDialogue.inputInstructions());
+            System.out.println(TTTDialogue.multiplayerInputInstructions("Player 1"));
             boolean openSpace;
             do {
                 userOnePlay = TTTTurnMove.getUserMove();
@@ -56,7 +56,7 @@ public class TTTMultiplayer {
                 System.exit(0);
             }
 
-            // #TODO add player two turn message
+            System.out.println(TTTDialogue.multiplayerInputInstructions("Player 2"));
             do {
                 userTwoPlay = TTTTurnMove.getUserMove();
                 openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userTwoPlay);

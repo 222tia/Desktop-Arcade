@@ -18,6 +18,18 @@ public class TTTDialogue {
                   Type the number of your chosen space.
                 """;
     }
+    public static String multiplayerInputInstructions(String player){
+        return player + ", it's your turn!" +
+                """
+                  
+                              1 | 2 | 3
+                             ------------
+                              4 | 5 | 6
+                             ------------
+                              7 | 8 | 9
+                  Type the number of your chosen space.
+                """;
+    }
 
     public static String showGameBoard(ArrayList<String> board){
         return "              " + board.get(0) + " | " + board.get(1) + " | " + board.get(2) +
