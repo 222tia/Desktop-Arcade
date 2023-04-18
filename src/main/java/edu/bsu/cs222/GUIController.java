@@ -26,7 +26,7 @@ public class GUIController {
 
     @FXML
     public void onBuncoClick() throws IOException {
-            FXMLLoader MultiplayerLoader = new FXMLLoader(getClass().getResource("Hub-Multiplayer-view.fxml"));
+            FXMLLoader MultiplayerLoader = new FXMLLoader(getClass().getResource("Hub-Bunco-Multiplayer-view.fxml"));
             Parent Multiplayerroot = MultiplayerLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(Multiplayerroot));
@@ -36,7 +36,7 @@ public class GUIController {
 
     @FXML
     public void onTTTClick() throws IOException {
-        FXMLLoader MultiplayerLoader = new FXMLLoader(getClass().getResource("Hub-Multiplayer-view.fxml"));
+        FXMLLoader MultiplayerLoader = new FXMLLoader(getClass().getResource("Hub-TTT-Multiplayer-view.fxml"));
         Parent Multiplayerroot = MultiplayerLoader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(Multiplayerroot));

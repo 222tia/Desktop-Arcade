@@ -4,11 +4,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class GUIMultiplayerChoice {
+    @FXML
+    public AnchorPane hubBuncoMultiplayer;
+    public AnchorPane hubTTTMultiplayer;
+
     @FXML
     public void onBuncoMultiplayerClick(){
 
