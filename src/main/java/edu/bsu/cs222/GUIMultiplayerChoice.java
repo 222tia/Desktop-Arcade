@@ -15,12 +15,12 @@ public class GUIMultiplayerChoice {
     public AnchorPane hubTTTMultiplayer;
 
     @FXML
-    public void onBuncoMultiplayerClick(){
+    public void multiBuncoPlay(){
 
     }
 
     @FXML
-    public void onBuncoSingleplayerClick() throws IOException {
+    public void singleBuncoPlay() throws IOException {
         FXMLLoader BuncoLoader = new FXMLLoader(getClass().getResource("Bunco-play.fxml"));
         Parent Buncoroot = BuncoLoader.load();
         Stage stage = new Stage();
@@ -29,12 +29,12 @@ public class GUIMultiplayerChoice {
     }
 
     @FXML
-    public void onTTTMultiplayerClick(){
+    public void multiTTTPlay(){
 
     }
 
     @FXML
-    public void  onTTTSingleplayerClick() throws IOException {
+    public void singleTTTPlay() throws IOException {
         FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTT-play.fxml"));
         Parent TTTroot = TTTLoader.load();
         Stage stage = new Stage();
