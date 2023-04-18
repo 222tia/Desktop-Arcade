@@ -50,4 +50,36 @@ public class BuncoDialogue {
                 
                 Otherwise, the winner is the first to get to 21 points!""";
     }
+
+    public static String Player1ScoreDisplay(int score) {
+        return ("Player 1's score is " + score);
+    }
+
+    public static String Player1WinDisplay(){
+        return("\n\nBunco! Player 1 Wins!");
+    }
+
+    public static String Player2ScoreDisplay(int score) {
+        return ("Player 2's score is " + score);
+    }
+
+    public static String Player2WinDisplay(){
+        return("\n\nBunco! Player 2 Wins!");
+    }
+
+    public static String Player1TurnDisplay(){return ("It's Player 1's Turn!");}
+
+    public static String Player2TurnDisplay(){return ("It's Player 2's Turn!");}
+
+    public static String playerScoreDisplays(int playerScore, int player2Score){
+        return("Player 1's score is "+playerScore+". Player 2's score is "+player2Score+".");
+    }
+
+    public static String Player1ContinueDisplay(){
+        return("\n\nPlayer 1 gained points, and gets to roll again!");
+    }
+
+    public static String Player2ContinueDisplay(){
+        return("\n\nPlayer 2 gained points, and gets to roll again!");
+    }
 }

@@ -6,16 +6,20 @@ import java.util.List;
 
 public class BuncoGame {
     static List<Integer> diceRollList = new ArrayList<>();
-    @SuppressWarnings("InfiniteLoopStatement")
-    public static void playBunco() throws IOException {
+    public static void playBunco(int playerNumber) throws IOException {
 
         int playerScore = 0;
+        int player2Score = 0;
         int compScore = 0;
         int roundNumber = 1;
 
 
         while (true) {
-            System.out.println(BuncoDialogue.PlayerTurnDisplay());
+            if (playerNumber==1) {
+                System.out.println(BuncoDialogue.PlayerTurnDisplay());
+            }else{
+                System.out.println(BuncoDialogue.Player1TurnDisplay());
+            }
             boolean turnContinue;
             do {
                 System.out.println(BuncoDialogue.RoundDisplay(roundNumber));
@@ -33,18 +37,32 @@ public class BuncoGame {
 
                 turnContinue = pointGain || DiceTriples;
 
-                System.out.println(BuncoDialogue.PlayerScoreDisplay(playerScore));
+                if (playerNumber==1) {
+                    System.out.println(BuncoDialogue.PlayerScoreDisplay(playerScore));
+                }else{
+                    System.out.println(BuncoDialogue.Player1ScoreDisplay(playerScore));
+                }
                 diceRollList.clear();
 
                 if (playerScore >= 21) {
-                    System.out.println(BuncoDialogue.PlayerWinDisplay());
+                    if (playerNumber==1) {
+                        System.out.println(BuncoDialogue.PlayerWinDisplay());
+                    }else{
+                        System.out.println(BuncoDialogue.Player1WinDisplay());
+                    }
+                    System.exit(1);
                 }
 
                 DesktopArcadeDialogue.EnterContinue();
 
 
             } while (turnContinue);
-            compScore = BuncoCompTurn.CompTurn(compScore, roundNumber);
+            if (playerNumber==1) {
+                compScore = BuncoCompTurn.CompTurn(compScore, roundNumber);
+            }
+            else{
+                player2Score=BuncoMultiplayer.player2Turn(player2Score, roundNumber);
+            }
             roundNumber++;
             if (roundNumber > 6) {
                 roundNumber = 1;

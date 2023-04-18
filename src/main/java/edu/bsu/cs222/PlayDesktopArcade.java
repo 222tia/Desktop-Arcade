@@ -37,9 +37,9 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue {
             playerSelection = playerChoice.nextLine();
             if (playerSelection.equals("1")) {
                 System.out.println(DesktopArcadeDialogue.BuncoRules());
-                BuncoGame.playBunco();
+                BuncoGame.playBunco(1);
             } if (playerSelection.equals("2")){
-                BuncoMultiplayer.playBuncoMultiplayer();
+                BuncoGame.playBunco(2);
             } else {
                 DesktopArcadeDialogue.incorrectInput();
             }

@@ -30,6 +30,7 @@ public class BuncoCompTurn {
 
             if (compScore >= 21) {
                 System.out.println(BuncoDialogue.CompWinDisplay());
+                System.exit(1);
             }
 
             DesktopArcadeDialogue.EnterContinue();
