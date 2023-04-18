@@ -48,7 +48,7 @@ public class TTTMultiplayer {
             DesktopArcadeDialogue.EnterContinue();
 
             if (userOneWin) {
-                System.out.println(TTTDialogue.userWinDialogue());
+                System.out.println(TTTDialogue.userOneWinDialogue());
                 System.exit(0);
             }
             if (draw) {
@@ -72,7 +72,7 @@ public class TTTMultiplayer {
                 draw = TTTGetResults.checkDraw(gameBoard);
             }
             if (userTwoWin) {
-                System.out.println(TTTDialogue.compWinDialogue());
+                System.out.println(TTTDialogue.userTwoWinDialogue());
                 System.exit(0);
             }
             if (draw) {

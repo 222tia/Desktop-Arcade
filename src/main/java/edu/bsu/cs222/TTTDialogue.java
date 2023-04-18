@@ -55,6 +55,9 @@ public class TTTDialogue {
 
     public static String compWinDialogue() {return("\n\n\nSorry, you lose!");}
 
+    public static String userOneWinDialogue() {return("\n\n\nPlayer 1 wins!");}
+    public static String userTwoWinDialogue() {return("\n\n\nPlayer 2 wins!");}
+
     public static String EndDialogue() {
         return "The game is over. Please restart.";
     }
