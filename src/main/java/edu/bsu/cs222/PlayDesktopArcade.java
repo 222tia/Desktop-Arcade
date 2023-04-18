@@ -38,7 +38,7 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue {
             if (playerSelection.equals("1")) {
                 System.out.println(DesktopArcadeDialogue.BuncoRules());
                 BuncoGame.playBunco();
-            } else if (playerSelection.equals("2")){
+            } if (playerSelection.equals("2")){
                 BuncoMultiplayer.playBuncoMultiplayer();
             } else {
                 DesktopArcadeDialogue.incorrectInput();
@@ -54,7 +54,7 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue {
             if (playerSelection.equals("1")) {
                 System.out.println(DesktopArcadeDialogue.TTTRules());
                 TTTGame.playTTT();
-            } else if (playerSelection.equals("2")){
+            } if (playerSelection.equals("2")){
                 TTTMultiplayer.playTTTMultiplayer();
             } else {
                 DesktopArcadeDialogue.incorrectInput();
