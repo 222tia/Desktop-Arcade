@@ -55,7 +55,6 @@ public class TTTTurnMove {
     }
 
     public static String letterChoice() {
-        System.out.println(TTTDialogue.letterChoiceDialogue());
         String letter;
         do{
             Scanner userLetterScanner = new Scanner(System.in);

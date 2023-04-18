@@ -19,7 +19,8 @@ public class TTTMultiplayer {
     static String userTwoLetter;
 
     public static void playTTTMultiplayer() throws IOException {
-        String userLetter = TTTTurnMove.letterChoice(); // #TODO update dialogue for multiplayer
+        System.out.println(TTTDialogue.multiplayerLetterChoiceDialogue());
+        String userLetter = TTTTurnMove.letterChoice();
         if (userLetter.equals("O")) {
             userTwoLetter = "X";
         } else {

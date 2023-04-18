@@ -17,6 +17,7 @@ public class TTTGame {
     static final boolean Continue=true;
     static String compLetter;
     public static void playTTT() throws IOException {
+        System.out.println(TTTDialogue.letterChoiceDialogue());
         String userLetter = TTTTurnMove.letterChoice();
         if (userLetter.equals("O")){
             compLetter="X";

@@ -51,6 +51,8 @@ public class TTTDialogue {
         return "Do you want to play as Xs or Os?";
     }
 
+    public static String multiplayerLetterChoiceDialogue() { return "Player 1, do you want to play as Xs or Os?";}
+
     public static String invalidLetterChoice() {
         return "Invalid input. Do you want to play as Xs or Os?";
     }
