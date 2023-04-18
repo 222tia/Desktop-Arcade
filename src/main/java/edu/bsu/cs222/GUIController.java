@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -12,34 +13,34 @@ import java.io.IOException;
 public class GUIController {
     @FXML
     public Label homeName;
-
+    public VBox hubView;
 
     @FXML
     public void onRPSClick() throws IOException {
         FXMLLoader RPSLoader = new FXMLLoader(getClass().getResource("RPS-play.fxml"));
         Parent RPSroot = RPSLoader.load();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(RPSroot));
-        stage.show();
+        Stage RPSStage = new Stage();
+        RPSStage.setScene(new Scene(RPSroot));
+        RPSStage.show();
     }
 
     @FXML
     public void onBuncoClick() throws IOException {
-        FXMLLoader BuncoLoader = new FXMLLoader(getClass().getResource("Bunco-play.fxml"));
-        Parent Buncoroot = BuncoLoader.load();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(Buncoroot));
-        stage.show();
-    }
+            FXMLLoader MultiplayerLoader = new FXMLLoader(getClass().getResource("Hub-Multiplayer-view.fxml"));
+            Parent Multiplayerroot = MultiplayerLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(Multiplayerroot));
+            stage.show();
+        }
+
 
     @FXML
     public void onTTTClick() throws IOException {
-        FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTT-play.fxml"));
-        Parent TTTroot = TTTLoader.load();
+        FXMLLoader MultiplayerLoader = new FXMLLoader(getClass().getResource("Hub-Multiplayer-view.fxml"));
+        Parent Multiplayerroot = MultiplayerLoader.load();
         Stage stage = new Stage();
-        stage.setScene(new Scene(TTTroot));
+        stage.setScene(new Scene(Multiplayerroot));
         stage.show();
-
     }
 
 }
