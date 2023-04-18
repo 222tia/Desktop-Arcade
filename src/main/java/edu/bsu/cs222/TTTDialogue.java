@@ -19,7 +19,7 @@ public class TTTDialogue {
                 """;
     }
     public static String multiplayerInputInstructions(String player){
-        return player + ", it's your turn!" +
+        return "\n       " + player + ", it's your turn!" +
                 """
                   
                               1 | 2 | 3
@@ -54,6 +54,9 @@ public class TTTDialogue {
     public static String userWinDialogue() {return("\n\n\nYou win!");}
 
     public static String compWinDialogue() {return("\n\n\nSorry, you lose!");}
+
+    public static String userOneWinDialogue() {return("\n\n\nPlayer 1 wins!");}
+    public static String userTwoWinDialogue() {return("\n\n\nPlayer 2 wins!");}
 
     public static String EndDialogue() {
         return "The game is over. Please restart.";
