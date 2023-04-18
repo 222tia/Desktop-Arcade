@@ -20,14 +20,14 @@ public class TTTMultiplayer {
 
     public static void playTTTMultiplayer() throws IOException {
         System.out.println(TTTDialogue.multiplayerLetterChoiceDialogue());
-        String userLetter = TTTTurnMove.letterChoice();
-        if (userLetter.equals("O")) {
+        String userOneLetter = TTTTurnMove.letterChoice();
+        if (userOneLetter.equals("O")) {
             userTwoLetter = "X";
         } else {
             userTwoLetter = "O";
         }
 
-        // #TODO add dialogue to tell players what letter they're playing
+        System.out.println(TTTDialogue.showMultiplayerLetterChoice(userOneLetter, userTwoLetter));
 
         do {
             System.out.println(TTTDialogue.inputInstructions());
@@ -40,8 +40,8 @@ public class TTTMultiplayer {
                 }
             } while (!openSpace);
 
-            TTTGameBoard.showUpdatedGameBoard(gameBoard, userOnePlay, userLetter);
-            userOneWin = TTTGetResults.checkBoard(userLetter, gameBoard);
+            TTTGameBoard.showUpdatedGameBoard(gameBoard, userOnePlay, userOneLetter);
+            userOneWin = TTTGetResults.checkBoard(userOneLetter, gameBoard);
             if (!userOneWin) {
                 draw = TTTGetResults.checkDraw(gameBoard);
             }
