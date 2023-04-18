@@ -19,7 +19,7 @@ public class TTTDialogue {
                 """;
     }
     public static String multiplayerInputInstructions(String player){
-        return player + ", it's your turn!" +
+        return "\n       " + player + ", it's your turn!" +
                 """
                   
                               1 | 2 | 3
