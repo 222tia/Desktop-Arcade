@@ -50,6 +50,12 @@ public class DesktopArcadeDialogue {
                 """);
     }
 
+    public static String multiplayerSelect(){
+        return("""
+                // multiplayer selection dialogue here
+                """);
+    }
+
     public static void incorrectInput(){
         System.err.println("Input not an option. Please try again.");
     }
