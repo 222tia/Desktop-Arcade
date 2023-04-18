@@ -18,6 +18,18 @@ public class TTTDialogue {
                   Type the number of your chosen space.
                 """;
     }
+    public static String multiplayerInputInstructions(String player){
+        return player + ", it's your turn!" +
+                """
+                  
+                              1 | 2 | 3
+                             ------------
+                              4 | 5 | 6
+                             ------------
+                              7 | 8 | 9
+                  Type the number of your chosen space.
+                """;
+    }
 
     public static String showGameBoard(ArrayList<String> board){
         return "              " + board.get(0) + " | " + board.get(1) + " | " + board.get(2) +
@@ -53,6 +65,8 @@ public class TTTDialogue {
 
     public static String multiplayerLetterChoiceDialogue() { return "Player 1, do you want to play as Xs or Os?";}
 
+    public static String showMultiplayerLetterChoice(String userOneLetter, String userTwoLetter) {
+        return "\nPlayer 1, you will play as " + userOneLetter + "\nPlayer 2, you will play as " + userTwoLetter; }
     public static String invalidLetterChoice() {
         return "Invalid input. Do you want to play as Xs or Os?";
     }
