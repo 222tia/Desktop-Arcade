@@ -33,7 +33,7 @@ Emma "Jay" Jordan
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.BuncoDialogue.java as it is meant to return the same value.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.RPSDialogue.java as it is meant to return the same value.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.TTTDialogue.java as it is meant to return the same value.
-<br>• Suppressed Warning "Redundant 'throws' clause" within edu.bsu.cs222.GUITTTPlay.java as the exception is thrown in the Initialize method.
+<br>• Suppressed Warning "Redundant 'throws' clause" within edu.bsu.cs222.GUITTTPlaySingle.java as the exception is thrown in the Initialize method.
 <br>• Suppressed Warning "Loop variable not updated inside loop" within edu.bsu.cs222.TTTGame.java as it is an infinite loop.
 
 

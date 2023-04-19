@@ -30,7 +30,7 @@ public class GUIMultiplayerChoice {
 
     @FXML
     public void multiTTTPlay() throws IOException {
-        FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTT-play-multi.fxml"));
+        FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTT-play-single.fxml"));
         Parent TTTroot = TTTLoader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(TTTroot));

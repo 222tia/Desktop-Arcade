@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 
 @SuppressWarnings("RedundantThrows")
-public class GUITTTPlay implements Initializable {
+public class GUITTTPlaySingle implements Initializable {
     @FXML
     private TextArea ruleBox;
 

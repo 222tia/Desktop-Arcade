@@ -16,7 +16,7 @@ public class TTTGame {
     static boolean draw = false;
     static final boolean Continue = true;
     static String playerTwoLetter;
-    public static void playTTTSingleplayer() throws IOException {
+    public static void playTTTSingle() throws IOException {
 
         System.out.println(TTTDialogue.letterChoiceDialogue());
         String userLetter = TTTTurnMove.letterChoice();
@@ -81,7 +81,7 @@ public class TTTGame {
 
     }
 
-    public static void playTTTMultiplayer() throws IOException {
+    public static void playTTTMulti() throws IOException {
 
         System.out.println(TTTDialogue.multiplayerLetterChoiceDialogue());
         String userOneLetter = TTTTurnMove.letterChoice();
