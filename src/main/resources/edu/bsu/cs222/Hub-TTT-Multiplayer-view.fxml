@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="hubTTTMultiplayer" prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: #fffbf2; -fx-background-radius: 10px; -fx-border-color: #d67bf4; -fx-border-style: solid; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIMultiplayerChoice">
+<AnchorPane fx:id="hubTTTMultiplayer" prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: #fffbf2; -fx-background-radius: 10px; -fx-border-color: #d67bf4; -fx-border-style: solid; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIMultiplayerChoice">
    <VBox alignment="CENTER" prefHeight="500.0" prefWidth="650.0">
-      <Button fx:id="singleTTTPlay" mnemonicParsing="false" text="Button" />
-      <Button fx:id="multiTTTPlay" mnemonicParsing="false" text="Button" />
+      <Button fx:id="singleTTTPlay" mnemonicParsing="false" onAction="#singleTTTPlay" text="Button" />
+      <Button fx:id="multiTTTPlay" mnemonicParsing="false" onAction="#multiTTTPlay" text="Button" />
    </VBox>
 </AnchorPane>
