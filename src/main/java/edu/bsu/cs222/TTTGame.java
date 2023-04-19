@@ -11,22 +11,27 @@ public class TTTGame {
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
     static int playerOnePlay;
     static int playerTwoPlay;
-    static boolean playerOneWin =false;
-    static boolean playerTwoWin =false;
-    static boolean draw=false;
-    static final boolean Continue=true;
+    static boolean playerOneWin = false;
+    static boolean playerTwoWin = false;
+    static boolean draw = false;
+    static final boolean Continue = true;
     static String playerTwoLetter;
     public static void playTTTSingleplayer() throws IOException {
+
         System.out.println(TTTDialogue.letterChoiceDialogue());
         String userLetter = TTTTurnMove.letterChoice();
+
         if (userLetter.equals("O")){
             playerTwoLetter ="X";
         }
         else{
             playerTwoLetter ="O";
         }
+
         do {
+
             System.out.println(TTTDialogue.inputInstructions());
+
             boolean openSpace;
             do {
                 playerOnePlay = TTTTurnMove.getUserMove();
@@ -41,6 +46,7 @@ public class TTTGame {
             if(!playerOneWin){
                 draw = TTTGetResults.checkDraw(gameBoard);
             }
+
             DesktopArcadeDialogue.EnterContinue();
 
             if(playerOneWin){
@@ -56,10 +62,10 @@ public class TTTGame {
             playerTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, playerTwoLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
             playerTwoWin = TTTGetResults.checkBoard(playerTwoLetter, gameBoard);
+
             if(!playerTwoWin){
                 draw = TTTGetResults.checkDraw(gameBoard);
             }
-
             if(playerTwoWin){
                 System.out.println(TTTDialogue.compWinDialogue());
                 System.exit(0);
@@ -68,14 +74,18 @@ public class TTTGame {
                 System.out.println(TTTDialogue.drawOutcomeDialogue());
                 System.exit(0);
             }
+
             DesktopArcadeDialogue.EnterContinue();
+
         }while(Continue);
 
     }
 
     public static void playTTTMultiplayer() throws IOException {
+
         System.out.println(TTTDialogue.multiplayerLetterChoiceDialogue());
         String userOneLetter = TTTTurnMove.letterChoice();
+
         if (userOneLetter.equals("O")) {
             playerTwoLetter = "X";
         } else {
@@ -85,7 +95,9 @@ public class TTTGame {
         System.out.println(TTTDialogue.showMultiplayerLetterChoice(userOneLetter, playerTwoLetter));
 
         do {
+
             System.out.println(TTTDialogue.multiplayerInputInstructions("Player 1"));
+
             boolean openSpace;
             do {
                 playerOnePlay = TTTTurnMove.getUserMove();
@@ -100,6 +112,7 @@ public class TTTGame {
             if (!playerOneWin) {
                 draw = TTTGetResults.checkDraw(gameBoard);
             }
+
             DesktopArcadeDialogue.EnterContinue();
 
             if (playerOneWin) {
@@ -134,7 +147,9 @@ public class TTTGame {
                 System.out.println(TTTDialogue.drawOutcomeDialogue());
                 System.exit(0);
             }
+
             DesktopArcadeDialogue.EnterContinue();
+
         } while (Continue);
 
     }
