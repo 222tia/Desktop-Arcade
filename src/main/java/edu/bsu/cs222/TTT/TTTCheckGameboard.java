@@ -2,7 +2,7 @@ package edu.bsu.cs222.TTT;
 
 import java.util.ArrayList;
 
-public class TTTGetResults {
+public class TTTCheckGameboard {
     public static boolean checkBoard(String letter, ArrayList<String> gameBoard){
         return (checkRows(letter, gameBoard) || checkColumns(letter, gameBoard) || checkDiagonals(letter, gameBoard));
     }

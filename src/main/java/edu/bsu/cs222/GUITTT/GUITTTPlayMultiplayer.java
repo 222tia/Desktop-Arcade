@@ -2,7 +2,7 @@ package edu.bsu.cs222.GUITTT;
 
 import edu.bsu.cs222.TTT.TTTDialogue;
 import edu.bsu.cs222.TTT.TTTGameBoard;
-import edu.bsu.cs222.TTT.TTTGetResults;
+import edu.bsu.cs222.TTT.TTTCheckGameboard;
 import edu.bsu.cs222.TTT.TTTTurnMove;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -87,9 +87,9 @@ public class GUITTTPlayMultiplayer implements Initializable {
             }
 
             GameDisplay(gameBoard);
-            userWin = TTTGetResults.checkBoard(userOneLetter, gameBoard);
+            userWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
             if(!userWin){
-                draw = TTTGetResults.checkDraw(gameBoard);
+                draw = TTTCheckGameboard.checkDraw(gameBoard);
             }
 
             if(userWin){
@@ -105,9 +105,9 @@ public class GUITTTPlayMultiplayer implements Initializable {
                 userTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, userTwoLetter, userOneLetter);
                 TTTGameBoard.updateGameBoard(gameBoard, userTwoPlay, userTwoLetter);
                 GameDisplay(gameBoard);
-                compWin = TTTGetResults.checkBoard(userTwoLetter, gameBoard);
+                compWin = TTTCheckGameboard.checkBoard(userTwoLetter, gameBoard);
                 if (!compWin) {
-                    draw = TTTGetResults.checkDraw(gameBoard);
+                    draw = TTTCheckGameboard.checkDraw(gameBoard);
                 }
 
                 if (compWin) {

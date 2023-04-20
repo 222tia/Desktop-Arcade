@@ -37,9 +37,10 @@ public class TTTGame {
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
-            playerOneWin = TTTGetResults.checkBoard(userLetter, gameBoard);
+            playerOneWin = TTTCheckGameboard.checkBoard(userLetter, gameBoard);
+
             if(!playerOneWin){
-                draw = TTTGetResults.checkDraw(gameBoard);
+                draw = TTTCheckGameboard.checkDraw(gameBoard);
             }
 
             DesktopArcadeDialogue.EnterContinue();
@@ -56,10 +57,10 @@ public class TTTGame {
             System.out.println(TTTDialogue.compTurn());
             playerTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, playerTwoLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
-            playerTwoWin = TTTGetResults.checkBoard(playerTwoLetter, gameBoard);
+            playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
 
             if(!playerTwoWin){
-                draw = TTTGetResults.checkDraw(gameBoard);
+                draw = TTTCheckGameboard.checkDraw(gameBoard);
             }
             if(playerTwoWin){
                 System.out.println(TTTDialogue.compWinDialogue());
@@ -95,9 +96,9 @@ public class TTTGame {
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userOneLetter);
-            playerOneWin = TTTGetResults.checkBoard(userOneLetter, gameBoard);
+            playerOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
             if (!playerOneWin) {
-                draw = TTTGetResults.checkDraw(gameBoard);
+                draw = TTTCheckGameboard.checkDraw(gameBoard);
             }
 
             DesktopArcadeDialogue.EnterContinue();
@@ -115,10 +116,10 @@ public class TTTGame {
             playerTwoPlay = TTTTurnMove.getUserMove(gameBoard);
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
-            playerTwoWin = TTTGetResults.checkBoard(playerTwoLetter, gameBoard);
+            playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
 
             if (!playerTwoWin) {
-                draw = TTTGetResults.checkDraw(gameBoard);
+                draw = TTTCheckGameboard.checkDraw(gameBoard);
             }
             if (playerTwoWin) {
                 System.out.println(TTTDialogue.userTwoWinDialogue());
