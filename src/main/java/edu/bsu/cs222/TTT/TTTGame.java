@@ -36,15 +36,6 @@ public class TTTGame {
 
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
 
-//            boolean openSpace;
-//            do {
-//                playerOnePlay = TTTTurnMove.getUserInput();
-//                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, playerOnePlay);
-//                if (!openSpace) {
-//                    System.out.println(TTTDialogue.improperSpace());
-//                }
-//            } while (!openSpace);
-
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
             playerOneWin = TTTGetResults.checkBoard(userLetter, gameBoard);
             if(!playerOneWin){
@@ -101,7 +92,6 @@ public class TTTGame {
         do {
 
             System.out.println(TTTDialogue.multiplayerInputInstructions("Player 1"));
-
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userOneLetter);
