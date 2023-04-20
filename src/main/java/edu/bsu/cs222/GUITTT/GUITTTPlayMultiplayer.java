@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
-public class GUITTTPlayMulti implements Initializable {
+public class GUITTTPlayMultiplayer implements Initializable {
     @FXML
     private TextArea ruleBox;
 
