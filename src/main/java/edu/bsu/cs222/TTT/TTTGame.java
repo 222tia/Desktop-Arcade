@@ -34,14 +34,16 @@ public class TTTGame {
 
             System.out.println(TTTDialogue.inputInstructions());
 
-            boolean openSpace;
-            do {
-                playerOnePlay = TTTTurnMove.getUserMove();
-                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, playerOnePlay);
-                if (!openSpace) {
-                    System.out.println(TTTDialogue.improperSpace());
-                }
-            } while (!openSpace);
+            playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
+
+//            boolean openSpace;
+//            do {
+//                playerOnePlay = TTTTurnMove.getUserInput();
+//                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, playerOnePlay);
+//                if (!openSpace) {
+//                    System.out.println(TTTDialogue.improperSpace());
+//                }
+//            } while (!openSpace);
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
             playerOneWin = TTTGetResults.checkBoard(userLetter, gameBoard);
@@ -100,14 +102,7 @@ public class TTTGame {
 
             System.out.println(TTTDialogue.multiplayerInputInstructions("Player 1"));
 
-            boolean openSpace;
-            do {
-                playerOnePlay = TTTTurnMove.getUserMove();
-                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, playerOnePlay);
-                if (!openSpace) {
-                    System.out.println(TTTDialogue.improperSpace());
-                }
-            } while (!openSpace);
+            playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userOneLetter);
             playerOneWin = TTTGetResults.checkBoard(userOneLetter, gameBoard);
@@ -127,13 +122,7 @@ public class TTTGame {
             }
 
             System.out.println(TTTDialogue.multiplayerInputInstructions("Player 2"));
-            do {
-                playerTwoPlay = TTTTurnMove.getUserMove();
-                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, playerTwoPlay);
-                if (!openSpace) {
-                    System.out.println(TTTDialogue.improperSpace());
-                }
-            } while (!openSpace);
+            playerTwoPlay = TTTTurnMove.getUserMove(gameBoard);
 
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
             playerTwoWin = TTTGetResults.checkBoard(playerTwoLetter, gameBoard);

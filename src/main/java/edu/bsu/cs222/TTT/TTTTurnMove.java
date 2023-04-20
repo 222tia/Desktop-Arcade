@@ -1,5 +1,6 @@
 package edu.bsu.cs222.TTT;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,7 +9,7 @@ public class TTTTurnMove {
     private final static List<String> possibleMovesString = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9");
 
 
-    public static int getUserMove() {
+    public static int getUserInput() {
         boolean isNotInteger = true;
         int userTurn = 0;
         Scanner userTurnMoveScanner = new Scanner(System.in);
@@ -23,6 +24,20 @@ public class TTTTurnMove {
             }
         }while(isNotInteger);
         return userTurn - 1;
+    }
+
+    public static int getUserMove(ArrayList<String> gameBoard) {
+        boolean openSpace;
+        int userMove;
+        do {
+            userMove = TTTTurnMove.getUserInput();
+            openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userMove);
+            if (!openSpace) {
+                System.out.println(TTTDialogue.improperSpace());
+            }
+        } while (!openSpace);
+
+        return userMove;
     }
 
     public static int checkUserMove(String userTurnString){

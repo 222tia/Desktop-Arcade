@@ -38,7 +38,7 @@ public class TestTTTTurnMove {
         final String input = "2";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         final int output = 1;
-        Assertions.assertEquals(output, TTTTurnMove.getUserMove());
+        Assertions.assertEquals(output, TTTTurnMove.getUserInput());
     }
 
     @Test
@@ -46,7 +46,7 @@ public class TestTTTTurnMove {
         final String input = "9";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         final int output = 8;
-        Assertions.assertEquals(output, TTTTurnMove.getUserMove());
+        Assertions.assertEquals(output, TTTTurnMove.getUserInput());
     }
 
     @Test
