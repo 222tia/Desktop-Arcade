@@ -43,6 +43,28 @@ public class BuncoDice {
         return score;
     }
 
+    public static Boolean PointGain(int round, List<Integer> diceList) {
+        return((diceList.get(0).equals(round)) || (diceList.get(1).equals(round)) || (diceList.get(2).equals(round)));
+    }
 
+    public static Boolean DiceTriples(List<Integer> diceList) {
+        return (diceList.get(0).equals(diceList.get(1))) && (diceList.get(1).equals(diceList.get(2)));
+    }
+
+    public static Integer round(int roundNumber){
+        roundNumber++;
+        if (roundNumber > 6) {
+            roundNumber = 1;
+        }
+        return roundNumber;
+    }
+
+    public static Boolean turnContinue(boolean point, boolean triples){
+        return (point || triples);
+    }
+
+    public static Boolean winReturn(int points){
+        return (points>=21);
+    }
 
 }

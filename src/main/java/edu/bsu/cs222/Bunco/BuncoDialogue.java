@@ -1,9 +1,11 @@
 package edu.bsu.cs222.Bunco;
 
+import java.util.List;
+
 @SuppressWarnings("SameReturnValue")
 public class BuncoDialogue {
-    public static String DiceOutput(int dice1, int dice2, int dice3) {
-        return ("\nRoll 1 = " + dice1 + "\nRoll 2 = " + dice2 + "\nRoll 3 = " + dice3);
+    public static String DiceOutput(List<Integer> diceRollList) {
+        return ("\nRoll 1 = " + diceRollList.get(0) + "\nRoll 2 = " + diceRollList.get(1) + "\nRoll 3 = " + diceRollList.get(2));
     }
 
     public static String PlayerScoreDisplay (int score){return ("Your score is " + score);}

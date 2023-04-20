@@ -28,16 +28,13 @@ public class BuncoGame {
 
                 diceRollList = BuncoDice.getDiceRolls();
 
-                int dice1Value = diceRollList.get(0);
-                int dice2Value = diceRollList.get(1);
-                int dice3Value = diceRollList.get(2);
-                System.out.println(BuncoDialogue.DiceOutput(dice1Value, dice2Value, dice3Value));
+                System.out.println(BuncoDialogue.DiceOutput(diceRollList));
 
-                boolean pointGain = ((dice1Value == roundNumber) || (dice2Value == roundNumber) || (dice3Value == roundNumber));
-                boolean DiceTriples = (dice1Value == dice2Value) && (dice2Value == dice3Value);
+                boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
+                boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
                 playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
 
-                turnContinue = pointGain || DiceTriples;
+                turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
 
                 if (playerNumber==1) {
                     System.out.println(BuncoDialogue.PlayerScoreDisplay(playerScore));
@@ -46,7 +43,7 @@ public class BuncoGame {
                 }
                 diceRollList.clear();
 
-                if (playerScore >= 21) {
+                if (BuncoDice.winReturn(playerScore)) {
                     if (playerNumber==1) {
                         System.out.println(BuncoDialogue.PlayerWinDisplay());
                     }else{
@@ -65,10 +62,7 @@ public class BuncoGame {
             else{
                 player2Score=BuncoMultiplayer.player2Turn(player2Score, roundNumber);
             }
-            roundNumber++;
-            if (roundNumber > 6) {
-                roundNumber = 1;
-            }
+            roundNumber=BuncoDice.round(roundNumber);
         }
     }
 
