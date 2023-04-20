@@ -19,10 +19,10 @@ public class GUITTTPlayMulti implements Initializable {
 
     public final ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
-    public String userLetter = " ";
-    public String compLetter = " ";
-    static int userPlay;
-    static int compPlay;
+    public String userOneLetter = " ";
+    public String userTwoLetter = " ";
+    static int userOnePlay;
+    static int userTwoPlay;
     static boolean userWin;
     static boolean compWin;
     static boolean draw;
@@ -55,35 +55,35 @@ public class GUITTTPlayMulti implements Initializable {
 
     @FXML
     public void onTTTInput() throws IOException {
-        userLetter = letterChoiceBox.getValue();
+        userOneLetter = letterChoiceBox.getValue();
         int compTurnCheck=1;
-        if (userLetter.equals("O")){
-            compLetter="X";
+        if (userOneLetter.equals("O")){
+            userTwoLetter ="X";
         }
         else{
-            compLetter="O";
+            userTwoLetter ="O";
         }
         if((!userWin)&&(!compWin)&&(!draw)){
             boolean openSpace;
             String userTextInput = (userInput.getText());
-            userPlay = TTTTurnMove.checkUserMove(userTextInput);
-            if (userPlay==9){
+            userOnePlay = TTTTurnMove.checkUserMove(userTextInput);
+            if (userOnePlay ==9){
                 ruleBox.appendText(TTTDialogue.invalidUserInput());
                 compTurnCheck=0;
             }
             else {
-                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
+                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userOnePlay);
                 if (!openSpace) {
                     ruleBox.appendText(TTTDialogue.improperSpace());
                     compTurnCheck = 0;
                 }
                 else{
-                    TTTGameBoard.updateGameBoard(gameBoard, userPlay, userLetter);
+                    TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
                 }
             }
 
             GameDisplay(gameBoard);
-            userWin = TTTGetResults.checkBoard(userLetter, gameBoard);
+            userWin = TTTGetResults.checkBoard(userOneLetter, gameBoard);
             if(!userWin){
                 draw = TTTGetResults.checkDraw(gameBoard);
             }
@@ -98,10 +98,10 @@ public class GUITTTPlayMulti implements Initializable {
             }
 
             if(compTurnCheck==1) {
-                compPlay = TTTTurnMove.getCompTurnMove(gameBoard, compLetter, userLetter);
-                TTTGameBoard.updateGameBoard(gameBoard, compPlay, compLetter);
+                userTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, userTwoLetter, userOneLetter);
+                TTTGameBoard.updateGameBoard(gameBoard, userTwoPlay, userTwoLetter);
                 GameDisplay(gameBoard);
-                compWin = TTTGetResults.checkBoard(compLetter, gameBoard);
+                compWin = TTTGetResults.checkBoard(userTwoLetter, gameBoard);
                 if (!compWin) {
                     draw = TTTGetResults.checkDraw(gameBoard);
                 }
