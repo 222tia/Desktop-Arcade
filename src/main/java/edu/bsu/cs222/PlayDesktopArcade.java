@@ -53,9 +53,9 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue {
             playerSelection = playerChoice.nextLine();
             if (playerSelection.equals("1")) {
                 System.out.println(DesktopArcadeDialogue.TTTRules());
-                TTTGame.playTTT();
+                TTTGame.playTTTSingle();
             } if (playerSelection.equals("2")){
-                TTTMultiplayer.playTTTMultiplayer();
+                TTTGame.playTTTMulti();
             } else {
                 DesktopArcadeDialogue.incorrectInput();
             }
