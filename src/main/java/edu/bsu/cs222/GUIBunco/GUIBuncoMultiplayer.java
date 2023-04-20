@@ -1,5 +1,7 @@
-package edu.bsu.cs222;
+package edu.bsu.cs222.GUIBunco;
 
+import edu.bsu.cs222.Bunco.BuncoDialogue;
+import edu.bsu.cs222.Bunco.BuncoDice;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;

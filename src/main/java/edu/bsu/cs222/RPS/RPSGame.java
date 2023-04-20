@@ -1,4 +1,4 @@
-package edu.bsu.cs222;
+package edu.bsu.cs222.RPS;
 
 public class RPSGame {
     public static void playRPS() {

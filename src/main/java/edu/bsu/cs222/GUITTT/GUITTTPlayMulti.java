@@ -1,5 +1,9 @@
-package edu.bsu.cs222;
+package edu.bsu.cs222.GUITTT;
 
+import edu.bsu.cs222.TTT.TTTDialogue;
+import edu.bsu.cs222.TTT.TTTGameBoard;
+import edu.bsu.cs222.TTT.TTTGetResults;
+import edu.bsu.cs222.TTT.TTTTurnMove;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;

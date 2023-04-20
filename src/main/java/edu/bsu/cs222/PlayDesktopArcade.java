@@ -1,5 +1,9 @@
 package edu.bsu.cs222;
 
+import edu.bsu.cs222.Bunco.BuncoGame;
+import edu.bsu.cs222.RPS.RPSGame;
+import edu.bsu.cs222.TTT.TTTGame;
+
 import java.io.IOException;
 import java.util.Scanner;
 

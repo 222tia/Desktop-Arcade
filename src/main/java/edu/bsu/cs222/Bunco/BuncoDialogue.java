@@ -1,4 +1,4 @@
-package edu.bsu.cs222;
+package edu.bsu.cs222.Bunco;
 
 @SuppressWarnings("SameReturnValue")
 public class BuncoDialogue {

@@ -1,11 +1,14 @@
-package edu.bsu.cs222;
+package edu.bsu.cs222.GUIRPS;
 
+import edu.bsu.cs222.DesktopArcadeDialogue;
+import edu.bsu.cs222.RPS.RPSDialogue;
+import edu.bsu.cs222.RPS.RPSPlayRandomizer;
+import edu.bsu.cs222.RPS.RPSScoreKeeper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.VBox;
 
 
 import java.net.URL;

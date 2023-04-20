@@ -1,4 +1,4 @@
-package edu.bsu.cs222;
+package edu.bsu.cs222.RPS;
 
 public class RPSScoreKeeper {
     public static int addUserScore(String computerPlay, String userPlay, int score){

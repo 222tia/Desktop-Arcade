@@ -6,7 +6,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-background-radius: 10px; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-color: #865DFF; -fx-border-color: #645CBB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBuncoPlay">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-background-radius: 10px; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-color: #865DFF; -fx-border-color: #645CBB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBunco.GUIBuncoPlay">
       <TextArea fx:id="buncoRuleArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="625.0" style="-fx-background-color: #865DFF;" wrapText="true" VBox.vgrow="SOMETIMES">
       <font>
          <Font name="Bookman Old Style Bold" size="14.0" />

@@ -1,5 +1,6 @@
 package edu.bsu.cs222;
 
+import edu.bsu.cs222.Bunco.BuncoDice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

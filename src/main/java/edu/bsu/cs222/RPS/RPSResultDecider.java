@@ -1,4 +1,4 @@
-package edu.bsu.cs222;
+package edu.bsu.cs222.RPS;
 
 public class RPSResultDecider {
     public static boolean winCondition(String winningPlay, String losingPlay) {
