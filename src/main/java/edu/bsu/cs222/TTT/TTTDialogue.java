@@ -76,6 +76,15 @@ public class TTTDialogue {
 
     public static String drawOutcomeDialogue() {return("\n\n\nThe game ends in a draw.");}
 
+    public static void gameOutcomeDialogue(boolean draw, boolean playerWin){
+        if(playerWin){
+            System.out.println(TTTDialogue.compWinDialogue());
+        }
+        if(draw){
+            System.out.println(TTTDialogue.drawOutcomeDialogue());
+        }
+    }
+
     public static String GUITTTRules(){
         return """
                 Tic-Tac-Toe is played by using a 3x3 grid.

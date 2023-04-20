@@ -35,39 +35,28 @@ public class TTTGame {
             System.out.println(TTTDialogue.inputInstructions());
 
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
-
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
-            playerOneWin = TTTCheckGameboard.checkBoard(userLetter, gameBoard);
 
-            if(!playerOneWin){
-                draw = TTTCheckGameboard.checkDraw(gameBoard);
+            playerOneWin = TTTCheckGameboard.checkBoard(userLetter, gameBoard);
+            draw = TTTCheckGameboard.checkDraw(gameBoard);
+
+            TTTDialogue.gameOutcomeDialogue(draw, playerOneWin);
+            if (draw || playerOneWin) {
+                System.exit(0);
             }
 
             DesktopArcadeDialogue.EnterContinue();
 
-            if(playerOneWin){
-                System.out.println(TTTDialogue.userWinDialogue());
-                System.exit(0);
-            }
-            if(draw){
-                System.out.println(TTTDialogue.drawOutcomeDialogue());
-                System.exit(0);
-            }
-
             System.out.println(TTTDialogue.compTurn());
+
             playerTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, playerTwoLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
-            playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
 
-            if(!playerTwoWin){
-                draw = TTTCheckGameboard.checkDraw(gameBoard);
-            }
-            if(playerTwoWin){
-                System.out.println(TTTDialogue.compWinDialogue());
-                System.exit(0);
-            }
-            if(draw){
-                System.out.println(TTTDialogue.drawOutcomeDialogue());
+            playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
+            draw = TTTCheckGameboard.checkDraw(gameBoard);
+
+            TTTDialogue.gameOutcomeDialogue(draw, playerOneWin);
+            if (draw || playerTwoWin) {
                 System.exit(0);
             }
 
