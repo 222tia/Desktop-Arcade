@@ -13,7 +13,6 @@ import java.io.IOException;
 public class GUIController {
     @FXML
     public Label homeName;
-    public VBox hubView;
 
     @FXML
     public void onRPSClick() throws IOException {
