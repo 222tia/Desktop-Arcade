@@ -6,7 +6,7 @@ import java.util.ArrayList;
 @SuppressWarnings("SameReturnValue")
 public class TTTDialogue {
 
-    public static String inputInstructions(){
+    public static String inputInstructionsSingle(){
         return """
                   It's your turn!
                   
@@ -18,7 +18,7 @@ public class TTTDialogue {
                   Type the number of your chosen space.
                 """;
     }
-    public static String multiplayerInputInstructions(String player){
+    public static String inputInstructionsMulti(String player){
         return "\n       " + player + ", it's your turn!" +
                 """
                   
@@ -56,15 +56,15 @@ public class TTTDialogue {
     public static String compWinDialogue() {return("\n\n\nSorry, you lose!");}
 
 
-    public static String EndDialogue() {
+    public static String endDialogue() {
         return "The game is over. Please restart.";
     }
 
-    public static String letterChoiceDialogue() {
+    public static String letterChoiceDialogueSingle() {
         return "Do you want to play as Xs or Os?";
     }
 
-    public static String multiplayerLetterChoiceDialogue() { return "Player 1, do you want to play as Xs or Os?";}
+    public static String letterChoiceDialogueMulti() { return "Player 1, do you want to play as Xs or Os?";}
 
     public static String showMultiplayerLetterChoice(String userOneLetter, String userTwoLetter) {
         return "\nPlayer 1, you will play as " + userOneLetter + "\nPlayer 2, you will play as " + userTwoLetter; }

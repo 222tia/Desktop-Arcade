@@ -20,7 +20,7 @@ public class TTTGame {
     static String playerTwoLetter;
     public static void playTTTSingle() throws IOException {
 
-        System.out.println(TTTDialogue.letterChoiceDialogue());
+        System.out.println(TTTDialogue.letterChoiceDialogueSingle());
         String userLetter = TTTTurnMove.letterChoice();
 
         if (userLetter.equals("O")){
@@ -32,7 +32,7 @@ public class TTTGame {
 
         do {
 
-            System.out.println(TTTDialogue.inputInstructions());
+            System.out.println(TTTDialogue.inputInstructionsSingle());
 
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
@@ -68,7 +68,7 @@ public class TTTGame {
 
     public static void playTTTMulti() throws IOException {
 
-        System.out.println(TTTDialogue.multiplayerLetterChoiceDialogue());
+        System.out.println(TTTDialogue.letterChoiceDialogueMulti());
         String userOneLetter = TTTTurnMove.letterChoice();
 
         if (userOneLetter.equals("O")) {
@@ -81,7 +81,7 @@ public class TTTGame {
 
         do {
 
-            System.out.println(TTTDialogue.multiplayerInputInstructions("Player 1"));
+            System.out.println(TTTDialogue.inputInstructionsMulti("Player 1"));
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userOneLetter);
 
@@ -95,7 +95,7 @@ public class TTTGame {
 
             DesktopArcadeDialogue.EnterContinue();
 
-            System.out.println(TTTDialogue.multiplayerInputInstructions("Player 2"));
+            System.out.println(TTTDialogue.inputInstructionsMulti("Player 2"));
             playerTwoPlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
 

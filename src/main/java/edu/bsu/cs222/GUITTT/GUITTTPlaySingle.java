@@ -120,7 +120,7 @@ public class GUITTTPlaySingle implements Initializable {
             }
         }
         else{
-            ruleBox.setText(TTTDialogue.EndDialogue());
+            ruleBox.setText(TTTDialogue.endDialogue());
         }
     }
 

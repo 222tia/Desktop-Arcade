@@ -119,7 +119,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
             }
         }
         else{
-            ruleBox.setText(TTTDialogue.EndDialogue());
+            ruleBox.setText(TTTDialogue.endDialogue());
         }
     }
 
