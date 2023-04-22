@@ -3,7 +3,6 @@ package edu.bsu.cs222.TTT;
 import java.util.ArrayList;
 
 public class TTTGameBoard {
-
     public static boolean emptySpaceCheck(ArrayList<String> gameBoard, int play){
         String b = gameBoard.get(play);
         return b.equals(" ");
@@ -18,5 +17,6 @@ public class TTTGameBoard {
         ArrayList<String> updatedGameBoard = updateGameBoard(gameBoard, play, letter);
         System.out.println(TTTDialogue.showGameBoard(updatedGameBoard));
     }
+
 
 }

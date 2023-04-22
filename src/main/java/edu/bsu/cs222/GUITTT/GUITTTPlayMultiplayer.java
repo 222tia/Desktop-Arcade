@@ -85,7 +85,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
                     TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
                 }
             }
-            GameDisplay(gameBoard);
+            updateGUIGameboard(gameBoard);
 
             userOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
@@ -112,7 +112,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
                     TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
                 }
             }
-            GameDisplay(gameBoard);
+            updateGUIGameboard(gameBoard);
 
             userTwoWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
@@ -129,7 +129,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
         }
     }
 
-    public void GameDisplay(ArrayList<String> gameBoard){
+    public void updateGUIGameboard(ArrayList<String> gameBoard){
         space1.setText(gameBoard.get(0));
         space2.setText(gameBoard.get(1));
         space3.setText(gameBoard.get(2));
