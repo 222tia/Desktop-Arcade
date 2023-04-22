@@ -27,8 +27,8 @@ public class GUITTTPlayMultiplayer implements Initializable {
     public String userTwoLetter = " ";
     static int userOnePlay;
     static int userTwoPlay;
-    static boolean userWin;
-    static boolean compWin;
+    static boolean userOneWin;
+    static boolean userTwoWin;
     static boolean draw;
     private final String[] letterChoice = {"X", "O"};
     @FXML
@@ -60,62 +60,68 @@ public class GUITTTPlayMultiplayer implements Initializable {
     @FXML
     public void onTTTInput() throws IOException {
         userOneLetter = letterChoiceBox.getValue();
-        int compTurnCheck=1;
         if (userOneLetter.equals("O")){
             userTwoLetter ="X";
         }
         else{
             userTwoLetter ="O";
         }
-        if((!userWin)&&(!compWin)&&(!draw)){
+
+        if((!userOneWin)&&(!userTwoWin)&&(!draw)){
+
             boolean openSpace;
-            String userTextInput = (userInput.getText());
-            userOnePlay = TTTTurnMove.checkUserMove(userTextInput);
+            userInput.setPromptText("Player 1, enter your selection and hit enter");
+            String userOneTextInput = (userInput.getText());
+
+            userOnePlay = TTTTurnMove.checkUserMove(userOneTextInput);
             if (userOnePlay ==9){
                 ruleBox.appendText(TTTDialogue.invalidUserInput());
-                compTurnCheck=0;
-            }
-            else {
+            } else {
                 openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userOnePlay);
                 if (!openSpace) {
                     ruleBox.appendText(TTTDialogue.improperSpace());
-                    compTurnCheck = 0;
                 }
                 else{
                     TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
                 }
             }
-
             GameDisplay(gameBoard);
-            userWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
-            if(!userWin){
-                draw = TTTCheckGameboard.checkDraw(gameBoard);
-            }
 
-            if(userWin){
-                ruleBox.appendText(TTTDialogue.userWinDialogue());
-                compTurnCheck = 0;
+            userOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
+            draw = TTTCheckGameboard.checkDraw(gameBoard);
+
+            if(userOneWin){
+                ruleBox.appendText("\n\n\n Player 1 Wins");
             }
             if(draw){
                 ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
-                compTurnCheck = 0;
             }
 
-            if(compTurnCheck==1) {
-                userTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, userTwoLetter, userOneLetter);
-                TTTGameBoard.updateGameBoard(gameBoard, userTwoPlay, userTwoLetter);
-                GameDisplay(gameBoard);
-                compWin = TTTCheckGameboard.checkBoard(userTwoLetter, gameBoard);
-                if (!compWin) {
-                    draw = TTTCheckGameboard.checkDraw(gameBoard);
-                }
+            userInput.setPromptText("Player 2, enter your selection and hit enter");
+            String userTwoTextInput = (userInput.getText());
 
-                if (compWin) {
-                    ruleBox.appendText(TTTDialogue.compWinDialogue());
+            userTwoPlay = TTTTurnMove.checkUserMove(userTwoTextInput);
+            if (userTwoPlay ==9){
+                ruleBox.appendText(TTTDialogue.invalidUserInput());
+            } else {
+                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userTwoPlay);
+                if (!openSpace) {
+                    ruleBox.appendText(TTTDialogue.improperSpace());
                 }
-                if (draw) {
-                    ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
+                else{
+                    TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
                 }
+            }
+            GameDisplay(gameBoard);
+
+            userTwoWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
+            draw = TTTCheckGameboard.checkDraw(gameBoard);
+
+            if(userTwoWin){
+                ruleBox.appendText("\n\n\n Player 2 Wins");
+            }
+            if(draw){
+                ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
             }
         }
         else{
