@@ -8,7 +8,7 @@ public class TTTDialogue {
 
     public static String inputInstructionsSingle(){
         return """
-                  It's your turn!
+                            It's your turn!
                   
                               1 | 2 | 3
                              ------------
