@@ -55,8 +55,6 @@ public class TTTDialogue {
 
     public static String compWinDialogue() {return("\n\n\nSorry, you lose!");}
 
-    public static String userOneWinDialogue() {return("\n\n\nPlayer 1 wins!");}
-    public static String userTwoWinDialogue() {return("\n\n\nPlayer 2 wins!");}
 
     public static String EndDialogue() {
         return "The game is over. Please restart.";
@@ -76,9 +74,21 @@ public class TTTDialogue {
 
     public static String drawOutcomeDialogue() {return("\n\n\nThe game ends in a draw.");}
 
-    public static void gameOutcomeDialogue(boolean draw, boolean playerWin){
-        if(playerWin){
+    public static void gameOutcomeDialogueSingle(boolean draw, boolean playerOneWin, boolean playerTwoWin){
+        if(playerOneWin){
+            System.out.println(TTTDialogue.userWinDialogue());
+        }
+        if (playerTwoWin) {
             System.out.println(TTTDialogue.compWinDialogue());
+        }
+        if(draw){
+            System.out.println(TTTDialogue.drawOutcomeDialogue());
+        }
+    }
+
+    public static void gameOutcomeDialogueMulti(boolean draw, boolean playerWin, String player){
+        if(playerWin){
+            System.out.println("\n\n\n" + player + " Wins!");
         }
         if(draw){
             System.out.println(TTTDialogue.drawOutcomeDialogue());
