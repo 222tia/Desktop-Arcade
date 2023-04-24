@@ -1,6 +1,6 @@
 package edu.bsu.cs222;
 
-import edu.bsu.cs222.Bunco.BuncoGame;
+import edu.bsu.cs222.Bunco.BuncoSingleplayer;
 import edu.bsu.cs222.RPS.RPSGame;
 import edu.bsu.cs222.TTT.TTTGame;
 
@@ -41,9 +41,9 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue {
             playerSelection = playerChoice.nextLine();
             if (playerSelection.equals("1")) {
                 System.out.println(DesktopArcadeDialogue.BuncoRules());
-                BuncoGame.playBunco(1);
+                BuncoSingleplayer.playBunco(1);
             } if (playerSelection.equals("2")){
-                BuncoGame.playBunco(2);
+                BuncoSingleplayer.playBunco(2);
             } else {
                 DesktopArcadeDialogue.incorrectInput();
             }

@@ -17,7 +17,7 @@ public class GUITTTMultiplayerChoice {
 
     @FXML
     public void onTTTSinglePlayerClick() throws IOException {
-        FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTTS-play.fxml"));
+        FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTTSingle-play.fxml"));
         Parent TTTroot = TTTLoader.load();
         Stage Singleplayerstage = new Stage();
         Singleplayerstage.setScene(new Scene(TTTroot));
@@ -26,7 +26,7 @@ public class GUITTTMultiplayerChoice {
 
     @FXML
     public void onTTTMultiPlayerClick() throws IOException {
-        FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTTM-play.fxml"));
+        FXMLLoader TTTLoader = new FXMLLoader(getClass().getResource("TTTMulti-play.fxml"));
         Parent TTTroot = TTTLoader.load();
         Stage Multiplayerstage = new Stage();
         Multiplayerstage.setScene(new Scene(TTTroot));

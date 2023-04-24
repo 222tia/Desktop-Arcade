@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BuncoGame {
+public class BuncoSingleplayer {
     static List<Integer> diceRollList = new ArrayList<>();
     public static void playBunco(int playerNumber) throws IOException {
 

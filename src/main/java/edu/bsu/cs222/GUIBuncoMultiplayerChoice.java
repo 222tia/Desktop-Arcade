@@ -17,7 +17,7 @@ public class GUIBuncoMultiplayerChoice {
 
     @FXML
     public void onBuncoSinglePlayerClick() throws IOException {
-        FXMLLoader BuncoLoader = new FXMLLoader(getClass().getResource("BuncoSplay.fxml"));
+        FXMLLoader BuncoLoader = new FXMLLoader(getClass().getResource("BuncoSingle-play.fxml"));
         Parent Buncoroot = BuncoLoader.load();
         Stage BuncoStage = new Stage();
         BuncoStage.setScene(new Scene(Buncoroot));
@@ -26,7 +26,7 @@ public class GUIBuncoMultiplayerChoice {
 
     @FXML
     public void onBuncoMultiPlayerClick() throws IOException{
-        FXMLLoader BuncoLoader = new FXMLLoader(getClass().getResource("BuncoM-play.fxml"));
+        FXMLLoader BuncoLoader = new FXMLLoader(getClass().getResource("BuncoMulti-play.fxml"));
         Parent Buncoroot = BuncoLoader.load();
         Stage BuncoStage = new Stage();
         BuncoStage.setScene(new Scene(Buncoroot));

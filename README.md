@@ -25,7 +25,7 @@ Emma "Jay" Jordan
 <br><b>Iteration 2:</b> To start the program via the terminal, follow the <i>Iteration 1</i> run instructions. To start the program via the GUI, navigate to Grade > finalRetribution > Tasks > Application > Run
 
 <h2>Warnings</h2>
-<br>• Suppressed Warning "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.Bunco.BuncoGame.java Class as it completed fine without an exception.
+<br>• Suppressed Warning "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.Bunco.BuncoSingleplayer.java Class as it completed fine without an exception.
 <br>• Suppressed Warning "Result of 'InputStream.read()' is ignored" within edu.bsu.cs222.Bunco.BuncoDice.java class as InputStream.read() is necessary for the application to run and is used.
 <br>• Suppressed Warning "Result of 'System.in.read()' is ignored" within edu.bsu.cs222.DesktopArcadeDialogue.java class as InputStream.read() as it allows users to press enter to play.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.Bunco.BuncoDice.java as it is meant to return the same value.
