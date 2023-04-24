@@ -1,4 +1,4 @@
-package edu.bsu.cs222.GUITTT;
+package edu.bsu.cs222;
 
 import edu.bsu.cs222.TTT.TTTDialogue;
 import edu.bsu.cs222.TTT.TTTGameBoard;

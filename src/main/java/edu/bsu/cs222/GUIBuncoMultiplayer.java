@@ -1,4 +1,4 @@
-package edu.bsu.cs222.GUIBunco;
+package edu.bsu.cs222;
 
 import edu.bsu.cs222.Bunco.BuncoDialogue;
 import edu.bsu.cs222.Bunco.BuncoDice;

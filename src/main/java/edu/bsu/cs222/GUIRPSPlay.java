@@ -1,4 +1,4 @@
-package edu.bsu.cs222.GUIRPS;
+package edu.bsu.cs222;
 
 import edu.bsu.cs222.DesktopArcadeDialogue;
 import edu.bsu.cs222.RPS.RPSDialogue;
