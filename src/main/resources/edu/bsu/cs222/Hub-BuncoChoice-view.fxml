@@ -5,19 +5,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" spacing="20.0" style="-fx-background-color: #fffbf2; -fx-background-radius: 10px; -fx-border-color: #d67bf4; -fx-border-style: solid; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBuncoMultiplayerChoice">
-   <children>
-      <Label text="Label" />
-      <Button fx:id="singleplayerBunco" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onBuncoSinglePlayerClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #d67bf4;" text="Singleplayer" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Cooper Black" size="12.0" />
-         </font></Button>
-      <Button fx:id="multiplayerBunco" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onBuncoMultiPlayerClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #d67bf4;" text="Multiplayer" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Cooper Black" size="12.0" />
-         </font></Button>
-   </children>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="500.0" prefWidth="650.0" spacing="20.0"
+      style="-fx-background-color: #fffbf2; -fx-background-radius: 10px; -fx-border-color: #d67bf4; -fx-border-style: solid; -fx-border-width: 10px;"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.bsu.cs222.GUIBuncoMultiplayerChoice">
    <padding>
-      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
    </padding>
+   <Label text="Label"/>
+   <Button fx:id="singleplayerBunco" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+           onAction="#onBuncoSinglePlayerClick" prefHeight="25.0" prefWidth="150.0"
+           style="-fx-background-color: #d67bf4;" text="Singleplayer" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="Cooper Black" size="12.0"/>
+      </font>
+   </Button>
+   <Button fx:id="multiplayerBunco" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+           onAction="#onBuncoMultiPlayerClick" prefHeight="25.0" prefWidth="150.0"
+           style="-fx-background-color: #d67bf4;" text="Multiplayer" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="Cooper Black" size="12.0"/>
+      </font>
+   </Button>
 </VBox>
