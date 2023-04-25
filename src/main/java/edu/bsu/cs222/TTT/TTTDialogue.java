@@ -112,4 +112,8 @@ public class TTTDialogue {
     public static String player1win() {return("\n\n\n Player 1 Wins");}
 
     public static String player2win() {return("\n\n\n Player 2 Wins");}
+
+    public static String player1Turn() {return("Player 1, enter your selection and hit enter");}
+
+    public static String player2Turn() {return("Player 2, enter your selection and hit enter");}
 }

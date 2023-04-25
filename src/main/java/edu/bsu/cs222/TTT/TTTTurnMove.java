@@ -68,6 +68,14 @@ public class TTTTurnMove {
         return (int) (Math.random() * 9);
     }
 
+    public static String getLetter(String firstLetter){
+        return switch (firstLetter) {
+            case ("O") -> "X";
+            case ("X") -> "O";
+            default -> "error";
+        };
+    }
+
     public static String letterChoice() {
         String letter;
         do{

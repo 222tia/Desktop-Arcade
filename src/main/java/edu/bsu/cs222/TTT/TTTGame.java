@@ -23,12 +23,7 @@ public class TTTGame {
         System.out.println(TTTDialogue.letterChoiceDialogueSingle());
         String userLetter = TTTTurnMove.letterChoice();
 
-        if (userLetter.equals("O")){
-            playerTwoLetter ="X";
-        }
-        else{
-            playerTwoLetter ="O";
-        }
+        playerTwoLetter=TTTTurnMove.getLetter(userLetter);
 
         do {
 
@@ -71,11 +66,7 @@ public class TTTGame {
         System.out.println(TTTDialogue.letterChoiceDialogueMulti());
         String userOneLetter = TTTTurnMove.letterChoice();
 
-        if (userOneLetter.equals("O")) {
-            playerTwoLetter = "X";
-        } else {
-            playerTwoLetter = "O";
-        }
+        playerTwoLetter=TTTTurnMove.getLetter(userOneLetter);
 
         System.out.println(TTTDialogue.showMultiplayerLetterChoice(userOneLetter, playerTwoLetter));
 

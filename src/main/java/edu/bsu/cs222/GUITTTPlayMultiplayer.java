@@ -60,21 +60,16 @@ public class GUITTTPlayMultiplayer implements Initializable {
     @FXML
     public void onTTTInput() throws IOException {
         userOneLetter = letterChoiceBox.getValue();
-        if (userOneLetter.equals("O")){
-            userTwoLetter ="X";
-        }
-        else{
-            userTwoLetter ="O";
-        }
+        userTwoLetter=TTTTurnMove.getLetter(userOneLetter);
 
         if((!userOneWin)&&(!userTwoWin)&&(!draw)){
 
             boolean openSpace;
 
                 if (orderOfPlay==0) {
-                    userInput.setPromptText("Player 1, enter your selection and hit enter");
+                    userInput.setPromptText(TTTDialogue.player1Turn());
                 }else{
-                    userInput.setPromptText("Player 2, enter your selection and hit enter");
+                    userInput.setPromptText(TTTDialogue.player2Turn());
                 }
                 String userTextInput = (userInput.getText());
 

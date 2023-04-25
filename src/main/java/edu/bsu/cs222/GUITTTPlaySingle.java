@@ -62,12 +62,7 @@ public class GUITTTPlaySingle implements Initializable {
     public void onTTTInput() throws IOException {
         userLetter = letterChoiceBox.getValue();
         int compTurnCheck=1;
-        if (userLetter.equals("O")){
-            compLetter="X";
-        }
-        else{
-            compLetter="O";
-        }
+        compLetter=TTTTurnMove.getLetter(userLetter);
         if((!userWin)&&(!compWin)&&(!draw)){
             boolean openSpace;
                 String userTextInput = (userInput.getText());
