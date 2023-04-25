@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 @SuppressWarnings("LoopConditionNotUpdatedInsideLoop")
-public class TTTGame {
+public class TTTSingleplayer {
 
     public static final ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));

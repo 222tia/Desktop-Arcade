@@ -2,7 +2,7 @@ package edu.bsu.cs222;
 
 import edu.bsu.cs222.Bunco.BuncoSingleplayer;
 import edu.bsu.cs222.RPS.RPSGame;
-import edu.bsu.cs222.TTT.TTTGame;
+import edu.bsu.cs222.TTT.TTTSingleplayer;
 import edu.bsu.cs222.TTT.TTTMultiplayer;
 
 import java.io.IOException;
@@ -59,7 +59,7 @@ public class PlayDesktopArcade extends DesktopArcadeDialogue {
             playerSelection = playerChoice.nextLine();
             if (playerSelection.equals("1")) {
                 System.out.println(DesktopArcadeDialogue.TTTRules());
-                TTTGame.playTTTSingle();
+                TTTSingleplayer.playTTTSingle();
             } if (playerSelection.equals("2")){
                 System.out.println(DesktopArcadeDialogue.TTTMultiplayerRules());
                 TTTMultiplayer.playTTTMulti();
