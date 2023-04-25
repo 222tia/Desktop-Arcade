@@ -23,7 +23,7 @@ public class GUIBuncoMultiplayer implements Initializable {
     public int turnOrder = 1;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        buncoRuleArea.setText(BuncoDialogue.GUIBuncoRules());
+        buncoRuleArea.setText(BuncoDialogue.GUIBuncoMultiplayerRules());
 
     }
 

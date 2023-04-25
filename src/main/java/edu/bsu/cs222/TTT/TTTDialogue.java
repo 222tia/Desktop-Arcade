@@ -109,6 +109,24 @@ public class TTTDialogue {
                                              7 | 8 | 9""";
     }
 
+    public static String GUITTTMultiplayerRules(){
+        return """
+                Tic-Tac-Toe is played by using a 3x3 grid.
+                
+                Player 1 will select their letter in the drop-down box, while player 2 will be assigned the opposite to player 1's choice.
+                Player 1 will then begin the game by selecting a spot to put an X or an O, depending on what letter they chose.
+                Then, players will take turns passing the controls over to one another on their respective turns!
+                
+                If a player gets 3 in a row vertically, horizontally, or diagonally they win!
+                Enter a number 1-9 to choose your space.
+                
+                                             1 | 2 | 3
+                                           ------------
+                                             4 | 5 | 6
+                                           ------------
+                                             7 | 8 | 9""";
+    }
+
     public static String player1win() {return("\n\n\n Player 1 Wins");}
 
     public static String player2win() {return("\n\n\n Player 2 Wins");}

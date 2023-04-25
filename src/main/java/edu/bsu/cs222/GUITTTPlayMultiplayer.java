@@ -40,7 +40,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ruleBox.appendText(TTTDialogue.GUITTTRules());
+        ruleBox.appendText(TTTDialogue.GUITTTMultiplayerRules());
         letterChoiceBox.getItems().addAll(letterChoice);
         userInput.setEditable(false);
         letterChoiceBox.setOnAction(event -> userInput.setEditable(true));
