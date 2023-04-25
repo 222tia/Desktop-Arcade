@@ -18,7 +18,7 @@
                       <Font name="Bookman Old Style" size="14.0" />
                   </font>
               </Label>
-              <Label alignment="CENTER" prefHeight="18.0" prefWidth="149.0" text="Player 1, choose your letter!" textAlignment="CENTER" textFill="#1d96ce" HBox.hgrow="SOMETIMES">
+              <Label alignment="CENTER" prefHeight="18.0" prefWidth="218.0" text="Player 1, choose your letter!" textAlignment="CENTER" textFill="#1d96ce" HBox.hgrow="SOMETIMES">
                   <font>
                       <Font name="Bookman Old Style Italic" size="15.0" />
                   </font>
