@@ -59,6 +59,14 @@ public class BuncoDice {
         return roundNumber;
     }
 
+    public static Integer playerTurnCheck(int turn){
+        return switch (turn) {
+            case (1) -> 2;
+            case (2) -> 1;
+            default -> 0;
+        };
+    }
+
     public static Boolean turnContinue(boolean point, boolean triples){
         return (point || triples);
     }

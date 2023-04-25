@@ -70,12 +70,8 @@ public class GUIBuncoMultiplayer implements Initializable {
                     buncoTextArea.appendText(BuncoDialogue.Player2ContinueDisplay());
                 }
                 if (!turnContinue) {
-                    if (turnOrder == 1) {
-                        turnOrder = 2;
-                    } else {
-                        turnOrder = 1;
-                        roundNumber=BuncoDice.round(roundNumber);
-                    }
+                    turnOrder=BuncoDice.playerTurnCheck(turnOrder);
+                    roundNumber=BuncoDice.round(roundNumber);
                 }
             } else {
                 buncoTextArea.appendText(BuncoDialogue.RestartDisplay());
