@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 @SuppressWarnings("LoopConditionNotUpdatedInsideLoop")
-public class TTTGame {
+
+public class TTTMultiplayer {
 
     public static final ArrayList<String> gameBoard = new ArrayList<>(
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
@@ -18,39 +19,39 @@ public class TTTGame {
     static boolean draw = false;
     static final boolean Continue = true;
     static String playerTwoLetter;
-    public static void playTTTSingle() throws IOException {
+    public static void playTTTMulti() throws IOException {
 
-        System.out.println(TTTDialogue.letterChoiceDialogueSingle());
-        String userLetter = TTTTurnMove.letterChoice();
+        System.out.println(TTTDialogue.letterChoiceDialogueMulti());
+        String userOneLetter = TTTTurnMove.letterChoice();
 
-        playerTwoLetter = TTTTurnMove.getLetter(userLetter);
+        playerTwoLetter=TTTTurnMove.getLetter(userOneLetter);
+
+        System.out.println(TTTDialogue.showMultiplayerLetterChoice(userOneLetter, playerTwoLetter));
 
         do {
 
-            System.out.println(TTTDialogue.inputInstructionsSingle());
-
+            System.out.println(TTTDialogue.inputInstructionsMulti("Player 1"));
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
-            TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
+            TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userOneLetter);
 
-            playerOneWin = TTTCheckGameboard.checkBoard(userLetter, gameBoard);
+            playerOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogueSingle(draw, playerOneWin, playerTwoWin);
+            TTTDialogue.gameOutcomeDialogueMulti(draw, playerOneWin, "Player 1");
             if (draw || playerOneWin) {
                 System.exit(0);
             }
 
             DesktopArcadeDialogue.EnterContinue();
 
-            System.out.println(TTTDialogue.compTurn());
-
-            playerTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, playerTwoLetter, userLetter);
+            System.out.println(TTTDialogue.inputInstructionsMulti("Player 2"));
+            playerTwoPlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
 
             playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogueSingle(draw, playerOneWin, playerTwoWin);
+            TTTDialogue.gameOutcomeDialogueMulti(draw, playerTwoWin, "Player 2");
             if (draw || playerTwoWin) {
                 System.exit(0);
             }
@@ -60,6 +61,4 @@ public class TTTGame {
         } while (Continue);
 
     }
-
-
 }
