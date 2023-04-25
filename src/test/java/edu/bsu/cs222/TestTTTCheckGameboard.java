@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class TestTTTGetResults {
+public class TestTTTCheckGameboard {
 
     @Test
     public void testFirstRowWinX(){
@@ -61,6 +61,20 @@ public class TestTTTGetResults {
     public void testDrawFalse(){
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", " ", "X", "O", "O", "X", "X", "O", "X"));
         Assertions.assertFalse(TTTCheckGameboard.checkDraw(gameBoard));
+    }
+
+    @Test
+    public void testPlayerOneWin(){
+        ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", " ", "O", "O", "X", " ", " ", "O", "X"));
+        String playerOneLetter = "X";
+        Assertions.assertTrue(TTTCheckGameboard.checkBoard(playerOneLetter, gameBoard));
+    }
+
+    @Test
+    public void testPlayerTwoWin(){
+        ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList(" ", " ", "O", " ", "X", "O", " ", "X", "O"));
+        String playerTwoLetter = "O";
+        Assertions.assertTrue(TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard));
     }
 }
 
