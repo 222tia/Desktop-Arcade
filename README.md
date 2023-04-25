@@ -3,7 +3,7 @@ A desktop-based entertainment hub that possesses a number of text-based games.
 <br>It's meant to mimic the spirit of plug-and-play games and the old, flash-based websites that housed multiple games.
 <p><b>Iteration 1:</b> Introduces 2 games that can be accessed and played via the terminal.
 <br><b>Iteration 2:</b> Introduces a 3rd game, alongside the option to play the games via a GUI.
-<br><b>Iteration 3:</b> Introduces local multiplayer and minor customization options.
+<br><b>Iteration 3:</b> Introduces a choice between local multiplayer or singleplayer.
 </p>
 <hr>
 <h2>Authors</h2>
@@ -22,7 +22,7 @@ Emma "Jay" Jordan
 <br>• The Latest release of this repository cloned in IntelliJ
 <h3>Run Instructions</h3>
 <b>Iteration 1:</b> To start the program, run the edu.bsu.cs222.PlayDesktopArcade Class. It will execute via the terminal.
-<br><b>Iteration 2:</b> To start the program via the terminal, follow the <i>Iteration 1</i> run instructions. To start the program via the GUI, navigate to Grade > finalRetribution > Tasks > Application > Run
+<br><b>Iteration 2 and 3:</b> To start the program via the terminal, follow the <i>Iteration 1</i> run instructions. To start the program via the GUI, navigate to Grade > finalRetribution > Tasks > Application > Run
 
 <h2>Warnings</h2>
 <br>• Suppressed Warning "'while' statement cannot complete without throwing an exception" within edu.bsu.cs222.Bunco.BuncoSingleplayer.java Class as it completed fine without an exception.
