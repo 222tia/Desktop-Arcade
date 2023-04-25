@@ -26,8 +26,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
     public String userOneLetter = " ";
     public String userTwoLetter = " ";
     public int orderOfPlay=0;
-    static int userOnePlay;
-    static int userTwoPlay;
+    static int userPlay;
     static boolean userOneWin;
     static boolean userTwoWin;
     static boolean draw;
@@ -71,66 +70,50 @@ public class GUITTTPlayMultiplayer implements Initializable {
         if((!userOneWin)&&(!userTwoWin)&&(!draw)){
 
             boolean openSpace;
-            if(orderOfPlay==0) {
-                userInput.setPromptText("Player 1, enter your selection and hit enter");
-                String userOneTextInput = (userInput.getText());
 
-                userOnePlay = TTTTurnMove.checkUserMove(userOneTextInput);
-                if (userOnePlay == 9) {
+                if (orderOfPlay==0) {
+                    userInput.setPromptText("Player 1, enter your selection and hit enter");
+                }else{
+                    userInput.setPromptText("Player 2, enter your selection and hit enter");
+                }
+                String userTextInput = (userInput.getText());
+
+                userPlay = TTTTurnMove.checkUserMove(userTextInput);
+                if (userPlay == 9) {
                     ruleBox.appendText(TTTDialogue.invalidUserInput());
                 } else {
-                    openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userOnePlay);
+                    openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
                     if (!openSpace) {
                         ruleBox.appendText(TTTDialogue.improperSpace());
                     } else {
-                        TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
+                        if (orderOfPlay==0) {
+                            TTTGameBoard.updateGameBoard(gameBoard, userPlay, userOneLetter);
+                        }else{
+                            TTTGameBoard.updateGameBoard(gameBoard, userPlay, userTwoLetter);
+                        }
                     }
                 }
                 updateGUIGameboard(gameBoard);
 
                 userOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
-                userTwoWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
+                userTwoWin = TTTCheckGameboard.checkBoard(userTwoLetter, gameBoard);
                 draw = TTTCheckGameboard.checkDraw(gameBoard);
 
                 if (userOneWin) {
                     ruleBox.appendText(TTTDialogue.player1win());
                 }
-                if (userOneWin) {
+                if (userTwoWin) {
                     ruleBox.appendText(TTTDialogue.player2win());
                 }
                 if (draw) {
                     ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
                 }
-                orderOfPlay=1;
-            }else{
-            userInput.setPromptText("Player 2, enter your selection and hit enter");
-            String userTwoTextInput = (userInput.getText());
-
-            userTwoPlay = TTTTurnMove.checkUserMove(userTwoTextInput);
-            if (userTwoPlay ==9){
-                ruleBox.appendText(TTTDialogue.invalidUserInput());
-            } else {
-                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userTwoPlay);
-                if (!openSpace) {
-                    ruleBox.appendText(TTTDialogue.improperSpace());
+                if(orderOfPlay==0) {
+                    orderOfPlay = 1;
+                }else{
+                    orderOfPlay=0;
                 }
-                else{
-                    TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
-                }
-            }
-            updateGUIGameboard(gameBoard);
-
-            userTwoWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
-            draw = TTTCheckGameboard.checkDraw(gameBoard);
-
-            if(userTwoWin){
-                ruleBox.appendText(TTTDialogue.player2win());
-            }
-            if(draw){
-                ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
-            }
-                orderOfPlay=0;
-        }}
+        }
         else{
             ruleBox.setText(TTTDialogue.endDialogue());
         }
