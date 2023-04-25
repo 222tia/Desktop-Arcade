@@ -108,4 +108,8 @@ public class TTTDialogue {
                                            ------------
                                              7 | 8 | 9""";
     }
+
+    public static String player1win() {return("\n\n\n Player 1 Wins");}
+
+    public static String player2win() {return("\n\n\n Player 2 Wins");}
 }

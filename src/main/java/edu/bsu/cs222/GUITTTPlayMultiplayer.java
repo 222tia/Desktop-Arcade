@@ -25,6 +25,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
     public String userOneLetter = " ";
     public String userTwoLetter = " ";
+    public int orderOfPlay=0;
     static int userOnePlay;
     static int userTwoPlay;
     static boolean userOneWin;
@@ -70,33 +71,38 @@ public class GUITTTPlayMultiplayer implements Initializable {
         if((!userOneWin)&&(!userTwoWin)&&(!draw)){
 
             boolean openSpace;
-            userInput.setPromptText("Player 1, enter your selection and hit enter");
-            String userOneTextInput = (userInput.getText());
+            if(orderOfPlay==0) {
+                userInput.setPromptText("Player 1, enter your selection and hit enter");
+                String userOneTextInput = (userInput.getText());
 
-            userOnePlay = TTTTurnMove.checkUserMove(userOneTextInput);
-            if (userOnePlay ==9){
-                ruleBox.appendText(TTTDialogue.invalidUserInput());
-            } else {
-                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userOnePlay);
-                if (!openSpace) {
-                    ruleBox.appendText(TTTDialogue.improperSpace());
+                userOnePlay = TTTTurnMove.checkUserMove(userOneTextInput);
+                if (userOnePlay == 9) {
+                    ruleBox.appendText(TTTDialogue.invalidUserInput());
+                } else {
+                    openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userOnePlay);
+                    if (!openSpace) {
+                        ruleBox.appendText(TTTDialogue.improperSpace());
+                    } else {
+                        TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
+                    }
                 }
-                else{
-                    TTTGameBoard.updateGameBoard(gameBoard, userOnePlay, userOneLetter);
+                updateGUIGameboard(gameBoard);
+
+                userOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
+                userTwoWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
+                draw = TTTCheckGameboard.checkDraw(gameBoard);
+
+                if (userOneWin) {
+                    ruleBox.appendText(TTTDialogue.player1win());
                 }
-            }
-            updateGUIGameboard(gameBoard);
-
-            userOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
-            draw = TTTCheckGameboard.checkDraw(gameBoard);
-
-            if(userOneWin){
-                ruleBox.appendText("\n\n\n Player 1 Wins");
-            }
-            if(draw){
-                ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
-            }
-
+                if (userOneWin) {
+                    ruleBox.appendText(TTTDialogue.player2win());
+                }
+                if (draw) {
+                    ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
+                }
+                orderOfPlay=1;
+            }else{
             userInput.setPromptText("Player 2, enter your selection and hit enter");
             String userTwoTextInput = (userInput.getText());
 
@@ -118,12 +124,13 @@ public class GUITTTPlayMultiplayer implements Initializable {
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
             if(userTwoWin){
-                ruleBox.appendText("\n\n\n Player 2 Wins");
+                ruleBox.appendText(TTTDialogue.player2win());
             }
             if(draw){
                 ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
             }
-        }
+                orderOfPlay=0;
+        }}
         else{
             ruleBox.setText(TTTDialogue.endDialogue());
         }
@@ -140,4 +147,5 @@ public class GUITTTPlayMultiplayer implements Initializable {
         space8.setText(gameBoard.get(7));
         space9.setText(gameBoard.get(8));
     }
+
 }

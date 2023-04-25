@@ -36,7 +36,7 @@ public class BuncoDialogue {
     public static String RestartDisplay() {return("\nPlease restart the game");}
 
     public static String RoundDisplay(int round){
-        return("\nRound #" + round);
+        return("\n\nRound #" + round);
     }
 
     public static String GUIBuncoRules(){
