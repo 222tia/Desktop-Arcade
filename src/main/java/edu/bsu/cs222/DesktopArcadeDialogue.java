@@ -40,6 +40,24 @@ public class DesktopArcadeDialogue {
                 
                 Otherwise, the winner is the first to get to 21 points!""");
     }
+    public static String BuncoMultiplayerRules(){
+        return("""
+                
+                Bunco is played by rolling 3 dice.
+                Rounds are numbered from 1 to 6 before looping back to 1.
+                When you gain points you get to roll again! When no points are gained play passes and your turn is over.
+                Hit enter to continue play.
+                
+                Keep and eye on the dialogue!
+                It will alert you when the next player's turn is; that is when the previous player passes the controls over to them!
+                Hit enter to continue play.
+                
+                1 point is gained when a dice roll is equal to the round number.
+                5 points are gained when triples are rolled.
+                If the triples match the round number, you automatically win!!
+                
+                Otherwise, the winner is the first to get to 21 points!""");
+    }
     public static String TTTRules() {
         return("""
                 
@@ -49,10 +67,26 @@ public class DesktopArcadeDialogue {
                 Press enter to continue play.
                 """);
     }
+    public static String TTTMultiplayerRules() {
+        return("""
+                
+                Tic-Tac-Toe is played by using a 3x3 grid.
+                
+                Player 1 will select their letter and press enter, while player 2 will be assigned the opposite to player 1's choice.
+                Player 1 will then begin the game by selecting a spot to put an X or an O, depending on what letter they chose.
+                Then, players will take turns passing the controls over to one another on their respective turns!
+                
+                If a player gets 3 in a row vertically, horizontally, or diagonally they win!
+                Press enter to continue play.
+                """);
+    }
 
     public static String multiplayerSelect(){
         return("""
-                // multiplayer selection dialogue here
+                Would you like to play Singleplayer or Multiplayer?
+                
+                Enter '1' to play by yourself!
+                Enter '2' to play with a friend!
                 """);
     }
 
