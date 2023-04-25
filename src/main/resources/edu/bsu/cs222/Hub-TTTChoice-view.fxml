@@ -20,12 +20,17 @@
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.6458333134651184" green="1.0" blue="0.9940972328186035" />
+                     <Color red="0.38999998569488525" green="0.648766279220581" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.9904214559386972">
+                  <color>
+                     <Color red="0.43794164061546326" green="0.9802631735801697" blue="0.9531470537185669" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="0.6470588445663452" green="1.0" blue="0.9921568632125854" />
+                     <Color red="0.43794164061546326" green="0.9802631735801697" blue="0.9531470537185669" />
                   </color>
                </Stop>
             </stops>

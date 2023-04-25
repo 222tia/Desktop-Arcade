@@ -1,6 +1,5 @@
 package edu.bsu.cs222;
 
-import edu.bsu.cs222.DesktopArcadeDialogue;
 import edu.bsu.cs222.RPS.RPSDialogue;
 import edu.bsu.cs222.RPS.RPSPlayRandomizer;
 import edu.bsu.cs222.RPS.RPSScoreKeeper;
@@ -9,7 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
-
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,9 +39,9 @@ public class GUIRPSPlay implements Initializable {
     @FXML
     public void onPlayClick() {
 
-        if (userScore< 2 || computerScore < 2) {
+        if (userScore < 2 || computerScore < 2) {
 
-            roundNumber+=1;
+            roundNumber += 1;
 
             String userPlay = userPlayChoice.getValue();
             String computerPlay = RPSPlayRandomizer.getRandomPlay();
@@ -56,7 +54,7 @@ public class GUIRPSPlay implements Initializable {
 
             scoreTextArea.setText(RPSDialogue.showScore(userScore, computerScore));
 
-            if (RPSScoreKeeper.checkScore(computerScore, userScore) || RPSScoreKeeper.checkScore(userScore, computerScore)){
+            if (RPSScoreKeeper.checkScore(computerScore, userScore) || RPSScoreKeeper.checkScore(userScore, computerScore)) {
                 gameTextArea.appendText((RPSDialogue.showGameResult(userScore, computerScore)) + RPSDialogue.RestartDisplay());
             }
 
