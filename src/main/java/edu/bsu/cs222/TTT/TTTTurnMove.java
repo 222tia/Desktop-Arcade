@@ -76,6 +76,14 @@ public class TTTTurnMove {
         };
     }
 
+    public static Integer playerTurnCheck(int turn){
+        return switch (turn) {
+            case (0) -> 1;
+            case (1) -> 0;
+            default -> 0;
+        };
+    }
+
     public static String letterChoice() {
         String letter;
         do{

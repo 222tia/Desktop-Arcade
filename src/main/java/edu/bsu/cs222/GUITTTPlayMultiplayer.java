@@ -103,11 +103,7 @@ public class GUITTTPlayMultiplayer implements Initializable {
                 if (draw) {
                     ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
                 }
-                if(orderOfPlay==0) {
-                    orderOfPlay = 1;
-                }else{
-                    orderOfPlay=0;
-                }
+                orderOfPlay=TTTTurnMove.playerTurnCheck(orderOfPlay);
         }
         else{
             ruleBox.setText(TTTDialogue.endDialogue());
