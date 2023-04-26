@@ -38,7 +38,7 @@ public class TTTMultiplayer {
             playerOneWin = TTTCheckGameboard.checkBoard(userOneLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogueMulti(draw, playerOneWin, "Player 1");
+            TTTDialogue.gameOutcomeDialogue(draw, playerOneWin, "Player 1");
             if (draw || playerOneWin) {
                 System.exit(0);
             }
@@ -52,7 +52,7 @@ public class TTTMultiplayer {
             playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogueMulti(draw, playerTwoWin, "Player 2");
+            TTTDialogue.gameOutcomeDialogue(draw, playerTwoWin, "Player 2");
             if (draw || playerTwoWin) {
                 System.exit(0);
             }

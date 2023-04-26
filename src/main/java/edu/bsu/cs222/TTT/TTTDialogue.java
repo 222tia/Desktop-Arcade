@@ -62,19 +62,7 @@ public class TTTDialogue {
 
     public static String drawOutcomeDialogue() {return("\n\n\nThe game ends in a draw.");}
 
-    public static void gameOutcomeDialogueSingle(boolean draw, boolean playerOneWin, boolean playerTwoWin){
-        if(playerOneWin){
-            System.out.println(TTTDialogue.userWinDialogue());
-        }
-        if (playerTwoWin) {
-            System.out.println(TTTDialogue.compWinDialogue());
-        }
-        if(draw){
-            System.out.println(TTTDialogue.drawOutcomeDialogue());
-        }
-    }
-
-    public static void gameOutcomeDialogueMulti(boolean draw, boolean playerWin, String player){
+    public static void gameOutcomeDialogue(boolean draw, boolean playerWin, String player){
         if(playerWin){
             System.out.println("\n\n\n" + player + " Wins!");
         }

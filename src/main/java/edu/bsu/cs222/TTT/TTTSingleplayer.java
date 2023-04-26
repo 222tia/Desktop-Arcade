@@ -28,7 +28,7 @@ public class TTTSingleplayer {
 
         do {
 
-            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Player 1"));
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "You"));
 
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
@@ -36,14 +36,14 @@ public class TTTSingleplayer {
             playerOneWin = TTTCheckGameboard.checkBoard(userLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogueSingle(draw, playerOneWin, playerTwoWin);
+            TTTDialogue.gameOutcomeDialogue(draw, playerOneWin, "You");
             if (draw || playerOneWin) {
                 System.exit(0);
             }
 
             DesktopArcadeDialogue.EnterContinue();
 
-            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Player 2"));
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Computer"));
 
             playerTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, playerTwoLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
@@ -51,7 +51,7 @@ public class TTTSingleplayer {
             playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogueSingle(draw, playerOneWin, playerTwoWin);
+            TTTDialogue.gameOutcomeDialogue(draw, playerTwoWin, "Computer");
             if (draw || playerTwoWin) {
                 System.exit(0);
             }
