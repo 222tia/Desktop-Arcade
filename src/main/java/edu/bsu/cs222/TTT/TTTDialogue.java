@@ -68,13 +68,11 @@ public class TTTDialogue {
         return "Invalid input. Do you want to play as Xs or Os?";
     }
 
-    public static String drawOutcomeDialogue() {return("\n\n\nThe game ends in a draw.");}
-
     public static String gameOutcomeDialogue(boolean draw, boolean playerWin, String player){
         if(playerWin){
             return ("\n\n\n the winner is " + player + "!");
         } else if(draw){
-            return (TTTDialogue.drawOutcomeDialogue());
+            return ("\n\n\nThe game ends in a draw.");
         } else {
             return "";
         }
