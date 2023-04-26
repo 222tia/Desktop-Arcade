@@ -16,7 +16,7 @@ public class TTTDialogue {
 
     public static String inputInstructions(int playerNumber, String player){
         if (playerNumber == 1) {
-            return "It's " + player + "'s turn!";
+            return "It's " + player + " turn!";
         } else {
             return "\n       " + player + ", it's your turn!" +
                     """

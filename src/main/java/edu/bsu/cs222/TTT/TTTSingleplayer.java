@@ -28,7 +28,7 @@ public class TTTSingleplayer {
 
         do {
 
-            System.out.println(TTTDialogue.inputInstructions(playerNumber, "You"));
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Your"));
 
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
@@ -43,7 +43,7 @@ public class TTTSingleplayer {
 
             DesktopArcadeDialogue.EnterContinue();
 
-            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Computer"));
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Computer's"));
 
             playerTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, playerTwoLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
