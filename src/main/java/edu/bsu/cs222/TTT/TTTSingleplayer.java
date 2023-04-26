@@ -18,6 +18,7 @@ public class TTTSingleplayer {
     static boolean draw = false;
     static final boolean Continue = true;
     static String playerTwoLetter;
+    static int playerNumber = 1;
     public static void playTTTSingle() throws IOException {
 
         System.out.println(TTTDialogue.letterChoiceDialogueSingle());
@@ -27,7 +28,7 @@ public class TTTSingleplayer {
 
         do {
 
-            System.out.println(TTTDialogue.inputInstructionsSingle());
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Player 1"));
 
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userLetter);
@@ -42,7 +43,7 @@ public class TTTSingleplayer {
 
             DesktopArcadeDialogue.EnterContinue();
 
-            System.out.println(TTTDialogue.compTurn());
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Player 2"));
 
             playerTwoPlay = TTTTurnMove.getCompTurnMove(gameBoard, playerTwoLetter, userLetter);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);

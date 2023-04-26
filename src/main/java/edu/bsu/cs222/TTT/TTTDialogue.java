@@ -6,31 +6,6 @@ import java.util.ArrayList;
 @SuppressWarnings("SameReturnValue")
 public class TTTDialogue {
 
-    public static String inputInstructionsSingle(){
-        return """
-                            It's your turn!
-                  
-                              1 | 2 | 3
-                             ------------
-                              4 | 5 | 6
-                             ------------
-                              7 | 8 | 9
-                  Type the number of your chosen space.
-                """;
-    }
-    public static String inputInstructionsMulti(String player){
-        return "\n       " + player + ", it's your turn!" +
-                """
-                  
-                              1 | 2 | 3
-                             ------------
-                              4 | 5 | 6
-                             ------------
-                              7 | 8 | 9
-                  Type the number of your chosen space.
-                """;
-    }
-
     public static String showGameBoard(ArrayList<String> board){
         return "              " + board.get(0) + " | " + board.get(1) + " | " + board.get(2) +
                 "\n             ------------\n" +
@@ -39,8 +14,21 @@ public class TTTDialogue {
                 "              " + board.get(6) + " | " + board.get(7) + " | " + board.get(8);
     }
 
-    public static String compTurn(){
-        return "It's the Computer's turn!";
+    public static String inputInstructions(int playerNumber, String player){
+        if (playerNumber == 1) {
+            return "It's the Computer's turn!";
+        } else {
+            return "\n       " + player + ", it's your turn!" +
+                    """
+                      
+                                  1 | 2 | 3
+                                 ------------
+                                  4 | 5 | 6
+                                 ------------
+                                  7 | 8 | 9
+                      Type the number of your chosen space.
+                    """;
+        }
     }
 
     public static String improperSpace() {

@@ -19,6 +19,7 @@ public class TTTMultiplayer {
     static boolean draw = false;
     static final boolean Continue = true;
     static String playerTwoLetter;
+    static int playerNumber = 2;
     public static void playTTTMulti() throws IOException {
 
         System.out.println(TTTDialogue.letterChoiceDialogueMulti());
@@ -30,7 +31,7 @@ public class TTTMultiplayer {
 
         do {
 
-            System.out.println(TTTDialogue.inputInstructionsMulti("Player 1"));
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Player 1"));
             playerOnePlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerOnePlay, userOneLetter);
 
@@ -44,7 +45,7 @@ public class TTTMultiplayer {
 
             DesktopArcadeDialogue.EnterContinue();
 
-            System.out.println(TTTDialogue.inputInstructionsMulti("Player 2"));
+            System.out.println(TTTDialogue.inputInstructions(playerNumber, "Player 2"));
             playerTwoPlay = TTTTurnMove.getUserMove(gameBoard);
             TTTGameBoard.showUpdatedGameBoard(gameBoard, playerTwoPlay, playerTwoLetter);
 
