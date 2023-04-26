@@ -24,54 +24,37 @@ public class GUIBuncoMultiplayer implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         buncoRuleArea.setText(BuncoDialogue.GUIBuncoMultiplayerRules());
-
     }
-
     @FXML
     public void onBuncoDiceClick() {
-            if (!(BuncoDice.winReturn(playerScore)) && !(BuncoDice.winReturn(player2Score))) {
-                buncoScoreArea.setText(BuncoDialogue.ScoreDisplay(playerScore, player2Score));
-                if (turnOrder == 1) {
-                    buncoTextArea.setText(BuncoDialogue.Player1TurnDisplay());
-                } else {
-                    buncoTextArea.setText(BuncoDialogue.Player2TurnDisplay());
-                }
-                boolean turnContinue;
+        if (BuncoDice.gameEndCheck(playerScore,player2Score)) {
+               buncoScoreArea.setText(BuncoDialogue.MultiScoreDisplay(playerScore, player2Score));
+                buncoTextArea.setText(BuncoDialogue.MultiTurnDisplay(turnOrder));
                 buncoTextArea.appendText(BuncoDialogue.RoundDisplay(roundNumber));
-
                 diceRollList = BuncoDice.getDiceRolls();
 
                 buncoTextArea.appendText(BuncoDialogue.DiceOutput(diceRollList));
 
                 boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
                 boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
+                boolean turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
                 if (turnOrder == 1) {
                     playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
+                    buncoTextArea.appendText(BuncoDialogue.MultiContinueCheck(turnContinue, turnOrder,playerScore));
+                    buncoTextArea.appendText(BuncoDialogue.MultiWinCondition(playerScore, turnOrder));
                 } else {
                     player2Score = BuncoDice.Scoring(player2Score, roundNumber, diceRollList);
+                    buncoTextArea.appendText(BuncoDialogue.MultiContinueCheck(turnContinue, turnOrder,player2Score));
+                    buncoTextArea.appendText(BuncoDialogue.MultiWinCondition(player2Score, turnOrder));
                 }
 
-                turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
-
-                buncoScoreArea.setText(BuncoDialogue.playerScoreDisplays(playerScore, player2Score));
+                buncoScoreArea.setText(BuncoDialogue.MultiScoreDisplay(playerScore, player2Score));
                 diceRollList.clear();
 
-                if (BuncoDice.winReturn(playerScore)) {
-                    buncoTextArea.appendText(BuncoDialogue.Player1WinDisplay());
-                }
-                if (BuncoDice.winReturn(player2Score)) {
-                    buncoTextArea.appendText(BuncoDialogue.Player2WinDisplay());
-                }
-
-                if ((turnContinue) && (turnOrder == 1) && !(BuncoDice.winReturn(playerScore))) {
-                    buncoTextArea.appendText(BuncoDialogue.Player1ContinueDisplay());
-                }
-                if ((turnContinue) && (turnOrder == 2) && !(BuncoDice.winReturn(player2Score))) {
-                    buncoTextArea.appendText(BuncoDialogue.Player2ContinueDisplay());
-                }
                 if (!turnContinue) {
+                    if (turnOrder==2){
+                        roundNumber=BuncoDice.round(roundNumber);}
                     turnOrder=BuncoDice.playerTurnCheck(turnOrder);
-                    roundNumber=BuncoDice.round(roundNumber);
                 }
             } else {
                 buncoTextArea.appendText(BuncoDialogue.RestartDisplay());

@@ -75,4 +75,7 @@ public class BuncoDice {
         return (points>=21);
     }
 
+    public static Boolean gameEndCheck(int score, int score2){
+        return !((winReturn(score))||(winReturn(score2)));
+    }
 }

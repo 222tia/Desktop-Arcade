@@ -10,7 +10,7 @@ public class BuncoMultiplayer {
     static List<Integer> diceRollList = new ArrayList<>();
     public static int player2Turn(int player2Score, int roundNumber) throws IOException {
             boolean turnContinue;
-            System.out.println(BuncoDialogue.Player2TurnDisplay());
+            System.out.println(BuncoDialogue.MultiTurnDisplay(2));
             do {
                 System.out.println(BuncoDialogue.RoundDisplay(roundNumber));
                 diceRollList = BuncoDice.getDiceRolls();

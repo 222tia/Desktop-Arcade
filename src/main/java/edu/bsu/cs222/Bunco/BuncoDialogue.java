@@ -8,7 +8,12 @@ public class BuncoDialogue {
         return ("\nRoll 1 = " + diceRollList.get(0) + "\nRoll 2 = " + diceRollList.get(1) + "\nRoll 3 = " + diceRollList.get(2));
     }
 
-    public static String PlayerScoreDisplay (int score){return ("Your score is " + score);}
+    public static String PlayerScoreDisplay (int score, int playerNumber){
+        if (playerNumber==1) {
+            return ("Your score is " + score);
+        }else{
+            return ("Player 1's score is " + score);
+    }}
 
     public static String CompScoreDisplay (int score){
         return ("Your opponent's score is " + score);
@@ -18,20 +23,12 @@ public class BuncoDialogue {
         return("Your score is "+playerScore+". Your opponent's score is "+compScore+".");
     }
 
-    public static String PlayerContinueDisplay(){
-        return("\n\nYou gained points, so you get to roll again!");
-    }
-    public static String CompContinueDisplay(){return("\n\nYour opponent gained points, and gets to roll again!");}
-
     public static String PlayerWinDisplay(){
         return("\n\nBunco! You Win!");
     }
     public static String CompWinDisplay(){
         return("\n\nYou Lose! Better luck next time!");
     }
-
-    public static String CompTurnDisplay() {return("It's Your Opponent's Turn!"); }
-    public static String PlayerTurnDisplay(){return ("It's Your Turn!");}
 
     public static String RestartDisplay() {return("\nPlease restart the game");}
 
@@ -70,9 +67,6 @@ public class BuncoDialogue {
                 Otherwise, the winner is the first to get to 21 points!""";
     }
 
-    public static String Player1ScoreDisplay(int score) {
-        return ("Player 1's score is " + score);
-    }
 
     public static String Player1WinDisplay(){
         return("\n\nBunco! Player 1 Wins!");
@@ -86,19 +80,83 @@ public class BuncoDialogue {
         return("\n\nBunco! Player 2 Wins!");
     }
 
-    public static String Player1TurnDisplay(){return ("It's Player 1's Turn!");}
-
-    public static String Player2TurnDisplay(){return ("It's Player 2's Turn!");}
-
-    public static String playerScoreDisplays(int playerScore, int player2Score){
+    public static String MultiScoreDisplay(int playerScore, int player2Score){
         return("Player 1's score is "+playerScore+". Player 2's score is "+player2Score+".");
     }
 
-    public static String Player1ContinueDisplay(){
-        return("\n\nPlayer 1 gained points, and gets to roll again!");
+    public static String TurnDisplay(int turnOrder) {
+        if (turnOrder == 1) {
+            return ("It's Your Turn!");
+        } else {
+            return ("It's Your Opponent's Turn!");
+        }
     }
 
-    public static String Player2ContinueDisplay(){
-        return("\n\nPlayer 2 gained points, and gets to roll again!");
+    public static String MultiTurnDisplay(int turnOrder) {
+        if (turnOrder == 1) {
+            return ("It's Player 1's Turn!");
+        }else {
+            return ("It's Player 2's Turn!");
+        }
+    }
+
+    public static String MultiplayerCheckTurn(int playerNumber, int turnOrder){
+        if (playerNumber==1){
+            return (TurnDisplay(turnOrder));
+        }else{
+            return (MultiTurnDisplay(turnOrder));
+        }
+    }
+
+    public static String ContinueCheck(boolean Continue, int turnOrder, int score){
+        if ((Continue) && (score < 21)) {
+            if (turnOrder==1) {
+                return ("\n\nYou gained points, and get to roll again!");
+            }else{
+                return ("\n\nYour opponent gained points, and gets to roll again!");
+            }
+        }
+        return " ";
+    }
+
+    public static String MultiContinueCheck(boolean Continue, int turnOrder, int score){
+        if ((Continue) && (score < 21)) {
+            if (turnOrder==1) {
+                return ("\n\nPlayer 1 gained points, and gets to roll again!");
+            }else{
+                return ("\n\nPlayer 2 gained points, and gets to roll again!");
+            }
+        }
+        return " ";
+    }
+
+    public static String WinCondition(int score, int turnOrder){
+        if (score>=21){
+            if(turnOrder==1){
+                return("\n\nBunco! You Win!");
+            }else{
+                return("\n\nYou Lose! Better luck next time!");
+            }
+        }
+        return " ";
+    }
+
+    public static String MultiWinCondition(int score, int turnOrder){
+        if (score>=21){
+            if(turnOrder==1){
+                return("\n\nBunco! Player 1 Wins!");
+            }else{
+                return("\n\nBunco! Player 2 Wins!");
+            }
+        }
+        return " ";
+    }
+
+    public static String Player1Win(int players){
+        if (players==1) {
+            return(BuncoDialogue.PlayerWinDisplay());
+        }else{
+            return(BuncoDialogue.Player1WinDisplay());
+        }
     }
 }

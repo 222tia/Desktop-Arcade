@@ -10,7 +10,7 @@ public class BuncoCompTurn {
     static List<Integer> diceRollList = new ArrayList<>();
     public static Integer CompTurn(int compScore, int roundNumber) throws IOException {
         boolean turnContinue;
-        System.out.println(BuncoDialogue.CompTurnDisplay());
+        System.out.println(BuncoDialogue.TurnDisplay(2));
         do {
             System.out.println(BuncoDialogue.RoundDisplay(roundNumber));
             diceRollList = BuncoDice.getDiceRolls();

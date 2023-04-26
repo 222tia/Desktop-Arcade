@@ -14,14 +14,11 @@ public class BuncoSingleplayer {
         int player2Score = 0;
         int compScore = 0;
         int roundNumber = 1;
+        int turnOrder =1;
 
 
         while (true) {
-            if (playerNumber==1) {
-                System.out.println(BuncoDialogue.PlayerTurnDisplay());
-            }else{
-                System.out.println(BuncoDialogue.Player1TurnDisplay());
-            }
+            System.out.println(BuncoDialogue.MultiplayerCheckTurn(playerNumber,turnOrder));
             boolean turnContinue;
             do {
                 System.out.println(BuncoDialogue.RoundDisplay(roundNumber));
@@ -35,20 +32,12 @@ public class BuncoSingleplayer {
                 playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
 
                 turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
+                System.out.println(BuncoDialogue.PlayerScoreDisplay(playerScore,playerNumber));
 
-                if (playerNumber==1) {
-                    System.out.println(BuncoDialogue.PlayerScoreDisplay(playerScore));
-                }else{
-                    System.out.println(BuncoDialogue.Player1ScoreDisplay(playerScore));
-                }
                 diceRollList.clear();
 
                 if (BuncoDice.winReturn(playerScore)) {
-                    if (playerNumber==1) {
-                        System.out.println(BuncoDialogue.PlayerWinDisplay());
-                    }else{
-                        System.out.println(BuncoDialogue.Player1WinDisplay());
-                    }
+                    System.out.println(BuncoDialogue.Player1Win(playerNumber));
                     System.exit(1);
                 }
 
