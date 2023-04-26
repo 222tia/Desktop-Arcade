@@ -16,7 +16,16 @@ public class TTTDialogue {
 
     public static String inputInstructions(int playerNumber, String player){
         if (playerNumber == 1) {
-            return "It's " + player + " turn!";
+            return "\n       it's your turn!" +
+                    """
+                      
+                                  1 | 2 | 3
+                                 ------------
+                                  4 | 5 | 6
+                                 ------------
+                                  7 | 8 | 9
+                      Type the number of your chosen space.
+                    """;
         } else {
             return "\n       " + player + ", it's your turn!" +
                     """
@@ -29,6 +38,10 @@ public class TTTDialogue {
                       Type the number of your chosen space.
                     """;
         }
+    }
+
+    public static String compTurn(){
+        return "it's the Computer's turn!";
     }
 
     public static String improperSpace() {
