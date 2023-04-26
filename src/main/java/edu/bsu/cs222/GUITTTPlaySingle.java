@@ -60,40 +60,35 @@ public class GUITTTPlaySingle implements Initializable {
 
     @FXML
     public void onTTTInput() throws IOException {
+
         userLetter = letterChoiceBox.getValue();
-        int compTurnCheck=1;
-        compLetter=TTTTurnMove.getLetter(userLetter);
+        int compTurnCheck = 1;
+        compLetter = TTTTurnMove.getLetter(userLetter);
+
         if((!userWin)&&(!compWin)&&(!draw)){
+
             boolean openSpace;
-                String userTextInput = (userInput.getText());
-                userPlay = TTTTurnMove.checkUserMove(userTextInput);
-                if (userPlay==9){
-                    ruleBox.appendText(TTTDialogue.invalidUserInput());
-                    compTurnCheck=0;
+            String userTextInput = (userInput.getText());
+            userPlay = TTTTurnMove.checkUserMove(userTextInput);
+            if (userPlay==9){
+                ruleBox.appendText(TTTDialogue.invalidUserInput());
+                compTurnCheck=0;
+            } else {
+                openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
+                if (!openSpace) {
+                    ruleBox.appendText(TTTDialogue.improperSpace());
+                    compTurnCheck = 0;
+                } else {
+                    TTTGameBoard.updateGameBoard(gameBoard, userPlay, userLetter);
                 }
-                else {
-                    openSpace = TTTGameBoard.emptySpaceCheck(gameBoard, userPlay);
-                    if (!openSpace) {
-                        ruleBox.appendText(TTTDialogue.improperSpace());
-                        compTurnCheck = 0;
-                    }
-                    else{
-                        TTTGameBoard.updateGameBoard(gameBoard, userPlay, userLetter);
-                    }
-                }
+            }
 
             GameDisplay(gameBoard);
             userWin = TTTCheckGameboard.checkBoard(userLetter, gameBoard);
-            if(!userWin){
-                draw = TTTCheckGameboard.checkDraw(gameBoard);
-            }
+            draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            if(userWin){
-                ruleBox.appendText(TTTDialogue.userWinDialogue());
-                compTurnCheck = 0;
-            }
-            if(draw){
-                ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
+            ruleBox.appendText(TTTDialogue.gameOutcomeDialogue(draw, userWin, "You"));
+            if(userWin || draw ){
                 compTurnCheck = 0;
             }
 
@@ -102,19 +97,11 @@ public class GUITTTPlaySingle implements Initializable {
                 TTTGameBoard.updateGameBoard(gameBoard, compPlay, compLetter);
                 GameDisplay(gameBoard);
                 compWin = TTTCheckGameboard.checkBoard(compLetter, gameBoard);
-                if (!compWin) {
-                    draw = TTTCheckGameboard.checkDraw(gameBoard);
-                }
+                draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-                if (compWin) {
-                    ruleBox.appendText(TTTDialogue.compWinDialogue());
-                }
-                if (draw) {
-                    ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
-                }
+                ruleBox.appendText(TTTDialogue.gameOutcomeDialogue(draw, compWin, "Computer"));
             }
-        }
-        else{
+        } else {
             ruleBox.setText(TTTDialogue.endDialogue());
         }
     }
