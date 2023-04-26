@@ -36,7 +36,7 @@ public class TTTSingleplayer {
             playerOneWin = TTTCheckGameboard.checkBoard(userLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogue(draw, playerOneWin, "You");
+            System.out.println(TTTDialogue.gameOutcomeDialogue(draw, playerOneWin, "You"));
             if (draw || playerOneWin) {
                 System.exit(0);
             }
@@ -51,7 +51,7 @@ public class TTTSingleplayer {
             playerTwoWin = TTTCheckGameboard.checkBoard(playerTwoLetter, gameBoard);
             draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-            TTTDialogue.gameOutcomeDialogue(draw, playerTwoWin, "Computer");
+            System.out.println(TTTDialogue.gameOutcomeDialogue(draw, playerTwoWin, "Computer"));
             if (draw || playerTwoWin) {
                 System.exit(0);
             }
