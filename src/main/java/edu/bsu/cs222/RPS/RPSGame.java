@@ -7,7 +7,7 @@ public class RPSGame {
         int computerScore = 0;
         int roundNumber = 0;
 
-        while (userScore< 2 || computerScore < 2) {
+        while (userScore< 2 && computerScore < 2) {
 
             roundNumber+=1;
             System.out.println(RPSDialogue.showRoundNumber(roundNumber));

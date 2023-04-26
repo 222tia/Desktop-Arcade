@@ -39,7 +39,7 @@ public class GUIRPSPlay implements Initializable {
     @FXML
     public void onPlayClick() {
 
-        if (userScore < 2 || computerScore < 2) {
+        if (userScore < 2 && computerScore < 2) {
 
             roundNumber += 1;
 
