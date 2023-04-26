@@ -94,15 +94,9 @@ public class GUITTTPlayMultiplayer implements Initializable {
                 userTwoWin = TTTCheckGameboard.checkBoard(userTwoLetter, gameBoard);
                 draw = TTTCheckGameboard.checkDraw(gameBoard);
 
-                if (userOneWin) {
-                    ruleBox.appendText(TTTDialogue.player1win());
-                }
-                if (userTwoWin) {
-                    ruleBox.appendText(TTTDialogue.player2win());
-                }
-                if (draw) {
-                    ruleBox.appendText(TTTDialogue.drawOutcomeDialogue());
-                }
+
+                ruleBox.appendText(TTTDialogue.gameOutcomeDialogue(draw, userOneWin, "Player 1"));
+                ruleBox.appendText(TTTDialogue.gameOutcomeDialogue(draw, userTwoWin, "Player 2"));
                 orderOfPlay=TTTTurnMove.playerTurnCheck(orderOfPlay);
         }
         else{
