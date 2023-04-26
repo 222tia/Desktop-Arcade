@@ -52,11 +52,6 @@ public class TTTDialogue {
         return "\nInvalid input (enter a number 1-9).";
     }
 
-    public static String userWinDialogue() {return("\n\n\nYou win!");}
-
-    public static String compWinDialogue() {return("\n\n\nSorry, you lose!");}
-
-
     public static String endDialogue() {
         return "The game is over. Please restart.";
     }
@@ -77,7 +72,7 @@ public class TTTDialogue {
 
     public static String gameOutcomeDialogue(boolean draw, boolean playerWin, String player){
         if(playerWin){
-            return ("\n\n\n" + player + " Wins!");
+            return ("\n\n\n the winner is " + player + "!");
         } else if(draw){
             return (TTTDialogue.drawOutcomeDialogue());
         } else {
