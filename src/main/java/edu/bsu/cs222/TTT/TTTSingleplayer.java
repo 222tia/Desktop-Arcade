@@ -21,7 +21,7 @@ public class TTTSingleplayer {
     static final int playerNumber = 1;
     public static void playTTTSingle() throws IOException {
 
-        System.out.println(TTTDialogue.letterChoiceDialogueSingle());
+        System.out.println(TTTDialogue.letterChoiceDialogue(playerNumber));
         String userLetter = TTTTurnMove.letterChoice();
 
         playerTwoLetter = TTTTurnMove.getLetter(userLetter);

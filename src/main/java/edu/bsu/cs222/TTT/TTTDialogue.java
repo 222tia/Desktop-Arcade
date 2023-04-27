@@ -56,11 +56,13 @@ public class TTTDialogue {
         return "The game is over. Please restart.";
     }
 
-    public static String letterChoiceDialogueSingle() {
-        return "Do you want to play as Xs or Os?";
+    public static String letterChoiceDialogue(int playerNumber) {
+        if (playerNumber == 1) {
+            return "Do you want to play as Xs or Os?";
+        } else {
+            return "Player 1, do you want to play as Xs or Os?";
+        }
     }
-
-    public static String letterChoiceDialogueMulti() { return "Player 1, do you want to play as Xs or Os?";}
 
     public static String showMultiplayerLetterChoice(String userOneLetter, String userTwoLetter) {
         return "\nPlayer 1, you will play as " + userOneLetter + "\nPlayer 2, you will play as " + userTwoLetter; }

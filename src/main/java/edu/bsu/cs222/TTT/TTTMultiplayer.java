@@ -22,7 +22,7 @@ public class TTTMultiplayer {
     static final int playerNumber = 2;
     public static void playTTTMulti() throws IOException {
 
-        System.out.println(TTTDialogue.letterChoiceDialogueMulti());
+        System.out.println(TTTDialogue.letterChoiceDialogue(playerNumber));
         String userOneLetter = TTTTurnMove.letterChoice();
 
         playerTwoLetter=TTTTurnMove.getLetter(userOneLetter);
