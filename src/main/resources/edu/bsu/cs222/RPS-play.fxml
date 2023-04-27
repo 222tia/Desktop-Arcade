@@ -9,15 +9,15 @@
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-border-radius: 10px; -fx-border-style: solid; -fx-border-color: #9A208C; -fx-background-radius: 10px; -fx-background-color: #E11299;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIRPSPlay">
    <TextArea fx:id="rulesTextArea" editable="false" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: #E11299;" VBox.vgrow="SOMETIMES">
       <font>
-         <Font name="Bookman Old Style Bold" size="14.0" />
+         <Font name="Bookman Old Style Italic" size="14.0" />
       </font></TextArea>
    <TextArea fx:id="gameTextArea" editable="false" prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: #E11299;" VBox.vgrow="SOMETIMES">
       <font>
-         <Font name="Bookman Old Style" size="14.0" />
+         <Font name="Bookman Old Style Bold" size="14.0" />
       </font></TextArea>
-   <TextArea fx:id="scoreTextArea" editable="false" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #E11299;" VBox.vgrow="SOMETIMES">
+   <TextArea fx:id="scoreTextArea" editable="false" prefHeight="10.0" prefWidth="600.0" style="-fx-background-color: #E11299;" VBox.vgrow="SOMETIMES">
       <font>
-         <Font name="Bookman Old Style" size="14.0" />
+         <Font name="Bookman Old Style Bold Italic" size="14.0" />
       </font></TextArea>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="225.0" text="What Would You Like to Play?&#10;   /\_/\  (\ __ /)   A__A&#10;  ( ˶•o•˶)  ( •ω• )   ( •⤙•  )&#10;ଘ(ა🍱)     (ა🍙૮)  (🍜٩  )੭&#10;" textFill="#ffeaea" HBox.hgrow="SOMETIMES">

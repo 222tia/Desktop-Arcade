@@ -9,21 +9,21 @@
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" style="-fx-background-radius: 10px; -fx-border-style: solid; -fx-border-radius: 10px; -fx-background-color: #865DFF; -fx-border-color: #645CBB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.GUIBuncoMultiplayer">
       <TextArea fx:id="buncoRuleArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="625.0" style="-fx-background-color: #865DFF;" wrapText="true" VBox.vgrow="SOMETIMES">
       <font>
-         <Font name="Bookman Old Style Bold" size="14.0" />
+         <Font name="Bookman Old Style Italic" size="14.0" />
       </font>
       <VBox.margin>
          <Insets />
       </VBox.margin></TextArea>
       <TextArea fx:id="buncoTextArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="625.0" promptText="Let's play Bunco!" style="-fx-background-color: #865DFF;" wrapText="true" VBox.vgrow="SOMETIMES">
       <font>
-         <Font name="Bookman Old Style Italic" size="14.0" />
+         <Font name="Bookman Old Style Bold" size="14.0" />
       </font>
       <VBox.margin>
          <Insets />
       </VBox.margin></TextArea>
-      <TextArea fx:id="buncoScoreArea" editable="false" prefHeight="100.0" prefWidth="625.0" promptText="Scores" style="-fx-background-color: #865DFF;" wrapText="true" VBox.vgrow="SOMETIMES">
+      <TextArea fx:id="buncoScoreArea" editable="false" prefHeight="8.0" prefWidth="628.0" promptText="Scores" style="-fx-background-color: #865DFF;" wrapText="true" VBox.vgrow="SOMETIMES">
       <font>
-         <Font name="Bookman Old Style Italic" size="14.0" />
+         <Font name="Bookman Old Style Bold Italic" size="14.0" />
       </font>
       <VBox.margin>
          <Insets />
