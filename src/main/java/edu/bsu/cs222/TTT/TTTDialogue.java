@@ -70,7 +70,7 @@ public class TTTDialogue {
 
     public static String gameOutcomeDialogue(boolean draw, boolean playerWin, String player){
         if(playerWin){
-            return ("\n\n\n the winner is " + player + "!");
+            return ("\n\n\nThe winner is " + player + "!");
         } else if(draw){
             return ("\n\n\nThe game ends in a draw.");
         } else {
