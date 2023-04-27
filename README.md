@@ -31,10 +31,11 @@ Emma "Jay" Jordan
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.Bunco.BuncoDice.java as it is meant to return the same value.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.DesktopArcadeDialogue.java as it is meant to return the same value.
 <br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.Bunco.BuncoDialogue.java as it is meant to return the same value.
-<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.RPS.RPSDialogue.java as it is meant to return the same value.
-<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.TTT.TTTDialogue.java as it is meant to return the same value.
+<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.RPSDialogue.java as it is meant to return the same value.
+<br>• Suppressed Warning "Method always returns the same value inspection" within edu.bsu.cs222.TTTDialogue.java as it is meant to return the same value.
 <br>• Suppressed Warning "Redundant 'throws' clause" within edu.bsu.cs222.GUITTTPlaySingle.java as the exception is thrown in the Initialize method.
-<br>• Suppressed Warning "Loop variable not updated inside loop" within edu.bsu.cs222.TTT.TTTSingleplayer.java as it is an infinite loop.
+<br>• Suppressed Warning "Loop variable not updated inside loop" within edu.bsu.cs222.TTTSingleplayer.java as it is an infinite loop.
+<br>• Excludes weak warning regarding naming conventions of packages.
 
 
 

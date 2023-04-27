@@ -39,7 +39,7 @@
             <Insets />
          </HBox.margin>
          <textFill>
-            <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0" startX="1.0">
+            <LinearGradient cycleMethod="REPEAT" startX="1.0">
                <stops>
                   <Stop>
                      <color>

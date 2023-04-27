@@ -11,7 +11,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,19 +45,15 @@ public class GUITTTPlayMultiplayer implements Initializable {
         letterChoiceBox.setOnAction(event -> userInput.setEditable(true));
         userInput.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
-                try {
-                    onTTTInput();
-                    letterChoiceBox.setDisable(true);
-                    userInput.clear();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                onTTTInput();
+                letterChoiceBox.setDisable(true);
+                userInput.clear();
             }
         });
     }
 
     @FXML
-    public void onTTTInput() throws IOException {
+    public void onTTTInput() {
         userOneLetter = letterChoiceBox.getValue();
         userTwoLetter=TTTTurnMove.getLetter(userOneLetter);
 

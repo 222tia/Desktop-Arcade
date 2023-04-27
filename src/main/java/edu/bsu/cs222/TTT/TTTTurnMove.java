@@ -80,7 +80,7 @@ public class TTTTurnMove {
         return switch (turn) {
             case (0) -> 1;
             case (1) -> 0;
-            default -> 0;
+            default -> 2;
         };
     }
 

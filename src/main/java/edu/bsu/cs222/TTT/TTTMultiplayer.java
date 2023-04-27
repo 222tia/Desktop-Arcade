@@ -19,7 +19,7 @@ public class TTTMultiplayer {
     static boolean draw = false;
     static final boolean Continue = true;
     static String playerTwoLetter;
-    static int playerNumber = 2;
+    static final int playerNumber = 2;
     public static void playTTTMulti() throws IOException {
 
         System.out.println(TTTDialogue.letterChoiceDialogueMulti());

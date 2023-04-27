@@ -18,7 +18,7 @@ public class TTTSingleplayer {
     static boolean draw = false;
     static final boolean Continue = true;
     static String playerTwoLetter;
-    static int playerNumber = 1;
+    static final int playerNumber = 1;
     public static void playTTTSingle() throws IOException {
 
         System.out.println(TTTDialogue.letterChoiceDialogueSingle());
