@@ -26,11 +26,11 @@ public class GUITTTPlaySingle implements Initializable {
             Arrays.asList(" "," "," "," "," "," "," "," "," "));
     public String userLetter = " ";
     public String compLetter = " ";
-    static int userPlay;
-    static int compPlay;
-    static boolean userWin;
-    static boolean compWin;
-    static boolean draw;
+    public int userPlay;
+    public int compPlay;
+    public boolean userWin;
+    public boolean compWin;
+    public boolean draw;
     private final String[] letterChoice = {"X", "O"};
     @FXML
     private ChoiceBox<String> letterChoiceBox;
