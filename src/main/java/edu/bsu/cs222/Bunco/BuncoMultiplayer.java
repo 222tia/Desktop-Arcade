@@ -31,7 +31,7 @@ public class BuncoMultiplayer {
                     System.exit(1);
                 }
 
-                DesktopArcadeDialogue.EnterContinue();
+                DesktopArcadeDialogue.enterContinue();
 
 
             } while (turnContinue);

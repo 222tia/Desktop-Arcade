@@ -51,7 +51,7 @@ public class TestDesktopArcadeDialogue {
                 If the triples match the round number, you automatically win!!
                 
                 Otherwise, the winner is the first to get to 21 points!""";
-        methodOutput = DesktopArcadeDialogue.BuncoRules();
+        methodOutput = DesktopArcadeDialogue.buncoRules();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -73,7 +73,7 @@ public class TestDesktopArcadeDialogue {
                 If the triples match the round number, you automatically win!!
                 
                 Otherwise, the winner is the first to get to 21 points!""";
-        methodOutput = DesktopArcadeDialogue.BuncoMultiplayerRules();
+        methodOutput = DesktopArcadeDialogue.buncoMultiplayerRules();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 

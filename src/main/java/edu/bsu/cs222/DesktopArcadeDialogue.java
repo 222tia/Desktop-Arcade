@@ -26,7 +26,7 @@ public class DesktopArcadeDialogue {
                 3.) Paper beats Rock.
                 """);
     }
-    public static String BuncoRules(){
+    public static String buncoRules(){
         return("""
                 
                 Bunco is played by rolling 3 dice.
@@ -40,7 +40,7 @@ public class DesktopArcadeDialogue {
                 
                 Otherwise, the winner is the first to get to 21 points!""");
     }
-    public static String BuncoMultiplayerRules(){
+    public static String buncoMultiplayerRules(){
         return("""
                 
                 Bunco is played by rolling 3 dice.
@@ -95,7 +95,7 @@ public class DesktopArcadeDialogue {
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    public static void EnterContinue() throws IOException {
+    public static void enterContinue() throws IOException {
         System.in.read();
     }
 

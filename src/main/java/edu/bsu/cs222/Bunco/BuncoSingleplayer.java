@@ -41,7 +41,7 @@ public class BuncoSingleplayer {
                     System.exit(1);
                 }
 
-                DesktopArcadeDialogue.EnterContinue();
+                DesktopArcadeDialogue.enterContinue();
 
 
             } while (turnContinue);

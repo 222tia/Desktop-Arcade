@@ -41,7 +41,7 @@ public class TTTSingleplayer {
                 System.exit(0);
             }
 
-            DesktopArcadeDialogue.EnterContinue();
+            DesktopArcadeDialogue.enterContinue();
 
             System.out.println(TTTDialogue.compTurn());
 
@@ -56,7 +56,7 @@ public class TTTSingleplayer {
                 System.exit(0);
             }
 
-            DesktopArcadeDialogue.EnterContinue();
+            DesktopArcadeDialogue.enterContinue();
 
         } while (Continue);
 

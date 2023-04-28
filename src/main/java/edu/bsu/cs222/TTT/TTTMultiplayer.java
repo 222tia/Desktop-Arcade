@@ -43,7 +43,7 @@ public class TTTMultiplayer {
                 System.exit(0);
             }
 
-            DesktopArcadeDialogue.EnterContinue();
+            DesktopArcadeDialogue.enterContinue();
 
             System.out.println(TTTDialogue.inputInstructions(playerNumber, "Player 2"));
             playerTwoPlay = TTTTurnMove.getUserMove(gameBoard);
@@ -57,7 +57,7 @@ public class TTTMultiplayer {
                 System.exit(0);
             }
 
-            DesktopArcadeDialogue.EnterContinue();
+            DesktopArcadeDialogue.enterContinue();
 
         } while (Continue);
 
