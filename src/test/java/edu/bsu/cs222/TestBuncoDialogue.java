@@ -18,6 +18,7 @@ class TestBuncoDialogue {
     int round;
     int turnOrder;
     boolean Continue;
+    int players;
 
     @Test
     public void testDiceOutput() {
@@ -198,41 +199,128 @@ class TestBuncoDialogue {
         methodOutput = BuncoDialogue.multiplayerCheckTurn(playerNumber,turnOrder);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
-/*
+
     @Test
-    public void testContinueCheck() {
-        expectedOutput = ;
-        methodOutput = ;
+    public void testContinueCheckTurnOrder1() {
+        Continue = true;
+        turnOrder = 1;
+        score = 10;
+        expectedOutput = "\n\nYou gained points, and get to roll again!";
+        methodOutput = BuncoDialogue.continueCheck(Continue, turnOrder, score);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    public void testMultiContinueCheck() {
-        expectedOutput = ;
-        methodOutput = ;
+    public void testContinueCheckTurnOrder2() {
+        Continue = true;
+        turnOrder = 2;
+        score = 10;
+        expectedOutput = "\n\nYour opponent gained points, and gets to roll again!";
+        methodOutput = BuncoDialogue.continueCheck(Continue, turnOrder, score);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    public void testWinCondition() {
-        expectedOutput = ;
-        methodOutput = ;
+    public void testContinueCheckNull() {
+        Continue = false;
+        turnOrder = 2;
+        score = 21;
+        expectedOutput = " ";
+        methodOutput = BuncoDialogue.continueCheck(Continue, turnOrder, score);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    public void testMultiWinCondition() {
-        expectedOutput = ;
-        methodOutput = ;
+    public void testMultiContinueCheckTurnOder1() {
+        Continue = true;
+        turnOrder = 1;
+        score = 10;
+        expectedOutput = "\n\nPlayer 1 gained points, and gets to roll again!";
+        methodOutput = BuncoDialogue.multiContinueCheck(Continue, turnOrder, score);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testMultiContinueCheckTurnOder2() {
+        Continue = true;
+        turnOrder = 2;
+        score = 10;
+        expectedOutput = "\n\nPlayer 2 gained points, and gets to roll again!";
+        methodOutput = BuncoDialogue.multiContinueCheck(Continue, turnOrder, score);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testMultiContinueCheckNull() {
+        Continue = false;
+        turnOrder = 1;
+        score = 21;
+        expectedOutput = " ";
+        methodOutput = BuncoDialogue.multiContinueCheck(Continue, turnOrder, score);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testSingleWinConditionWin() {
+        turnOrder = 1;
+        score = 21;
+        expectedOutput = "\n\nBunco! You Win!";
+        methodOutput = BuncoDialogue.singleWinCondition(score, turnOrder);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testSingleWinConditionLose() {
+        turnOrder = 2;
+        score = 21;
+        expectedOutput = "\n\nYou Lose! Better luck next time!";
+        methodOutput = BuncoDialogue.singleWinCondition(score, turnOrder);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testSingleWinConditionNull() {
+        turnOrder = 1;
+        score = 10;
+        expectedOutput = " ";
+        methodOutput = BuncoDialogue.singleWinCondition(score, turnOrder);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testMultiWinConditionPlayer1Win() {
+        turnOrder = 1;
+        score = 21;
+        expectedOutput = "\n\nBunco! Player 1 Wins!";
+        methodOutput = BuncoDialogue.multiWinCondition(score, turnOrder);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testMultiWinConditionPlayer2Win() {
+        turnOrder = 2;
+        score = 21;
+        expectedOutput = "\n\nBunco! Player 2 Wins!";
+        methodOutput = BuncoDialogue.multiWinCondition(score, turnOrder);
+        Assertions.assertEquals(expectedOutput, methodOutput);
+    }
+
+    @Test
+    public void testMultiWinConditionNull() {
+        turnOrder = 1;
+        score = 10;
+        expectedOutput = " ";
+        methodOutput = BuncoDialogue.multiWinCondition(score, turnOrder);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
     public void testPlayer1Win() {
-        expectedOutput = ;
-        methodOutput = ;
+        players = 1;
+        expectedOutput = "\n\nBunco! You Win!";
+        methodOutput = BuncoDialogue.player1Win(players);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
- */
+
 }
