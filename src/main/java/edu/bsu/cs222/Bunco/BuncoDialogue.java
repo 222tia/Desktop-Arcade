@@ -4,18 +4,18 @@ import java.util.List;
 
 @SuppressWarnings("SameReturnValue")
 public class BuncoDialogue {
-    public static String DiceOutput(List<Integer> diceRollList) {
+    public static String diceOutput(List<Integer> diceRollList) {
         return ("\nRoll 1 = " + diceRollList.get(0) + "\nRoll 2 = " + diceRollList.get(1) + "\nRoll 3 = " + diceRollList.get(2));
     }
 
-    public static String PlayerScoreDisplay (int score, int playerNumber){
+    public static String playerScoreDisplay(int score, int playerNumber){
         if (playerNumber==1) {
             return ("Your score is " + score);
         }else{
             return ("Player 1's score is " + score);
     }}
 
-    public static String CompScoreDisplay (int score){
+    public static String compScoreDisplay(int score){
         return ("Your opponent's score is " + score);
     }
 
@@ -23,16 +23,16 @@ public class BuncoDialogue {
         return("Your score is "+playerScore+". Your opponent's score is "+compScore+".");
     }
 
-    public static String PlayerWinDisplay(){
+    public static String playerWinDisplay(){
         return("\n\nBunco! You Win!");
     }
-    public static String CompWinDisplay(){
+    public static String compWinDisplay(){
         return("\n\nYou Lose! Better luck next time!");
     }
 
-    public static String RestartDisplay() {return("\nPlease restart the game");}
+    public static String restartDisplay() {return("\nPlease restart the game");}
 
-    public static String RoundDisplay(int round){
+    public static String roundDisplay(int round){
         return("\n\nRound #" + round);
     }
 
@@ -68,23 +68,23 @@ public class BuncoDialogue {
     }
 
 
-    public static String Player1WinDisplay(){
+    public static String player1WinDisplay(){
         return("\n\nBunco! Player 1 Wins!");
     }
 
-    public static String Player2ScoreDisplay(int score) {
+    public static String player2ScoreDisplay(int score) {
         return ("Player 2's score is " + score);
     }
 
-    public static String Player2WinDisplay(){
+    public static String player2WinDisplay(){
         return("\n\nBunco! Player 2 Wins!");
     }
 
-    public static String MultiScoreDisplay(int playerScore, int player2Score){
+    public static String multiScoreDisplay(int playerScore, int player2Score){
         return("Player 1's score is "+playerScore+". Player 2's score is "+player2Score+".");
     }
 
-    public static String TurnDisplay(int turnOrder) {
+    public static String singleTurnDisplay(int turnOrder) {
         if (turnOrder == 1) {
             return ("It's Your Turn!");
         } else {
@@ -92,7 +92,7 @@ public class BuncoDialogue {
         }
     }
 
-    public static String MultiTurnDisplay(int turnOrder) {
+    public static String multiTurnDisplay(int turnOrder) {
         if (turnOrder == 1) {
             return ("It's Player 1's Turn!");
         }else {
@@ -100,15 +100,15 @@ public class BuncoDialogue {
         }
     }
 
-    public static String MultiplayerCheckTurn(int playerNumber, int turnOrder){
+    public static String multiplayerCheckTurn(int playerNumber, int turnOrder){
         if (playerNumber==1){
-            return (TurnDisplay(turnOrder));
+            return (singleTurnDisplay(turnOrder));
         }else{
-            return (MultiTurnDisplay(turnOrder));
+            return (multiTurnDisplay(turnOrder));
         }
     }
 
-    public static String ContinueCheck(boolean Continue, int turnOrder, int score){
+    public static String continueCheck(boolean Continue, int turnOrder, int score){
         if ((Continue) && (score < 21)) {
             if (turnOrder==1) {
                 return ("\n\nYou gained points, and get to roll again!");
@@ -119,7 +119,7 @@ public class BuncoDialogue {
         return " ";
     }
 
-    public static String MultiContinueCheck(boolean Continue, int turnOrder, int score){
+    public static String multiContinueCheck(boolean Continue, int turnOrder, int score){
         if ((Continue) && (score < 21)) {
             if (turnOrder==1) {
                 return ("\n\nPlayer 1 gained points, and gets to roll again!");
@@ -130,7 +130,7 @@ public class BuncoDialogue {
         return " ";
     }
 
-    public static String WinCondition(int score, int turnOrder){
+    public static String singleWinCondition(int score, int turnOrder){
         if (score>=21){
             if(turnOrder==1){
                 return("\n\nBunco! You Win!");
@@ -141,7 +141,7 @@ public class BuncoDialogue {
         return " ";
     }
 
-    public static String MultiWinCondition(int score, int turnOrder){
+    public static String multiWinCondition(int score, int turnOrder){
         if (score>=21){
             if(turnOrder==1){
                 return("\n\nBunco! Player 1 Wins!");
@@ -152,11 +152,11 @@ public class BuncoDialogue {
         return " ";
     }
 
-    public static String Player1Win(int players){
+    public static String player1Win(int players){
         if (players==1) {
-            return(BuncoDialogue.PlayerWinDisplay());
+            return(BuncoDialogue.playerWinDisplay());
         }else{
-            return(BuncoDialogue.Player1WinDisplay());
+            return(BuncoDialogue.player1WinDisplay());
         }
     }
 }

@@ -30,23 +30,23 @@ public class GUIBuncoPlay implements Initializable {
     public void onBuncoDiceClick() {
             if (BuncoDice.gameEndCheck(playerScore,compScore)) {
                 buncoScoreArea.setText(BuncoDialogue.ScoreDisplay(playerScore, compScore));
-                buncoTextArea.setText(BuncoDialogue.TurnDisplay(turnOrder));
-                buncoTextArea.appendText(BuncoDialogue.RoundDisplay(roundNumber));
+                buncoTextArea.setText(BuncoDialogue.singleTurnDisplay(turnOrder));
+                buncoTextArea.appendText(BuncoDialogue.roundDisplay(roundNumber));
                 diceRollList = BuncoDice.getDiceRolls();
 
-                buncoTextArea.appendText(BuncoDialogue.DiceOutput(diceRollList));
+                buncoTextArea.appendText(BuncoDialogue.diceOutput(diceRollList));
 
                 boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
                 boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
                 boolean turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
                 if (turnOrder == 1) {
                     playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
-                    buncoTextArea.appendText(BuncoDialogue.ContinueCheck(turnContinue, turnOrder, playerScore));
-                    buncoTextArea.appendText(BuncoDialogue.WinCondition(playerScore, turnOrder));
+                    buncoTextArea.appendText(BuncoDialogue.continueCheck(turnContinue, turnOrder, playerScore));
+                    buncoTextArea.appendText(BuncoDialogue.singleWinCondition(playerScore, turnOrder));
                 } else {
                     compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
-                    buncoTextArea.appendText(BuncoDialogue.ContinueCheck(turnContinue, turnOrder, compScore));
-                    buncoTextArea.appendText(BuncoDialogue.WinCondition(compScore, turnOrder));
+                    buncoTextArea.appendText(BuncoDialogue.continueCheck(turnContinue, turnOrder, compScore));
+                    buncoTextArea.appendText(BuncoDialogue.singleWinCondition(compScore, turnOrder));
                 }
                 buncoScoreArea.setText(BuncoDialogue.ScoreDisplay(playerScore, compScore));
                 diceRollList.clear();
@@ -55,7 +55,7 @@ public class GUIBuncoPlay implements Initializable {
                 roundNumber=BuncoDice.round(roundNumber);}
                 turnOrder=BuncoDice.playerTurnCheck(turnOrder);
             } else {
-                buncoTextArea.appendText(BuncoDialogue.RestartDisplay());
+                buncoTextArea.appendText(BuncoDialogue.restartDisplay());
             }
     }
 }

@@ -23,7 +23,7 @@ class TestBuncoDialogue {
     public void testDiceOutput() {
         List<Integer> diceRollList = List.of(1, 2, 3);
         expectedOutput = "\nRoll 1 = 1\nRoll 2 = 2\nRoll 3 = 3";
-        methodOutput = BuncoDialogue.DiceOutput(diceRollList);
+        methodOutput = BuncoDialogue.diceOutput(diceRollList);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -32,7 +32,7 @@ class TestBuncoDialogue {
         score = 10;
         playerNumber = 1;
         expectedOutput = "Your score is 10";
-        methodOutput = BuncoDialogue.PlayerScoreDisplay(score, playerNumber);
+        methodOutput = BuncoDialogue.playerScoreDisplay(score, playerNumber);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
     @Test
@@ -40,7 +40,7 @@ class TestBuncoDialogue {
         score = 10;
         playerNumber = 2;
         expectedOutput = "Player 1's score is 10";
-        methodOutput = BuncoDialogue.PlayerScoreDisplay(score, playerNumber);
+        methodOutput = BuncoDialogue.playerScoreDisplay(score, playerNumber);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -48,7 +48,7 @@ class TestBuncoDialogue {
     public void testCompScoreDisplay() {
         score = 10;
         expectedOutput = "Your opponent's score is 10";
-        methodOutput = BuncoDialogue.CompScoreDisplay(score);
+        methodOutput = BuncoDialogue.compScoreDisplay(score);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -64,21 +64,21 @@ class TestBuncoDialogue {
     @Test
     public void testPlayerWinDisplay() {
         expectedOutput = "\n\nBunco! You Win!";
-        methodOutput = BuncoDialogue.PlayerWinDisplay();
+        methodOutput = BuncoDialogue.playerWinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
     public void testCompWinDisplay() {
         expectedOutput = "\n\nYou Lose! Better luck next time!";
-        methodOutput = BuncoDialogue.CompWinDisplay();
+        methodOutput = BuncoDialogue.compWinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
     public void testRestartDisplay() {
         expectedOutput = "\nPlease restart the game";
-        methodOutput = BuncoDialogue.RestartDisplay();
+        methodOutput = BuncoDialogue.restartDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -86,7 +86,7 @@ class TestBuncoDialogue {
     public void testRoundDisplay() {
         round = 5;
         expectedOutput = "\n\nRound #5";
-        methodOutput = BuncoDialogue.RoundDisplay(round);
+        methodOutput = BuncoDialogue.roundDisplay(round);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -130,7 +130,7 @@ class TestBuncoDialogue {
     @Test
     public void testPlayer1WinDisplay() {
         expectedOutput = "\n\nBunco! Player 1 Wins!";
-        methodOutput = BuncoDialogue.Player1WinDisplay();
+        methodOutput = BuncoDialogue.player1WinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -138,14 +138,14 @@ class TestBuncoDialogue {
     public void testPlayer2ScoreDisplay() {
         score = 10;
         expectedOutput = "Player 2's score is 10";
-        methodOutput = BuncoDialogue.Player2ScoreDisplay(score);
+        methodOutput = BuncoDialogue.player2ScoreDisplay(score);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
     public void testPlayer2WinDisplay() {
         expectedOutput = "\n\nBunco! Player 2 Wins!";
-        methodOutput = BuncoDialogue.Player2WinDisplay();
+        methodOutput = BuncoDialogue.player2WinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -154,7 +154,7 @@ class TestBuncoDialogue {
         playerScore = 10;
         player2Score = 5;
         expectedOutput = "Player 1's score is 10. Player 2's score is 5.";
-        methodOutput = BuncoDialogue.MultiScoreDisplay(playerScore,player2Score);
+        methodOutput = BuncoDialogue.multiScoreDisplay(playerScore,player2Score);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -162,7 +162,7 @@ class TestBuncoDialogue {
     public void testTurnDisplayTurnOrder1() {
         turnOrder = 1;
         expectedOutput = "It's Your Turn!";
-        methodOutput = BuncoDialogue.TurnDisplay(turnOrder);
+        methodOutput = BuncoDialogue.singleTurnDisplay(turnOrder);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -170,7 +170,7 @@ class TestBuncoDialogue {
     public void testTurnDisplayTurnOrder2() {
         turnOrder = 2;
         expectedOutput = "It's Your Opponent's Turn!";
-        methodOutput = BuncoDialogue.TurnDisplay(turnOrder);
+        methodOutput = BuncoDialogue.singleTurnDisplay(turnOrder);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -178,7 +178,7 @@ class TestBuncoDialogue {
     public void testMultiTurnDisplayTurnOrder1() {
         turnOrder = 1;
         expectedOutput = "It's Player 1's Turn!";
-        methodOutput = BuncoDialogue.MultiTurnDisplay(turnOrder);
+        methodOutput = BuncoDialogue.multiTurnDisplay(turnOrder);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -186,7 +186,7 @@ class TestBuncoDialogue {
     public void testMultiTurnDisplayTurnOrder2() {
         turnOrder = 2;
         expectedOutput = "It's Player 2's Turn!";
-        methodOutput = BuncoDialogue.MultiTurnDisplay(turnOrder);
+        methodOutput = BuncoDialogue.multiTurnDisplay(turnOrder);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
@@ -195,7 +195,7 @@ class TestBuncoDialogue {
         playerNumber = 1;
         turnOrder = 1;
         expectedOutput = "It's Your Turn!";
-        methodOutput = BuncoDialogue.MultiplayerCheckTurn(playerNumber,turnOrder);
+        methodOutput = BuncoDialogue.multiplayerCheckTurn(playerNumber,turnOrder);
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 /*

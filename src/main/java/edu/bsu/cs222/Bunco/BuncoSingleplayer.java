@@ -18,26 +18,26 @@ public class BuncoSingleplayer {
 
 
         while (true) {
-            System.out.println(BuncoDialogue.MultiplayerCheckTurn(playerNumber,turnOrder));
+            System.out.println(BuncoDialogue.multiplayerCheckTurn(playerNumber,turnOrder));
             boolean turnContinue;
             do {
-                System.out.println(BuncoDialogue.RoundDisplay(roundNumber));
+                System.out.println(BuncoDialogue.roundDisplay(roundNumber));
 
                 diceRollList = BuncoDice.getDiceRolls();
 
-                System.out.println(BuncoDialogue.DiceOutput(diceRollList));
+                System.out.println(BuncoDialogue.diceOutput(diceRollList));
 
                 boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
                 boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
                 playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
 
                 turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
-                System.out.println(BuncoDialogue.PlayerScoreDisplay(playerScore,playerNumber));
+                System.out.println(BuncoDialogue.playerScoreDisplay(playerScore,playerNumber));
 
                 diceRollList.clear();
 
                 if (BuncoDice.winReturn(playerScore)) {
-                    System.out.println(BuncoDialogue.Player1Win(playerNumber));
+                    System.out.println(BuncoDialogue.player1Win(playerNumber));
                     System.exit(1);
                 }
 

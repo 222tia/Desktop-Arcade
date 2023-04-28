@@ -10,12 +10,12 @@ public class BuncoCompTurn {
     static List<Integer> diceRollList = new ArrayList<>();
     public static Integer CompTurn(int compScore, int roundNumber) throws IOException {
         boolean turnContinue;
-        System.out.println(BuncoDialogue.TurnDisplay(2));
+        System.out.println(BuncoDialogue.singleTurnDisplay(2));
         do {
-            System.out.println(BuncoDialogue.RoundDisplay(roundNumber));
+            System.out.println(BuncoDialogue.roundDisplay(roundNumber));
             diceRollList = BuncoDice.getDiceRolls();
 
-            System.out.println(BuncoDialogue.DiceOutput(diceRollList));
+            System.out.println(BuncoDialogue.diceOutput(diceRollList));
 
 
 
@@ -23,11 +23,11 @@ public class BuncoCompTurn {
             boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
             compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
             turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
-            System.out.println(BuncoDialogue.CompScoreDisplay(compScore));
+            System.out.println(BuncoDialogue.compScoreDisplay(compScore));
             diceRollList.clear();
 
             if (BuncoDice.winReturn(compScore)) {
-                System.out.println(BuncoDialogue.CompWinDisplay());
+                System.out.println(BuncoDialogue.compWinDisplay());
                 System.exit(1);
             }
 
