@@ -13,7 +13,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", "X", " ", " ", " ", " ", " ", " ", " "));
         String letter = "X";
         int expectedComPlay = 2;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -21,7 +21,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList(" ", " ", " ", "X", "X", " ", " ", " ", " "));
         String letter = "X";
         int expectedComPlay = 5;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -29,7 +29,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList(" ", " ", " ", " ", " ", " ", "X", "X", " "));
         String letter = "X";
         int expectedComPlay = 8;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -37,7 +37,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", " ", " ", " ", "X", " ", " ", " ", " "));
         String letter = "X";
         int expectedComPlay = 8;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -45,7 +45,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList(" ", " ", " ", " ", "X", " ", " ", " ", "X"));
         String letter = "X";
         int expectedComPlay = 0;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", " ", " ", "X", " ", " ", " ", " ", " "));
         String letter = "X";
         int expectedComPlay = 6;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -61,7 +61,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList(" ", "X", " ", " ", "X", " ", " ", " ", " "));
         String letter = "X";
         int expectedComPlay = 7;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList(" ", " ", "X", " ", " ", "X", " ", " ", " "));
         String letter = "X";
         int expectedComPlay = 8;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.TurnLogicCheck(gameBoard, letter));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.turnLogicCheck(gameBoard, letter));
     }
 
     @Test
@@ -77,7 +77,7 @@ public class TestTTTTurnLogic {
         ArrayList<String> gameBoard = new ArrayList<>(Arrays.asList("X", " ", " ", " ", " ", " ", " ", "X", " "));
         String letter = "X";
         int expectedComPlay = 9;
-        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.RowsAI(letter, gameBoard));
+        Assertions.assertEquals(expectedComPlay, TTTTurnLogic.rowsAILogic(letter, gameBoard));
     }
 
 }

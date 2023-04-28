@@ -51,9 +51,9 @@ public class TTTTurnMove {
 
     public static int getCompTurnMove(ArrayList<String> gameBoard, String compLetter, String userLetter){
         boolean checkEmptySpace;
-        int compTurn = TTTTurnLogic.TurnLogicCheck(gameBoard, compLetter);
+        int compTurn = TTTTurnLogic.turnLogicCheck(gameBoard, compLetter);
         if (compTurn==9) {
-            compTurn = TTTTurnLogic.TurnLogicCheck(gameBoard, userLetter);
+            compTurn = TTTTurnLogic.turnLogicCheck(gameBoard, userLetter);
             if (compTurn == 9) {
                 do {
                     compTurn = getRandomMove();

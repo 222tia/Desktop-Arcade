@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class TTTTurnLogic {
 
-    public static Integer TurnLogicCheck(ArrayList<String> gameBoard, String letter){
-        int compTurn = RowsAI(letter, gameBoard);
+    public static Integer turnLogicCheck(ArrayList<String> gameBoard, String letter){
+        int compTurn = rowsAILogic(letter, gameBoard);
         if (compTurn==9){
-            compTurn = ColumnsAI(letter, gameBoard);
+            compTurn = columnsAILogic(letter, gameBoard);
             if (compTurn==9){
-                compTurn = DiagonalsAI(letter, gameBoard);
+                compTurn = diagonalsAILogic(letter, gameBoard);
             }
         }
         return compTurn;
     }
-    public static Integer RowsAI(String letter, ArrayList<String> gameBoard){
+    public static Integer rowsAILogic(String letter, ArrayList<String> gameBoard){
         if(gameBoard.get(0).equals(" ") && gameBoard.get(1).equals(letter) && gameBoard.get(2).equals(letter)){
             return 0;
         }
@@ -45,7 +45,7 @@ public class TTTTurnLogic {
         return 9;
     }
 
-    public static Integer ColumnsAI(String letter, ArrayList<String> gameBoard){
+    public static Integer columnsAILogic(String letter, ArrayList<String> gameBoard){
         if(gameBoard.get(0).equals(" ") && gameBoard.get(3).equals(letter) && gameBoard.get(6).equals(letter)){
             return 0;
         }
@@ -76,7 +76,7 @@ public class TTTTurnLogic {
         return 9;
     }
 
-    public static Integer DiagonalsAI(String letter, ArrayList<String> gameBoard){
+    public static Integer diagonalsAILogic(String letter, ArrayList<String> gameBoard){
         if(gameBoard.get(0).equals(" ") && gameBoard.get(4).equals(letter) && gameBoard.get(8).equals(letter)) {
             return 0;
         }
