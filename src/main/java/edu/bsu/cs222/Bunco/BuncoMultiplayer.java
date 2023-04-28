@@ -19,9 +19,9 @@ public class BuncoMultiplayer {
 
 
 
-                boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
-                boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
-                player2Score = BuncoDice.Scoring(player2Score, roundNumber, diceRollList);
+                boolean pointGain = BuncoDice.pointGain(roundNumber, diceRollList);
+                boolean DiceTriples = BuncoDice.diceTriples(diceRollList);
+                player2Score = BuncoDice.scoring(player2Score, roundNumber, diceRollList);
                 turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
                 System.out.println(BuncoDialogue.player2ScoreDisplay(player2Score));
                 diceRollList.clear();

@@ -36,15 +36,15 @@ public class GUIBuncoPlay implements Initializable {
 
                 buncoTextArea.appendText(BuncoDialogue.diceOutput(diceRollList));
 
-                boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
-                boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
+                boolean pointGain = BuncoDice.pointGain(roundNumber, diceRollList);
+                boolean DiceTriples = BuncoDice.diceTriples(diceRollList);
                 boolean turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
                 if (turnOrder == 1) {
-                    playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
+                    playerScore = BuncoDice.scoring(playerScore, roundNumber, diceRollList);
                     buncoTextArea.appendText(BuncoDialogue.continueCheck(turnContinue, turnOrder, playerScore));
                     buncoTextArea.appendText(BuncoDialogue.singleWinCondition(playerScore, turnOrder));
                 } else {
-                    compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
+                    compScore = BuncoDice.scoring(compScore, roundNumber, diceRollList);
                     buncoTextArea.appendText(BuncoDialogue.continueCheck(turnContinue, turnOrder, compScore));
                     buncoTextArea.appendText(BuncoDialogue.singleWinCondition(compScore, turnOrder));
                 }

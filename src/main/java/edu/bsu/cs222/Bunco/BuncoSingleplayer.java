@@ -27,9 +27,9 @@ public class BuncoSingleplayer {
 
                 System.out.println(BuncoDialogue.diceOutput(diceRollList));
 
-                boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
-                boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
-                playerScore = BuncoDice.Scoring(playerScore, roundNumber, diceRollList);
+                boolean pointGain = BuncoDice.pointGain(roundNumber, diceRollList);
+                boolean DiceTriples = BuncoDice.diceTriples(diceRollList);
+                playerScore = BuncoDice.scoring(playerScore, roundNumber, diceRollList);
 
                 turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
                 System.out.println(BuncoDialogue.playerScoreDisplay(playerScore,playerNumber));
@@ -46,7 +46,7 @@ public class BuncoSingleplayer {
 
             } while (turnContinue);
             if (playerNumber==1) {
-                compScore = BuncoCompTurn.CompTurn(compScore, roundNumber);
+                compScore = BuncoCompTurn.compTurn(compScore, roundNumber);
             }
             else{
                 player2Score=BuncoMultiplayer.player2Turn(player2Score, roundNumber);

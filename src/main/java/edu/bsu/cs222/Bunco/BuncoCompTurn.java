@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BuncoCompTurn {
     static List<Integer> diceRollList = new ArrayList<>();
-    public static Integer CompTurn(int compScore, int roundNumber) throws IOException {
+    public static Integer compTurn(int compScore, int roundNumber) throws IOException {
         boolean turnContinue;
         System.out.println(BuncoDialogue.singleTurnDisplay(2));
         do {
@@ -19,9 +19,9 @@ public class BuncoCompTurn {
 
 
 
-            boolean pointGain = BuncoDice.PointGain(roundNumber, diceRollList);
-            boolean DiceTriples = BuncoDice.DiceTriples(diceRollList);
-            compScore = BuncoDice.Scoring(compScore, roundNumber, diceRollList);
+            boolean pointGain = BuncoDice.pointGain(roundNumber, diceRollList);
+            boolean DiceTriples = BuncoDice.diceTriples(diceRollList);
+            compScore = BuncoDice.scoring(compScore, roundNumber, diceRollList);
             turnContinue = BuncoDice.turnContinue(pointGain, DiceTriples);
             System.out.println(BuncoDialogue.compScoreDisplay(compScore));
             diceRollList.clear();

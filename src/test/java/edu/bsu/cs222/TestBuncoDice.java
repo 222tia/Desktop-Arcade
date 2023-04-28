@@ -9,7 +9,7 @@ import java.util.List;
 public class TestBuncoDice {
     @Test
     public void testDiceRollOutput(){
-        final int randomDiceRoll = BuncoDice.DiceRoll();
+        final int randomDiceRoll = BuncoDice.diceRoll();
         Assertions.assertTrue(randomDiceRoll <= 6);
     }
 
@@ -18,7 +18,7 @@ public class TestBuncoDice {
         int score =0;
         int round = 1;
         List<Integer> diceRollList = List.of(1, 2, 2);
-        score = BuncoDice.Scoring(score, round, diceRollList);
+        score = BuncoDice.scoring(score, round, diceRollList);
         Assertions.assertEquals(1, score);
     }
 
@@ -27,7 +27,7 @@ public class TestBuncoDice {
         int score =0;
         int round = 1;
         List<Integer> diceRollList = List.of(1, 1, 2);
-        score = BuncoDice.Scoring(score, round, diceRollList);
+        score = BuncoDice.scoring(score, round, diceRollList);
         Assertions.assertEquals(2, score);
     }
 
@@ -36,7 +36,7 @@ public class TestBuncoDice {
         int score =0;
         int round = 1;
         List<Integer> diceRollList = List.of(2, 2, 2);
-        score = BuncoDice.Scoring(score, round, diceRollList);
+        score = BuncoDice.scoring(score, round, diceRollList);
         Assertions.assertEquals(5, score);
     }
 
@@ -45,7 +45,7 @@ public class TestBuncoDice {
         int score =0;
         int round = 2;
         List<Integer> diceRollList = List.of(2, 2, 2);
-        score = BuncoDice.Scoring(score, round, diceRollList);
+        score = BuncoDice.scoring(score, round, diceRollList);
         Assertions.assertEquals(21, score);
     }
 
