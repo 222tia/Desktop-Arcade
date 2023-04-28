@@ -20,7 +20,7 @@ class TestBuncoDialogue {
     boolean Continue;
 
     @Test
-    void testDiceOutput() {
+    public void testDiceOutput() {
         List<Integer> diceRollList = List.of(1, 2, 3);
         expectedOutput = "\nRoll 1 = 1\nRoll 2 = 2\nRoll 3 = 3";
         methodOutput = BuncoDialogue.DiceOutput(diceRollList);
@@ -28,7 +28,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testPlayerScoreDisplaySingle() {
+    public void testPlayerScoreDisplaySingle() {
         score = 10;
         playerNumber = 1;
         expectedOutput = "Your score is 10";
@@ -36,7 +36,7 @@ class TestBuncoDialogue {
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
     @Test
-    void testPlayerScoreDisplayMulti() {
+    public void testPlayerScoreDisplayMulti() {
         score = 10;
         playerNumber = 2;
         expectedOutput = "Player 1's score is 10";
@@ -45,7 +45,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testCompScoreDisplay() {
+    public void testCompScoreDisplay() {
         score = 10;
         expectedOutput = "Your opponent's score is 10";
         methodOutput = BuncoDialogue.CompScoreDisplay(score);
@@ -53,7 +53,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testScoreDisplay() {
+    public void testScoreDisplay() {
         playerScore = 10;
         compScore = 5;
         expectedOutput = "Your score is 10. Your opponent's score is 5.";
@@ -62,28 +62,28 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testPlayerWinDisplay() {
+    public void testPlayerWinDisplay() {
         expectedOutput = "\n\nBunco! You Win!";
         methodOutput = BuncoDialogue.PlayerWinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testCompWinDisplay() {
+    public void testCompWinDisplay() {
         expectedOutput = "\n\nYou Lose! Better luck next time!";
         methodOutput = BuncoDialogue.CompWinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testRestartDisplay() {
+    public void testRestartDisplay() {
         expectedOutput = "\nPlease restart the game";
         methodOutput = BuncoDialogue.RestartDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testRoundDisplay() {
+    public void testRoundDisplay() {
         round = 5;
         expectedOutput = "\n\nRound #5";
         methodOutput = BuncoDialogue.RoundDisplay(round);
@@ -91,7 +91,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testGUIBuncoRules() {
+    public void testGUIBuncoRules() {
         expectedOutput = """
                 Bunco is played by rolling 3 dice.
                 Rounds are numbered from 1 to 6 before looping back to 1.
@@ -108,7 +108,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testGUIBuncoMultiplayerRules() {
+    public void testGUIBuncoMultiplayerRules() {
         expectedOutput = """
                 Bunco is played by rolling 3 dice.
                 Rounds are numbered from 1 to 6 before looping back to 1.
@@ -128,14 +128,14 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testPlayer1WinDisplay() {
+    public void testPlayer1WinDisplay() {
         expectedOutput = "\n\nBunco! Player 1 Wins!";
         methodOutput = BuncoDialogue.Player1WinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testPlayer2ScoreDisplay() {
+    public void testPlayer2ScoreDisplay() {
         score = 10;
         expectedOutput = "Player 2's score is 10";
         methodOutput = BuncoDialogue.Player2ScoreDisplay(score);
@@ -143,14 +143,14 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testPlayer2WinDisplay() {
+    public void testPlayer2WinDisplay() {
         expectedOutput = "\n\nBunco! Player 2 Wins!";
         methodOutput = BuncoDialogue.Player2WinDisplay();
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testMultiScoreDisplay() {
+    public void testMultiScoreDisplay() {
         playerScore = 10;
         player2Score = 5;
         expectedOutput = "Player 1's score is 10. Player 2's score is 5.";
@@ -159,7 +159,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testTurnDisplayTurnOrder1() {
+    public void testTurnDisplayTurnOrder1() {
         turnOrder = 1;
         expectedOutput = "It's Your Turn!";
         methodOutput = BuncoDialogue.TurnDisplay(turnOrder);
@@ -167,7 +167,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testTurnDisplayTurnOrder2() {
+    public void testTurnDisplayTurnOrder2() {
         turnOrder = 2;
         expectedOutput = "It's Your Opponent's Turn!";
         methodOutput = BuncoDialogue.TurnDisplay(turnOrder);
@@ -175,7 +175,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testMultiTurnDisplayTurnOrder1() {
+    public void testMultiTurnDisplayTurnOrder1() {
         turnOrder = 1;
         expectedOutput = "It's Player 1's Turn!";
         methodOutput = BuncoDialogue.MultiTurnDisplay(turnOrder);
@@ -183,7 +183,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testMultiTurnDisplayTurnOrder2() {
+    public void testMultiTurnDisplayTurnOrder2() {
         turnOrder = 2;
         expectedOutput = "It's Player 2's Turn!";
         methodOutput = BuncoDialogue.MultiTurnDisplay(turnOrder);
@@ -191,7 +191,7 @@ class TestBuncoDialogue {
     }
 
     @Test
-    void testMultiplayerCheckTurn() {
+    public void testMultiplayerCheckTurn() {
         playerNumber = 1;
         turnOrder = 1;
         expectedOutput = "It's Your Turn!";
@@ -200,35 +200,35 @@ class TestBuncoDialogue {
     }
 /*
     @Test
-    void testContinueCheck() {
+    public void testContinueCheck() {
         expectedOutput = ;
         methodOutput = ;
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testMultiContinueCheck() {
+    public void testMultiContinueCheck() {
         expectedOutput = ;
         methodOutput = ;
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testWinCondition() {
+    public void testWinCondition() {
         expectedOutput = ;
         methodOutput = ;
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testMultiWinCondition() {
+    public void testMultiWinCondition() {
         expectedOutput = ;
         methodOutput = ;
         Assertions.assertEquals(expectedOutput, methodOutput);
     }
 
     @Test
-    void testPlayer1Win() {
+    public void testPlayer1Win() {
         expectedOutput = ;
         methodOutput = ;
         Assertions.assertEquals(expectedOutput, methodOutput);
